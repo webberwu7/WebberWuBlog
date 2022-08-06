@@ -1,0 +1,6 @@
+baseURL = 'https://webberwu7.github.io/WebberWuBlog'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+
+
+theme = "m10c"

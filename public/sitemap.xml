@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/make-a-hugo-blog/</loc>
+    <lastmod>2022-08-06T11:56:21+08:00</lastmod>
+  </url><url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/categories/</loc>
+  </url><url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/</loc>
+  </url><url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/tags/</loc>
+  </url>
+</urlset>

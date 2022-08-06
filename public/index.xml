@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>https://webberwu7.github.io/WebberWuBlog/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://webberwu7.github.io/WebberWuBlog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>菜雞部落客的hugo踩雷之路 ( 1 ) - 建立hugo專案與新增文章</title>
+      <link>https://webberwu7.github.io/WebberWuBlog/make-a-hugo-blog/</link>
+      <pubDate>Sat, 06 Aug 2022 11:56:21 +0800</pubDate>
+      
+      <guid>https://webberwu7.github.io/WebberWuBlog/make-a-hugo-blog/</guid>
+      <description>什麼是 Hugo Hugo 是一個用 Go 編寫的靜態網站生成器，2013由 Steve Francia 原創，自 v0.14 (2015年) 由 Bjørn Erik Pedersen 主力開發[2]，並由全球各地的開發者和使用者提交貢獻。Hugo 以 Apache License 2.0 授權的開放原始碼專案。[3] Hugo 一般只需幾秒鐘就能生成一個網站（每頁少於 1 毫秒），被稱為「世界上最快的網站構建框架」，也使 Hugo 大受歡迎，成為最熱門的靜態網站生成器之一，被廣泛採用。 [REF: wiki]
+所以如果我們的網站類型是靜態網站的話，非常推薦使用hugo來建置
+1. 安裝Hugo 我這裡用的環境是 mac 且使用brew套件管理工具
+brew install hugo 安裝後可以檢查一下版本 確認是否順利完成
+hugo version hugo version 結果圖
+➜ ~ hugo version hugo v0.101.0+extended darwin/amd64 BuildDate=unknown 2. 開啟一個hugo專案 安裝好後可以使用方便的 hugo 指令建立一個預設的 hugo網站
+# hugo new site {資料夾名稱} hugo new site webberwu_hugo 可以看到新增完後會在資料夾中長出這些東西
+├── archetypes ├── content ├── data ├── layouts ├── public │ ├── categories │ ├── css │ ├── make-a-hugo-blog │ ├── page │ └── tags ├── resources │ └── _gen ├── static └── themes └── hugo-theme-m10c # 下一步才會安裝的主題 剛新建時會是空的 3.</description>
+    </item>
+    
+  </channel>
+</rss>
