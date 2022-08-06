@@ -1,7 +1,6 @@
 ---
 title: "菜雞部落客的hugo踩雷之路 ( 2 ) - 部署到github上的靜態網站"
 date: 2022-08-06T13:50:36+08:00
-draft: true
 ---
 
 # 靜態網站
@@ -56,3 +55,42 @@ hugo
     git commit -m "init hugo blog"
     git push origin master
     ```
+
+## 4. 到github repository 中設定Github Page
+
+Setting -> Pages -> Source
+
+設定 `deploy from a branch`
+
+branch 選擇 `master` `/docs` 
+
+![image](https://i.imgur.com/TfiVss4.png)
+
+---
+## [踩到雷了！！ 趕緊補救一下]
+config.toml 加入 exportDir 設定
+
+因為hugo exportDir 預設是 public 資料夾
+
+但是github page 在上方第四步時只支援 /docs 資料夾中的資料
+
+因此我們需要在config.toml 檔加入 
+```toml
+publishDir = 'docs'
+```
+然後重新hugo製作一次
+
+之後把舊的public資料夾刪除掉
+
+---
+
+## 5. Workflows 
+如果一切順利的話可以在 action 中看到跑完的綠色通過
+
+![image](https://i.imgur.com/JbdYaSM.png)
+(前面的紅色就是踩到的一些雷)
+
+## 出發 前往部署成功的網站看看囉
+
+`https://{github帳號}.github.io/{剛剛創建的repository}`
+

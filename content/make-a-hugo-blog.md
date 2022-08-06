@@ -87,7 +87,23 @@ title = 'My New Hugo Site'
 
 theme = "m10c"
 ```
+---
+### 踩雷經驗 - git submodule
+如果你要將專案部署上github page的時候
 
+沒有使用git submodule會使build過程失敗
+
+因此我們要在 專案資料夾中使用submodule
+
+新建一個檔案 `.gitmodules`
+
+並在裡面寫下
+```
+[submodule "themes/m10c"]
+	path = themes/m10c
+	url = git@github.com:vaga/hugo-theme-m10c.git
+```
+---
 ## 4. 完成後就來試跑看看囉！
 hugo 提供快速啟動網站伺服器的服務
 不需要像傳統網站需要準備好apache或nginx等http伺服器
@@ -152,6 +168,22 @@ Hugo 是一個用 Go ...
 
     `http://localhost:1313/make-a-hugo-blog/`
 
+---
+### 踩雷經驗 - hugo publishDir 調整
+再輸入指令hugo產生靜態檔案之前
+
+如果你未來想將網站發佈到github page的話
+
+需要在 config.toml 多加一個設定
+```toml
+publishDir = 'docs'
+```
+
+hugo預設的靜態檔資料夾是在`public`資料夾
+
+但是github page 預設讀取的資料夾名稱是 `docs`
+
+---
 
 內容寫完也確認無誤後
 
@@ -159,7 +191,7 @@ Hugo 是一個用 Go ...
 ```zsh
 hugo
 ```
-你就會在 public資料夾中看到你新增的頁面囉
+你就會在 public資料夾中看到你新增的頁面囉 (如果有設定publishDir='docs' 則會在docs資料夾中看到)
 
 ## 下集待續
 下一集將實作Hugo上傳至github靜態頁面
