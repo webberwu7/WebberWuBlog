@@ -1,6 +1,7 @@
 ---
 title: "菜雞部落客的hugo踩雷之路 ( 1 ) - 建立hugo專案與新增文章"
 date: 2022-08-06T11:56:21+08:00
+tags: ['hugo']
 ---
 # 什麼是 Hugo
 Hugo 是一個用 Go 編寫的靜態網站生成器，2013由 Steve Francia 原創，自 v0.14 (2015年) 由 Bjørn Erik Pedersen 主力開發[2]，並由全球各地的開發者和使用者提交貢獻。Hugo 以 Apache License 2.0 授權的開放原始碼專案。[3]
