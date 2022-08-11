@@ -6,7 +6,27 @@
     <description>Recent content in hugo on webber 筆記本</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sat, 06 Aug 2022 13:50:36 +0800</lastBuildDate><atom:link href="https://webberwu7.github.io/WebberWuBlog/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Aug 2022 23:37:05 +0800</lastBuildDate><atom:link href="https://webberwu7.github.io/WebberWuBlog/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>菜雞部落客的hugo踩雷之路 ( 3 ) - Content 與 layout 的愛恨情仇</title>
+      <link>https://webberwu7.github.io/WebberWuBlog/posts/make-a-hugo-blog-2/</link>
+      <pubDate>Mon, 08 Aug 2022 23:37:05 +0800</pubDate>
+      
+      <guid>https://webberwu7.github.io/WebberWuBlog/posts/make-a-hugo-blog-2/</guid>
+      <description>文章參數配置 相信大家在創建文章時都會看的這樣的文字在最前方
+--- title: &amp;#34;菜雞部落客的hugo踩雷之路 ( 3 ) - 優化網站&amp;#34; date: 2022-08-06T23:37:05+08:00 draft: true --- 這是hugo提供給使用者編輯page頁面時可設定的參數區
+[REF: https://gohugo.io/variables/page/#page-level-params]
+目前的理解是，這些參數可以自定義加入進去，然後看layout有沒有支援
+那我們就先加入常見主題都支援的 tags 吧！
+tags: [&amp;#39;hugo&amp;#39;] 就會看到文章中出現 tags 囉！ Content Organization hugo的 content有自己一套的組織規則
+Content Sections 首先先來認識 Content Sections
+[REF: Content Sections]
+section有兩個定義 在content下面第一層的資料夾
+資料夾裡面有 _index.md
+參考下方結構圖
+content └── blog &amp;lt;-- Section, 在content下面第一層的資料夾/ ├── funny-cats │ ├── mypost.md │ └── kittens &amp;lt;-- Section, 因為這個資料夾裡面有 _index.md │ └── _index.md └── tech &amp;lt;-- Section, 因為這個資料夾裡面有 _index.</description>
+    </item>
+    
     <item>
       <title>菜雞部落客的hugo踩雷之路 ( 2 ) - 部署到github上的靜態網站</title>
       <link>https://webberwu7.github.io/WebberWuBlog/posts/make-a-hugo-blog-1/</link>
