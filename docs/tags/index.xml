@@ -6,7 +6,16 @@
     <description>Recent content in Tags on webber 筆記本</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Mon, 08 Aug 2022 23:37:05 +0800</lastBuildDate><atom:link href="https://webberwu7.github.io/WebberWuBlog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Aug 2022 16:15:34 +0800</lastBuildDate><atom:link href="https://webberwu7.github.io/WebberWuBlog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>laravel</title>
+      <link>https://webberwu7.github.io/WebberWuBlog/tags/laravel/</link>
+      <pubDate>Sat, 13 Aug 2022 16:15:34 +0800</pubDate>
+      
+      <guid>https://webberwu7.github.io/WebberWuBlog/tags/laravel/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>hugo</title>
       <link>https://webberwu7.github.io/WebberWuBlog/tags/hugo/</link>

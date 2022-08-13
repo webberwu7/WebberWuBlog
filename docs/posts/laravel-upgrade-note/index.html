@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="zh-tw">
+  <head>
+    <title>Laravel 升級之路 - 踩雷筆記 // webber 筆記本</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="webber" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://webberwu7.github.io/WebberWuBlog/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Laravel 升級之路 - 踩雷筆記"/>
+<meta name="twitter:description" content="Laravel 升級之路 隨著laravel版本推陳出新
+php 8 也已經於2020年末推出了
+之前專案使用的 laravel lts版本是 laravel 6 將在2022.09邁入不再維護的日期
+此篇文章是記錄將laravel 6 升級至 9 的過程中所執行的動作或遇到的錯誤
+屬於一篇方便下次要再升級時可以回來翻找紀錄的地方
+laravel 6 -&gt; 7 參考連結:https://laravel.com/docs/7.x/upgrade#upgrade-7.0
+跟著需求改完composer.json後
+執行指令
+composer update 第一坑: darkaonline/l5-swagger 需要將darkaonline/l5-swagger 升級至 &ldquo;7.*&rdquo;
+參考連結: https://github.com/DarkaOnLine/L5-Swagger/wiki/Installation-&amp;-Configuration
+第二坑: Script @php artisan package:discover &ndash;ansi handling the post-autoload-dump event returned with error code 255 參考連結: https://stackoverflow.com/questions/50840960/script-php-artisan-packagediscover-handling-the-post-autoload-dump-event-retur
+其實laravel文件就有寫清楚了 https://laravel.com/docs/7.x/upgrade#symfony-5-related-upgrades
+laravel 7 -&gt; 8 參考連結:https://laravel.com/docs/8.x/upgrade
+跟著需求改完composer.json後
+執行指令
+composer update 第一坑: swagger失敗 Required @OA\Info() not found 解法原因 https://github.com/zircote/swagger-php/blob/master/docs/guide/faq.md"/>
+
+    <meta property="og:title" content="Laravel 升級之路 - 踩雷筆記" />
+<meta property="og:description" content="Laravel 升級之路 隨著laravel版本推陳出新
+php 8 也已經於2020年末推出了
+之前專案使用的 laravel lts版本是 laravel 6 將在2022.09邁入不再維護的日期
+此篇文章是記錄將laravel 6 升級至 9 的過程中所執行的動作或遇到的錯誤
+屬於一篇方便下次要再升級時可以回來翻找紀錄的地方
+laravel 6 -&gt; 7 參考連結:https://laravel.com/docs/7.x/upgrade#upgrade-7.0
+跟著需求改完composer.json後
+執行指令
+composer update 第一坑: darkaonline/l5-swagger 需要將darkaonline/l5-swagger 升級至 &ldquo;7.*&rdquo;
+參考連結: https://github.com/DarkaOnLine/L5-Swagger/wiki/Installation-&amp;-Configuration
+第二坑: Script @php artisan package:discover &ndash;ansi handling the post-autoload-dump event returned with error code 255 參考連結: https://stackoverflow.com/questions/50840960/script-php-artisan-packagediscover-handling-the-post-autoload-dump-event-retur
+其實laravel文件就有寫清楚了 https://laravel.com/docs/7.x/upgrade#symfony-5-related-upgrades
+laravel 7 -&gt; 8 參考連結:https://laravel.com/docs/8.x/upgrade
+跟著需求改完composer.json後
+執行指令
+composer update 第一坑: swagger失敗 Required @OA\Info() not found 解法原因 https://github.com/zircote/swagger-php/blob/master/docs/guide/faq.md" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://webberwu7.github.io/WebberWuBlog/posts/laravel-upgrade-note/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-13T16:15:34+08:00" />
+<meta property="article:modified_time" content="2022-08-13T16:15:34+08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://webberwu7.github.io/WebberWuBlog"><img class="app-header-avatar" src="/WebberWuBlog/avatar.jpg" alt="webber" /></a>
+      <h1>webber 筆記本</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/WebberWuBlog/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/WebberWuBlog/tags/">Tags</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/WebberWuBlog/about/">About</a>
+      </nav>
+      <p>目前是一名後端工程師</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/webberwu7" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>My Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Laravel 升級之路 - 踩雷筆記</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Aug 13, 2022
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://webberwu7.github.io/WebberWuBlog/tags/laravel/">laravel</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h1 id="laravel-升級之路">Laravel 升級之路</h1>
+<p>隨著laravel版本推陳出新</p>
+<p>php 8 也已經於2020年末推出了</p>
+<p>之前專案使用的 laravel lts版本是 laravel 6 將在2022.09邁入不再維護的日期</p>
+<p>此篇文章是記錄將laravel 6 升級至 9 的過程中所執行的動作或遇到的錯誤</p>
+<p>屬於一篇方便下次要再升級時可以回來翻找紀錄的地方</p>
+<h2 id="laravel-6---7">laravel 6 -&gt; 7</h2>
+<p>參考連結:https://laravel.com/docs/7.x/upgrade#upgrade-7.0</p>
+<p>跟著需求改完composer.json後</p>
+<p>執行指令</p>
+<pre tabindex="0"><code class="language-bash=" data-lang="bash=">composer update
+</code></pre><h3 id="第一坑-darkaonlinel5-swagger">第一坑: darkaonline/l5-swagger</h3>
+<p>需要將darkaonline/l5-swagger 升級至 &ldquo;7.*&rdquo;</p>
+<p>參考連結:
+<a href="https://github.com/DarkaOnLine/L5-Swagger/wiki/Installation-&amp;-Configuration">https://github.com/DarkaOnLine/L5-Swagger/wiki/Installation-&amp;-Configuration</a></p>
+<h3 id="第二坑-script-php-artisan-packagediscover---ansi-handling-the-post-autoload-dump-event-returned-with-error-code-255">第二坑: Script @php artisan package:discover &ndash;ansi handling the post-autoload-dump event returned with error code 255</h3>
+<p>參考連結:
+<a href="https://stackoverflow.com/questions/50840960/script-php-artisan-packagediscover-handling-the-post-autoload-dump-event-retur">https://stackoverflow.com/questions/50840960/script-php-artisan-packagediscover-handling-the-post-autoload-dump-event-retur</a></p>
+<p>其實laravel文件就有寫清楚了
+<a href="https://laravel.com/docs/7.x/upgrade#symfony-5-related-upgrades">https://laravel.com/docs/7.x/upgrade#symfony-5-related-upgrades</a></p>
+<h2 id="laravel-7---8">laravel 7 -&gt; 8</h2>
+<p>參考連結:https://laravel.com/docs/8.x/upgrade</p>
+<p>跟著需求改完composer.json後</p>
+<p>執行指令</p>
+<pre tabindex="0"><code class="language-bash=" data-lang="bash=">composer update
+</code></pre><h3 id="第一坑-swagger失敗-required-oainfo-not-found">第一坑: swagger失敗 Required @OA\Info() not found</h3>
+<p>解法原因
+<a href="https://github.com/zircote/swagger-php/blob/master/docs/guide/faq.md">https://github.com/zircote/swagger-php/blob/master/docs/guide/faq.md</a></p>
+<p>需要在加入namespace 和 空的class
+且註解如果連在一起要連貫</p>
+<pre tabindex="0"><code class="language-php=" data-lang="php="> *         @OA\JsonContent(
+ *             @OA\Property(property=&#34;error&#34;, type=&#34;string&#34;,
+ *                 example=&#34;Exception&#34;
+ *             ),
+ *         ),
+ *     ),
+ * )
+ * 
+ * 
+ *
+ * @OA\Post(
+ *     path=&#34;/api/projects/{projectID}/export/statistical-report&#34;,
+ *     security={{&#34;Bearer&#34;:{}}},
+ *     operationId=&#34;專案匯出統計報告&#34;,
+ *     tags={&#34;Export 匯出&#34;,},
+ *     summary=&#34;專案匯出統計報告&#34;,
+ *     description=&#34;後台登入後，專案匯出統
+</code></pre><p>不可以這樣做</p>
+<pre tabindex="0"><code class="language-php=" data-lang="php="> *         @OA\JsonContent(
+ *             @OA\Property(property=&#34;error&#34;, type=&#34;string&#34;,
+ *                 example=&#34;Exception&#34;
+ *             ),
+ *         ),
+ *     ),
+ * )
+ */ 
+
+/**
+ * @OA\Post(
+ *     path=&#34;/api/projects/{projectID}/export/statistical-report&#34;,
+ *     security={{&#34;Bearer&#34;:{}}},
+ *     operationId=&#34;專案匯出統計報告&#34;,
+ *     tags={&#34;Export 匯出&#34;,},
+ *     summary=&#34;專案匯出統計報告&#34;,
+ *     description=&#34;後台登入後，專案匯出統
+</code></pre><h2 id="php-73---80">php 7.3 -&gt; 8.0</h2>
+<h3 id="安裝-php-80">安裝 php 8.0</h3>
+<h4 id="這裡是mac-local安裝php-8">這裡是mac local安裝php 8</h4>
+<pre tabindex="0"><code>brew install php@8.0
+</code></pre><h3 id="zshrc-更新">zshrc 更新</h3>
+<pre tabindex="0"><code>vi ~/.zshrc
+</code></pre><p>加入下面這兩行</p>
+<pre tabindex="0"><code>export PATH=&#34;/usr/local/opt/php@8.0/bin:$PATH&#34;
+export PATH=&#34;/usr/local/opt/php@8.0/sbin:$PATH&#34;
+</code></pre><h3 id="第一坑-kreaitlaravel-firebase-需要升級">第一坑: kreait/laravel-firebase 需要升級</h3>
+<pre tabindex="0"><code> &#34;kreait/laravel-firebase&#34;: &#34;^4.1&#34;,
+</code></pre><h3 id="第二坑-tymonjwt-auth-不支援php-8">第二坑: tymon/jwt-auth 不支援php 8</h3>
+<p>先暫時換成這個</p>
+<pre tabindex="0"><code> &#34;php-open-source-saver/jwt-auth&#34;: &#34;^1.4&#34;
+</code></pre><h2 id="laravel-8---9">laravel 8 -&gt; 9</h2>
+<h3 id="第一坑-leagueflysystem-aws-s3-v3-需要升級">第一坑: league/flysystem-aws-s3-v3 需要升級</h3>
+<pre tabindex="0"><code>&#34;league/flysystem-aws-s3-v3&#34;: &#34;^3.0.11&#34;,
+</code></pre><h3 id="第二坑-undefined-constant-illuminatehttprequestheader_x_forwarded_all">第二坑: Undefined constant Illuminate\Http\Request::HEADER_X_FORWARDED_ALL</h3>
+<p><img src="https://i.imgur.com/6Xkf3Qd.png" alt=""></p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
