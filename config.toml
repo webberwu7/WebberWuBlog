@@ -9,6 +9,7 @@ title = 'webber 筆記本'
 paginate = 10
 [params]
     author = 'webber'
+    avatar = "images/avatar.jpg"
     description = '目前是一名後端工程師'
 
 [menu]
