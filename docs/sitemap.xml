@@ -2,19 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/posts/</loc>
+    <lastmod>2022-08-16T12:19:14+08:00</lastmod>
+  </url><url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/</loc>
+    <lastmod>2022-08-16T12:19:14+08:00</lastmod>
+  </url><url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/posts/make-a-hugo-blog-3/</loc>
+    <lastmod>2022-08-16T12:19:14+08:00</lastmod>
+  </url><url>
     <loc>https://webberwu7.github.io/WebberWuBlog/tags/laravel/</loc>
     <lastmod>2022-08-13T16:15:34+08:00</lastmod>
   </url><url>
     <loc>https://webberwu7.github.io/WebberWuBlog/posts/laravel-upgrade-note/</loc>
     <lastmod>2022-08-13T16:15:34+08:00</lastmod>
   </url><url>
-    <loc>https://webberwu7.github.io/WebberWuBlog/posts/</loc>
-    <lastmod>2022-08-13T16:15:34+08:00</lastmod>
-  </url><url>
     <loc>https://webberwu7.github.io/WebberWuBlog/tags/</loc>
-    <lastmod>2022-08-13T16:15:34+08:00</lastmod>
-  </url><url>
-    <loc>https://webberwu7.github.io/WebberWuBlog/</loc>
     <lastmod>2022-08-13T16:15:34+08:00</lastmod>
   </url><url>
     <loc>https://webberwu7.github.io/WebberWuBlog/tags/hugo/</loc>
@@ -29,8 +32,8 @@
     <loc>https://webberwu7.github.io/WebberWuBlog/posts/make-a-hugo-blog/</loc>
     <lastmod>2022-08-06T11:56:21+08:00</lastmod>
   </url><url>
-    <loc>https://webberwu7.github.io/WebberWuBlog/about/</loc>
-  </url><url>
     <loc>https://webberwu7.github.io/WebberWuBlog/categories/</loc>
+  </url><url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/about/</loc>
   </url>
 </urlset>

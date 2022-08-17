@@ -6,7 +6,21 @@
     <description>Recent content in Posts on webber 筆記本</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sat, 13 Aug 2022 16:15:34 +0800</lastBuildDate><atom:link href="https://webberwu7.github.io/WebberWuBlog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Aug 2022 12:19:14 +0800</lastBuildDate><atom:link href="https://webberwu7.github.io/WebberWuBlog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>菜雞部落客的hugo踩雷之路 ( 4 ) - 終於有頭像了</title>
+      <link>https://webberwu7.github.io/WebberWuBlog/posts/make-a-hugo-blog-3/</link>
+      <pubDate>Tue, 16 Aug 2022 12:19:14 +0800</pubDate>
+      
+      <guid>https://webberwu7.github.io/WebberWuBlog/posts/make-a-hugo-blog-3/</guid>
+      <description>部落格作者頭像 在目前使用的 m10c 主題中有提到設定
+Configuration In your config.toml file, define the following variables in params:
+author: 作者的名字 description: 關於作者的簡單的敘述 avatar: 放置作者大頭照的路徑 menu_item_separator: 在目錄類型之間的分隔符號. HTML allowed (default: &amp;quot; - &amp;ldquo;) favicon: 使用favicon.ico的絕對路境 (default: &amp;ldquo;/favicon.ico&amp;rdquo;) 根據hugo的目錄設計
+可以將靜態資源放在 static 資料夾中 (REF: Hugo Static Files)
+By default, the static/ directory in the site project is used for all static files (e.g. stylesheets, JavaScript, images).
+The static files are served on the site root path</description>
+    </item>
+    
     <item>
       <title>Laravel 升級之路 - 踩雷筆記</title>
       <link>https://webberwu7.github.io/WebberWuBlog/posts/laravel-upgrade-note/</link>
