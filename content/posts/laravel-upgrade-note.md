@@ -1,7 +1,7 @@
 ---
 title: "Laravel 升級之路 - 踩雷筆記"
 date: 2022-08-13T16:15:34+08:00
-tags: ['laravel']
+tags: ['php', 'laravel']
 ---
 # Laravel 升級之路
 隨著laravel版本推陳出新

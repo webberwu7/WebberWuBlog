@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>php on webber 筆記本</title>
+    <link>https://webberwu7.github.io/WebberWuBlog/tags/php/</link>
+    <description>Recent content in php on webber 筆記本</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Sat, 13 Aug 2022 16:15:34 +0800</lastBuildDate><atom:link href="https://webberwu7.github.io/WebberWuBlog/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laravel 升級之路 - 踩雷筆記</title>
+      <link>https://webberwu7.github.io/WebberWuBlog/posts/laravel-upgrade-note/</link>
+      <pubDate>Sat, 13 Aug 2022 16:15:34 +0800</pubDate>
+      
+      <guid>https://webberwu7.github.io/WebberWuBlog/posts/laravel-upgrade-note/</guid>
+      <description>Laravel 升級之路 隨著laravel版本推陳出新
+php 8 也已經於2020年末推出了
+之前專案使用的 laravel lts版本是 laravel 6 將在2022.09邁入不再維護的日期
+此篇文章是記錄將laravel 6 升級至 9 的過程中所執行的動作或遇到的錯誤
+屬於一篇方便下次要再升級時可以回來翻找紀錄的地方
+laravel 6 -&amp;gt; 7 參考連結:https://laravel.com/docs/7.x/upgrade#upgrade-7.0
+跟著需求改完composer.json後
+執行指令
+composer update 第一坑: darkaonline/l5-swagger 需要將darkaonline/l5-swagger 升級至 &amp;ldquo;7.*&amp;rdquo;
+參考連結: https://github.com/DarkaOnLine/L5-Swagger/wiki/Installation-&amp;amp;-Configuration
+第二坑: Script @php artisan package:discover &amp;ndash;ansi handling the post-autoload-dump event returned with error code 255 參考連結: https://stackoverflow.com/questions/50840960/script-php-artisan-packagediscover-handling-the-post-autoload-dump-event-retur
+其實laravel文件就有寫清楚了 https://laravel.com/docs/7.x/upgrade#symfony-5-related-upgrades
+laravel 7 -&amp;gt; 8 參考連結:https://laravel.com/docs/8.x/upgrade
+跟著需求改完composer.json後
+執行指令
+composer update 第一坑: swagger失敗 Required @OA\Info() not found 解法原因 https://github.com/zircote/swagger-php/blob/master/docs/guide/faq.md</description>
+    </item>
+    
+  </channel>
+</rss>
