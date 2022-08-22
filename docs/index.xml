@@ -9,19 +9,19 @@
     <lastBuildDate>Thu, 18 Aug 2022 00:05:39 +0800</lastBuildDate><atom:link href="https://webberwu7.github.io/WebberWuBlog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python - Bigquery 筆記</title>
-      <link>https://webberwu7.github.io/WebberWuBlog/posts/python-bigquery/</link>
+      <link>https://webberwu7.github.io/WebberWuBlog/posts/20220818-python-bigquery/</link>
       <pubDate>Thu, 18 Aug 2022 00:05:39 +0800</pubDate>
       
-      <guid>https://webberwu7.github.io/WebberWuBlog/posts/python-bigquery/</guid>
+      <guid>https://webberwu7.github.io/WebberWuBlog/posts/20220818-python-bigquery/</guid>
       <description>需要套件 google-cloud-bigquery =&amp;gt; 串接bigquery的套件 pnadas =&amp;gt; 抓取後製作成dataframe的套件 db-dtype =&amp;gt; 轉換成dataframe的套件 pip3 install pip3 install google-cloud-bigquery pip3 install pandas pip3 install db-dtypes requirements.txt pip install -r requirements.txt # requirements.txt google-cloud-bigquery==3.3.1 pandas==1.4.3 db-dtypes==1.0.3 簡單使用方法 # 設定讀取 google credentials 的路徑 os.environ[&amp;#34;GOOGLE_APPLICATION_CREDENTIALS&amp;#34;] = &amp;#34;config/Crawler-Bigquery.json&amp;#34; # 啟動 bigquery client client = bigquery.Client() # 寫下你要 query 的語法 QUERY = ( &amp;#34;&amp;#34;&amp;#34; YOUR QUERY &amp;#34;&amp;#34;&amp;#34; ) query_job = client.query(QUERY) response = query_job.to_dataframe() print(response) </description>
     </item>
     
     <item>
       <title>菜雞部落客的hugo踩雷之路 ( 4 ) - 終於有頭像了</title>
-      <link>https://webberwu7.github.io/WebberWuBlog/posts/make-a-hugo-blog-3/</link>
+      <link>https://webberwu7.github.io/WebberWuBlog/posts/20220816-make-a-hugo-blog-3/</link>
       <pubDate>Tue, 16 Aug 2022 12:19:14 +0800</pubDate>
       
-      <guid>https://webberwu7.github.io/WebberWuBlog/posts/make-a-hugo-blog-3/</guid>
+      <guid>https://webberwu7.github.io/WebberWuBlog/posts/20220816-make-a-hugo-blog-3/</guid>
       <description>部落格作者頭像 在目前使用的 m10c 主題中有提到設定
 Configuration In your config.toml file, define the following variables in params:
 author: 作者的名字 description: 關於作者的簡單的敘述 avatar: 放置作者大頭照的路徑 menu_item_separator: 在目錄類型之間的分隔符號. HTML allowed (default: &amp;quot; - &amp;ldquo;) favicon: 使用favicon.ico的絕對路境 (default: &amp;ldquo;/favicon.ico&amp;rdquo;) 根據hugo的目錄設計
@@ -32,10 +32,10 @@ The static files are served on the site root path</description>
     
     <item>
       <title>Laravel 升級之路 - 踩雷筆記</title>
-      <link>https://webberwu7.github.io/WebberWuBlog/posts/laravel-upgrade-note/</link>
+      <link>https://webberwu7.github.io/WebberWuBlog/posts/20220813-laravel-upgrade-note/</link>
       <pubDate>Sat, 13 Aug 2022 16:15:34 +0800</pubDate>
       
-      <guid>https://webberwu7.github.io/WebberWuBlog/posts/laravel-upgrade-note/</guid>
+      <guid>https://webberwu7.github.io/WebberWuBlog/posts/20220813-laravel-upgrade-note/</guid>
       <description>Laravel 升級之路 隨著laravel版本推陳出新
 php 8 也已經於2020年末推出了
 之前專案使用的 laravel lts版本是 laravel 6 將在2022.09邁入不再維護的日期
@@ -56,10 +56,10 @@ composer update 第一坑: swagger失敗 Required @OA\Info() not found 解法原
     
     <item>
       <title>菜雞部落客的hugo踩雷之路 ( 3 ) - Content 與 layout 的愛恨情仇</title>
-      <link>https://webberwu7.github.io/WebberWuBlog/posts/make-a-hugo-blog-2/</link>
+      <link>https://webberwu7.github.io/WebberWuBlog/posts/20220808-make-a-hugo-blog-2/</link>
       <pubDate>Mon, 08 Aug 2022 23:37:05 +0800</pubDate>
       
-      <guid>https://webberwu7.github.io/WebberWuBlog/posts/make-a-hugo-blog-2/</guid>
+      <guid>https://webberwu7.github.io/WebberWuBlog/posts/20220808-make-a-hugo-blog-2/</guid>
       <description>文章參數配置 相信大家在創建文章時都會看的這樣的文字在最前方
 --- title: &amp;#34;菜雞部落客的hugo踩雷之路 ( 3 ) - 優化網站&amp;#34; date: 2022-08-06T23:37:05+08:00 draft: true --- 這是hugo提供給使用者編輯page頁面時可設定的參數區
 [REF: https://gohugo.io/variables/page/#page-level-params]
@@ -76,10 +76,10 @@ content └── blog &amp;lt;-- Section, 在content下面第一層的資料夾
     
     <item>
       <title>菜雞部落客的hugo踩雷之路 ( 2 ) - 部署到github上的靜態網站</title>
-      <link>https://webberwu7.github.io/WebberWuBlog/posts/make-a-hugo-blog-1/</link>
+      <link>https://webberwu7.github.io/WebberWuBlog/posts/20220806-make-a-hugo-blog-1/</link>
       <pubDate>Sat, 06 Aug 2022 13:50:36 +0800</pubDate>
       
-      <guid>https://webberwu7.github.io/WebberWuBlog/posts/make-a-hugo-blog-1/</guid>
+      <guid>https://webberwu7.github.io/WebberWuBlog/posts/20220806-make-a-hugo-blog-1/</guid>
       <description>靜態網站 所謂靜態網頁，便是指超文件標示語言HyperText Markup Language，簡稱：HTML。是一種常與CSS及Javascript配合製作的網站建置基礎技術，網頁以純文字或圖片形式為主，內容固定、互動性差，且無後台資料庫。一般來說只要是網頁副檔名為html或htm，皆可辦定為靜態網頁。因爲靜態網頁的穩定性和無需連接資料庫，因此能快速開啟頁面，也更容易被搜索引擎檢索，所以許多人在編寫網頁時會將動態網頁、影像、動畫等轉變成靜態方式，就是所謂的“偽靜態網頁”，來提高搜尋引擎的友善度進而達到排名優化。
 [REF: 上網查到的說明]
 GitHub Pages https://pages.github.com/
@@ -98,10 +98,10 @@ git add --all git commit -m &amp;#34;init hugo blog&amp;#34; git push origin mas
     
     <item>
       <title>菜雞部落客的hugo踩雷之路 ( 1 ) - 建立hugo專案與新增文章</title>
-      <link>https://webberwu7.github.io/WebberWuBlog/posts/make-a-hugo-blog/</link>
+      <link>https://webberwu7.github.io/WebberWuBlog/posts/20220806-make-a-hugo-blog/</link>
       <pubDate>Sat, 06 Aug 2022 11:56:21 +0800</pubDate>
       
-      <guid>https://webberwu7.github.io/WebberWuBlog/posts/make-a-hugo-blog/</guid>
+      <guid>https://webberwu7.github.io/WebberWuBlog/posts/20220806-make-a-hugo-blog/</guid>
       <description>什麼是 Hugo Hugo 是一個用 Go 編寫的靜態網站生成器，2013由 Steve Francia 原創，自 v0.14 (2015年) 由 Bjørn Erik Pedersen 主力開發[2]，並由全球各地的開發者和使用者提交貢獻。Hugo 以 Apache License 2.0 授權的開放原始碼專案。[3] Hugo 一般只需幾秒鐘就能生成一個網站（每頁少於 1 毫秒），被稱為「世界上最快的網站構建框架」，也使 Hugo 大受歡迎，成為最熱門的靜態網站生成器之一，被廣泛採用。 [REF: wiki]
 所以如果我們的網站類型是靜態網站的話，非常推薦使用hugo來建置
 1. 安裝Hugo 我這裡用的環境是 mac 且使用brew套件管理工具

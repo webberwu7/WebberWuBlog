@@ -9,10 +9,10 @@
     <lastBuildDate>Sat, 13 Aug 2022 16:15:34 +0800</lastBuildDate><atom:link href="https://webberwu7.github.io/WebberWuBlog/tags/laravel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Laravel 升級之路 - 踩雷筆記</title>
-      <link>https://webberwu7.github.io/WebberWuBlog/posts/laravel-upgrade-note/</link>
+      <link>https://webberwu7.github.io/WebberWuBlog/posts/20220813-laravel-upgrade-note/</link>
       <pubDate>Sat, 13 Aug 2022 16:15:34 +0800</pubDate>
       
-      <guid>https://webberwu7.github.io/WebberWuBlog/posts/laravel-upgrade-note/</guid>
+      <guid>https://webberwu7.github.io/WebberWuBlog/posts/20220813-laravel-upgrade-note/</guid>
       <description>Laravel 升級之路 隨著laravel版本推陳出新
 php 8 也已經於2020年末推出了
 之前專案使用的 laravel lts版本是 laravel 6 將在2022.09邁入不再維護的日期

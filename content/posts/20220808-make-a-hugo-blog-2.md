@@ -114,7 +114,7 @@ hugo 提供我們設計layout模板渲染生成靜態html檔
 
 (不專業前端知識如有錯誤，請不要吝嗇告知修正)
 
-所以我們可以看一下 [踩雷之路 (1)]({{< ref "/posts/make-a-hugo-blog" >}}) 所使用的theme是怎麼寫的吧！
+所以我們可以看一下 [踩雷之路 (1)]({{< ref "/posts/20220806-make-a-hugo-blog" >}}) 所使用的theme是怎麼寫的吧！
 
 首先先來看這個檔案 `m10c/layouts/_default/list.html`
 

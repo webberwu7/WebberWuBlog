@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="zh-tw">
+  <head>
+    <title>菜雞部落客的hugo踩雷之路 ( 3 ) - Content 與 layout 的愛恨情仇 // webber 筆記本</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="webber" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://webberwu7.github.io/WebberWuBlog/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="菜雞部落客的hugo踩雷之路 ( 3 ) - Content 與 layout 的愛恨情仇"/>
+<meta name="twitter:description" content="文章參數配置 相信大家在創建文章時都會看的這樣的文字在最前方
+--- title: &#34;菜雞部落客的hugo踩雷之路 ( 3 ) - 優化網站&#34; date: 2022-08-06T23:37:05&#43;08:00 draft: true --- 這是hugo提供給使用者編輯page頁面時可設定的參數區
+[REF: https://gohugo.io/variables/page/#page-level-params]
+目前的理解是，這些參數可以自定義加入進去，然後看layout有沒有支援
+那我們就先加入常見主題都支援的 tags 吧！
+tags: [&#39;hugo&#39;] 就會看到文章中出現 tags 囉！ Content Organization hugo的 content有自己一套的組織規則
+Content Sections 首先先來認識 Content Sections
+[REF: Content Sections]
+section有兩個定義 在content下面第一層的資料夾
+資料夾裡面有 _index.md
+參考下方結構圖
+content └── blog &lt;-- Section, 在content下面第一層的資料夾/ ├── funny-cats │ ├── mypost.md │ └── kittens &lt;-- Section, 因為這個資料夾裡面有 _index.md │ └── _index.md └── tech &lt;-- Section, 因為這個資料夾裡面有 _index."/>
+
+    <meta property="og:title" content="菜雞部落客的hugo踩雷之路 ( 3 ) - Content 與 layout 的愛恨情仇" />
+<meta property="og:description" content="文章參數配置 相信大家在創建文章時都會看的這樣的文字在最前方
+--- title: &#34;菜雞部落客的hugo踩雷之路 ( 3 ) - 優化網站&#34; date: 2022-08-06T23:37:05&#43;08:00 draft: true --- 這是hugo提供給使用者編輯page頁面時可設定的參數區
+[REF: https://gohugo.io/variables/page/#page-level-params]
+目前的理解是，這些參數可以自定義加入進去，然後看layout有沒有支援
+那我們就先加入常見主題都支援的 tags 吧！
+tags: [&#39;hugo&#39;] 就會看到文章中出現 tags 囉！ Content Organization hugo的 content有自己一套的組織規則
+Content Sections 首先先來認識 Content Sections
+[REF: Content Sections]
+section有兩個定義 在content下面第一層的資料夾
+資料夾裡面有 _index.md
+參考下方結構圖
+content └── blog &lt;-- Section, 在content下面第一層的資料夾/ ├── funny-cats │ ├── mypost.md │ └── kittens &lt;-- Section, 因為這個資料夾裡面有 _index.md │ └── _index.md └── tech &lt;-- Section, 因為這個資料夾裡面有 _index." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://webberwu7.github.io/WebberWuBlog/posts/20220808-make-a-hugo-blog-2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-08T23:37:05+08:00" />
+<meta property="article:modified_time" content="2022-08-08T23:37:05+08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://webberwu7.github.io/WebberWuBlog"><img class="app-header-avatar" src="/WebberWuBlog/images/avatar.jpg" alt="webber" /></a>
+      <h1>webber 筆記本</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/WebberWuBlog/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/WebberWuBlog/tags/">Tags</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/WebberWuBlog/about/">About</a>
+      </nav>
+      <p>目前是一名後端工程師</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/webberwu7" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>My Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">菜雞部落客的hugo踩雷之路 ( 3 ) - Content 與 layout 的愛恨情仇</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Aug 8, 2022
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://webberwu7.github.io/WebberWuBlog/tags/hugo/">hugo</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h1 id="文章參數配置">文章參數配置</h1>
+<p>相信大家在創建文章時都會看的這樣的文字在最前方</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: &#34;菜雞部落客的hugo踩雷之路 ( 3 ) - 優化網站&#34;
+</span></span><span style="display:flex;"><span>date: 2022-08-06T23:37:05+08:00
+</span></span><span style="display:flex;"><span>draft: true
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><p>這是hugo提供給使用者編輯page頁面時可設定的參數區</p>
+<p>[REF: <a href="https://gohugo.io/variables/page/#page-level-params">https://gohugo.io/variables/page/#page-level-params</a>]</p>
+<p>目前的理解是，這些參數可以自定義加入進去，然後看layout有沒有支援</p>
+<p>那我們就先加入常見主題都支援的 <code>tags</code> 吧！</p>
+<pre tabindex="0"><code>tags: [&#39;hugo&#39;]
+</code></pre><p>就會看到文章中出現 tags 囉！
+<img src="https://i.imgur.com/9fKI8O5.png" alt="image"></p>
+<h1 id="content-organization">Content Organization</h1>
+<p>hugo的 content有自己一套的組織規則</p>
+<h2 id="content-sections">Content Sections</h2>
+<p>首先先來認識 Content Sections</p>
+<p>[REF: <a href="https://gohugo.io/content-management/sections/">Content Sections</a>]</p>
+<h3 id="section有兩個定義">section有兩個定義</h3>
+<ol>
+<li>
+<p>在content下面第一層的資料夾</p>
+</li>
+<li>
+<p>資料夾裡面有 _index.md</p>
+</li>
+</ol>
+<p>參考下方結構圖</p>
+<pre tabindex="0"><code>content
+└── blog        &lt;-- Section, 在content下面第一層的資料夾/
+    ├── funny-cats
+    │   ├── mypost.md
+    │   └── kittens         &lt;-- Section, 因為這個資料夾裡面有 _index.md
+    │       └── _index.md
+    └── tech                &lt;-- Section, 因為這個資料夾裡面有 _index.md
+        └── _index.md
+</code></pre><h3 id="section-特色">section 特色</h3>
+<ul>
+<li>
+<p>hugo 會自動幫你把content下第一層 section 套用 list的模板</p>
+</li>
+<li>
+<p>Content Section vs Content Type</p>
+<p>使用section後hugo會自動把文章的section當成他預設的 content type</p>
+<p>例如說下方結構圖中</p>
+<p>post-1的content type就是 post</p>
+<pre tabindex="0"><code>content
+└── post        &lt;-- Section, 在content下面第一層的資料夾/
+    └── post-1.md 
+</code></pre></li>
+<li>
+<p>Section with Archetypes</p>
+<p>section 特性可以搭派 hugo archetypes 使在特定section中建立的文章</p>
+<p>可以自動對照到相對應的文章樣板</p>
+<p>例如下方結構圖中，在archetypes中建立post資料夾與底下的default.md</p>
+<p>如此一來當你在post section建立文章時，他就會自動帶入該樣板了</p>
+<pre tabindex="0"><code>archetypes
+└── post
+    └── default.md
+</code></pre></li>
+</ul>
+<h2 id="content-type">Content Type</h2>
+<p>在 section 有提到會依據 section 自動設定文章 type</p>
+<p>那如果這篇文章沒有沒有辦法自動帶入，也沒有手動設定的時候</p>
+<p>會有個預設值= page</p>
+<pre tabindex="0"><code>content
+└── post     
+│   └── post-1.md
+└── about.md    &lt;-- 在content下，但沒有被放進任何資料夾中 (且文章中也沒有設定type)
+</code></pre><h1 id="layout設計">Layout設計</h1>
+<p>上面講了content的一些資訊究竟是要拿來做什麼的呢？</p>
+<p>這就要講到hugo layout</p>
+<p>hugo 提供我們設計layout模板渲染生成靜態html檔</p>
+<p>我們可以在layout中使用剛剛提到的 section 作為參數帶入 layout中</p>
+<p>(這邊我的理解是類似使用php blade寫網頁時在html帶入程式碼和參數，之後一次性產生靜態html檔)</p>
+<p>(不專業前端知識如有錯誤，請不要吝嗇告知修正)</p>
+<p>所以我們可以看一下 <a href="https://webberwu7.github.io/WebberWuBlog/posts/20220806-make-a-hugo-blog/">踩雷之路 (1)</a> 所使用的theme是怎麼寫的吧！</p>
+<p>首先先來看這個檔案 <code>m10c/layouts/_default/list.html</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ define &#34;main&#34; }}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h1</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;posts-list&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      {{ range where .Paginator.Pages &#34;Type&#34; &#34;!=&#34; &#34;page&#34; }}
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;posts-list-item&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;posts-list-item-title&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>          &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;posts-list-item-description&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            {{ partial &#34;icon.html&#34; (dict &#34;ctx&#34; $ &#34;name&#34; &#34;calendar&#34;) }}
+</span></span><span style="display:flex;"><span>            {{ .PublishDate.Format &#34;Jan 2, 2006&#34; }}
+</span></span><span style="display:flex;"><span>            -
+</span></span><span style="display:flex;"><span>            {{ partial &#34;icon.html&#34; (dict &#34;ctx&#34; $ &#34;name&#34; &#34;clock&#34;) }}
+</span></span><span style="display:flex;"><span>            {{ .ReadingTime }} min read
+</span></span><span style="display:flex;"><span>          &lt;/<span style="color:#f92672">span</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>      {{ end }}
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>    {{ partial &#34;pagination.html&#34; $ }}
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><p>這份list.html中 <code>{{ range where .Paginator.Pages &quot;Type&quot; &quot;!=&quot; &quot;page&quot; }}</code></p>
+<p>將所有 type != page 的文章做一個foreach的迴圈</p>
+<p>回到首頁 或是<code>/posts</code>頁就能看到文章列囉</p>
+<p><img src="https://imgur.com/YbxzTlO.png" alt="image"></p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
