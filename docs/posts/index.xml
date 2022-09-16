@@ -6,7 +6,26 @@
     <description>Recent content in Posts on webber 筆記本</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Thu, 18 Aug 2022 00:05:39 +0800</lastBuildDate><atom:link href="https://webberwu7.github.io/WebberWuBlog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Sep 2022 23:38:14 +0800</lastBuildDate><atom:link href="https://webberwu7.github.io/WebberWuBlog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>wordpress 插件開發筆記 (1) - 第一個插件</title>
+      <link>https://webberwu7.github.io/WebberWuBlog/posts/202220915-develop-wordpress-plugin/</link>
+      <pubDate>Thu, 15 Sep 2022 23:38:14 +0800</pubDate>
+      
+      <guid>https://webberwu7.github.io/WebberWuBlog/posts/202220915-develop-wordpress-plugin/</guid>
+      <description>1. 基本結構 建立一個資料夾
+並在裡面新增一個與資料夾同名的.php檔
+做為插件的進入點
+my-plugin └── my-plugin.php 在my-plugin.php加上插件的註解後
+wordpress就能讀到該插件了
+&amp;lt;?php /** * my-plugin * * Plugin Name: my-plugin * Description: 學習開發wordpress插件 * Version: 0.1 * Author: webber.wu */ 2. 使用autoload與namespace 隨著程式的開發未來檔案數量會越來越多
+開發引用其他php就需要一堆require
+又可能會遇到撞名的狀況
+因此namespace與autoload的搭配就能讓code變成漂亮許多
+資料夾中新增autoload.php
+&amp;lt;?php spl_autoload_register(function ($class) { $prefix = &amp;#39;MyPlugin&amp;#39;; $base_dir = __DIR__ . &amp;#39;/app/&amp;#39;; $len = strlen($prefix); if (strncmp($prefix, $class, $len) !== 0) { // no, move to the next registered autoloader return; } // get the relative class name $relative_class = substr($class, $len); // replace the namespace prefix with the base directory, replace namespace // separators with directory separators in the relative class name, append // with .</description>
+    </item>
+    
     <item>
       <title>Python - Bigquery 筆記</title>
       <link>https://webberwu7.github.io/WebberWuBlog/posts/20220818-python-bigquery/</link>

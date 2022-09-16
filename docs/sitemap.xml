@@ -2,22 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://webberwu7.github.io/WebberWuBlog/tags/bigquery/</loc>
-    <lastmod>2022-08-18T00:05:39+08:00</lastmod>
+    <loc>https://webberwu7.github.io/WebberWuBlog/tags/php/</loc>
+    <lastmod>2022-09-15T23:38:14+08:00</lastmod>
+  </url><url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/tags/plugin/</loc>
+    <lastmod>2022-09-15T23:38:14+08:00</lastmod>
   </url><url>
     <loc>https://webberwu7.github.io/WebberWuBlog/posts/</loc>
+    <lastmod>2022-09-15T23:38:14+08:00</lastmod>
+  </url><url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/tags/</loc>
+    <lastmod>2022-09-15T23:38:14+08:00</lastmod>
+  </url><url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/</loc>
+    <lastmod>2022-09-15T23:38:14+08:00</lastmod>
+  </url><url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/tags/wordpress/</loc>
+    <lastmod>2022-09-15T23:38:14+08:00</lastmod>
+  </url><url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/posts/202220915-develop-wordpress-plugin/</loc>
+    <lastmod>2022-09-15T23:38:14+08:00</lastmod>
+  </url><url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/tags/bigquery/</loc>
     <lastmod>2022-08-18T00:05:39+08:00</lastmod>
   </url><url>
     <loc>https://webberwu7.github.io/WebberWuBlog/tags/python/</loc>
     <lastmod>2022-08-18T00:05:39+08:00</lastmod>
   </url><url>
     <loc>https://webberwu7.github.io/WebberWuBlog/posts/20220818-python-bigquery/</loc>
-    <lastmod>2022-08-18T00:05:39+08:00</lastmod>
-  </url><url>
-    <loc>https://webberwu7.github.io/WebberWuBlog/tags/</loc>
-    <lastmod>2022-08-18T00:05:39+08:00</lastmod>
-  </url><url>
-    <loc>https://webberwu7.github.io/WebberWuBlog/</loc>
     <lastmod>2022-08-18T00:05:39+08:00</lastmod>
   </url><url>
     <loc>https://webberwu7.github.io/WebberWuBlog/tags/hugo/</loc>
@@ -30,9 +42,6 @@
     <lastmod>2022-08-13T16:15:34+08:00</lastmod>
   </url><url>
     <loc>https://webberwu7.github.io/WebberWuBlog/posts/20220813-laravel-upgrade-note/</loc>
-    <lastmod>2022-08-13T16:15:34+08:00</lastmod>
-  </url><url>
-    <loc>https://webberwu7.github.io/WebberWuBlog/tags/php/</loc>
     <lastmod>2022-08-13T16:15:34+08:00</lastmod>
   </url><url>
     <loc>https://webberwu7.github.io/WebberWuBlog/posts/20220808-make-a-hugo-blog-2/</loc>

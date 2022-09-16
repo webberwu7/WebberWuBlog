@@ -6,7 +6,34 @@
     <description>Recent content in Tags on webber 筆記本</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Thu, 18 Aug 2022 00:05:39 +0800</lastBuildDate><atom:link href="https://webberwu7.github.io/WebberWuBlog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Sep 2022 23:38:14 +0800</lastBuildDate><atom:link href="https://webberwu7.github.io/WebberWuBlog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>php</title>
+      <link>https://webberwu7.github.io/WebberWuBlog/tags/php/</link>
+      <pubDate>Thu, 15 Sep 2022 23:38:14 +0800</pubDate>
+      
+      <guid>https://webberwu7.github.io/WebberWuBlog/tags/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>plugin</title>
+      <link>https://webberwu7.github.io/WebberWuBlog/tags/plugin/</link>
+      <pubDate>Thu, 15 Sep 2022 23:38:14 +0800</pubDate>
+      
+      <guid>https://webberwu7.github.io/WebberWuBlog/tags/plugin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wordpress</title>
+      <link>https://webberwu7.github.io/WebberWuBlog/tags/wordpress/</link>
+      <pubDate>Thu, 15 Sep 2022 23:38:14 +0800</pubDate>
+      
+      <guid>https://webberwu7.github.io/WebberWuBlog/tags/wordpress/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>bigquery</title>
       <link>https://webberwu7.github.io/WebberWuBlog/tags/bigquery/</link>
@@ -40,15 +67,6 @@
       <pubDate>Sat, 13 Aug 2022 16:15:34 +0800</pubDate>
       
       <guid>https://webberwu7.github.io/WebberWuBlog/tags/laravel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>php</title>
-      <link>https://webberwu7.github.io/WebberWuBlog/tags/php/</link>
-      <pubDate>Sat, 13 Aug 2022 16:15:34 +0800</pubDate>
-      
-      <guid>https://webberwu7.github.io/WebberWuBlog/tags/php/</guid>
       <description></description>
     </item>
     
