@@ -11,6 +11,7 @@ paginate = 10
     author = 'webber'
     avatar = "images/avatar.jpg"
     description = '目前是一名後端工程師'
+    favicon = 'favicon.png'
 
 [menu]
   [[menu.main]]

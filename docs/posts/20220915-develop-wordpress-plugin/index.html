@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="zh-tw">
+  <head>
+    <title>wordpress 插件開發筆記 (1) - 第一個插件 // webber 筆記本</title>
+    <link rel="shortcut icon" href="favicon.png" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="webber" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://webberwu7.github.io/WebberWuBlog/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="wordpress 插件開發筆記 (1) - 第一個插件"/>
+<meta name="twitter:description" content="1. 基本結構 建立一個資料夾
+並在裡面新增一個與資料夾同名的.php檔
+做為插件的進入點
+my-plugin └── my-plugin.php 在my-plugin.php加上插件的註解後
+wordpress就能讀到該插件了
+&lt;?php /** * my-plugin * * Plugin Name: my-plugin * Description: 學習開發wordpress插件 * Version: 0.1 * Author: webber.wu */ 2. 使用autoload與namespace 隨著程式的開發未來檔案數量會越來越多
+開發引用其他php就需要一堆require
+又可能會遇到撞名的狀況
+因此namespace與autoload的搭配就能讓code變成漂亮許多
+資料夾中新增autoload.php
+&lt;?php spl_autoload_register(function ($class) { $prefix = &#39;MyPlugin&#39;; $base_dir = __DIR__ . &#39;/app/&#39;; $len = strlen($prefix); if (strncmp($prefix, $class, $len) !== 0) { // no, move to the next registered autoloader return; } // get the relative class name $relative_class = substr($class, $len); // replace the namespace prefix with the base directory, replace namespace // separators with directory separators in the relative class name, append // with ."/>
+
+    <meta property="og:title" content="wordpress 插件開發筆記 (1) - 第一個插件" />
+<meta property="og:description" content="1. 基本結構 建立一個資料夾
+並在裡面新增一個與資料夾同名的.php檔
+做為插件的進入點
+my-plugin └── my-plugin.php 在my-plugin.php加上插件的註解後
+wordpress就能讀到該插件了
+&lt;?php /** * my-plugin * * Plugin Name: my-plugin * Description: 學習開發wordpress插件 * Version: 0.1 * Author: webber.wu */ 2. 使用autoload與namespace 隨著程式的開發未來檔案數量會越來越多
+開發引用其他php就需要一堆require
+又可能會遇到撞名的狀況
+因此namespace與autoload的搭配就能讓code變成漂亮許多
+資料夾中新增autoload.php
+&lt;?php spl_autoload_register(function ($class) { $prefix = &#39;MyPlugin&#39;; $base_dir = __DIR__ . &#39;/app/&#39;; $len = strlen($prefix); if (strncmp($prefix, $class, $len) !== 0) { // no, move to the next registered autoloader return; } // get the relative class name $relative_class = substr($class, $len); // replace the namespace prefix with the base directory, replace namespace // separators with directory separators in the relative class name, append // with ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://webberwu7.github.io/WebberWuBlog/posts/20220915-develop-wordpress-plugin/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-15T23:38:14+08:00" />
+<meta property="article:modified_time" content="2022-09-15T23:38:14+08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://webberwu7.github.io/WebberWuBlog"><img class="app-header-avatar" src="/WebberWuBlog/images/avatar.jpg" alt="webber" /></a>
+      <h1>webber 筆記本</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/WebberWuBlog/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/WebberWuBlog/tags/">Tags</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/WebberWuBlog/about/">About</a>
+      </nav>
+      <p>目前是一名後端工程師</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/webberwu7" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>My Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">wordpress 插件開發筆記 (1) - 第一個插件</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Sep 15, 2022
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://webberwu7.github.io/WebberWuBlog/tags/php/">php</a>
+              <a class="tag" href="https://webberwu7.github.io/WebberWuBlog/tags/wordpress/">wordpress</a>
+              <a class="tag" href="https://webberwu7.github.io/WebberWuBlog/tags/plugin/">plugin</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h2 id="1-基本結構">1. 基本結構</h2>
+<p>建立一個資料夾</p>
+<p>並在裡面新增一個與資料夾同名的.php檔</p>
+<p>做為插件的進入點</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>my-plugin
+</span></span><span style="display:flex;"><span>└── my-plugin.php
+</span></span></code></pre></div><p>在my-plugin.php加上插件的註解後</p>
+<p>wordpress就能讀到該插件了</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> * my-plugin
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> * 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> * Plugin Name: my-plugin
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> * Description: 學習開發wordpress插件
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> * Version:     0.1
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> * Author:      webber.wu
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> */</span>
+</span></span></code></pre></div><p><img src="https://i.imgur.com/cpq1ZxR.png" alt=""></p>
+<h2 id="2-使用autoload與namespace">2. 使用autoload與namespace</h2>
+<p>隨著程式的開發未來檔案數量會越來越多</p>
+<p>開發引用其他php就需要一堆require</p>
+<p>又可能會遇到撞名的狀況</p>
+<p>因此namespace與autoload的搭配就能讓code變成漂亮許多</p>
+<ol>
+<li>
+<p>資料夾中新增autoload.php</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">spl_autoload_register</span>(<span style="color:#66d9ef">function</span> ($class) {
+</span></span><span style="display:flex;"><span>    $prefix <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;MyPlugin&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    $base_dir <span style="color:#f92672">=</span> <span style="color:#66d9ef">__DIR__</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;/app/&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    $len <span style="color:#f92672">=</span> <span style="color:#a6e22e">strlen</span>($prefix);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">strncmp</span>($prefix, $class, $len) <span style="color:#f92672">!==</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// no, move to the next registered autoloader
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// get the relative class name
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    $relative_class <span style="color:#f92672">=</span> <span style="color:#a6e22e">substr</span>($class, $len);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// replace the namespace prefix with the base directory, replace namespace
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// separators with directory separators in the relative class name, append
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// with .php
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    $file <span style="color:#f92672">=</span> $base_dir <span style="color:#f92672">.</span> <span style="color:#a6e22e">str_replace</span>(<span style="color:#e6db74">&#39;\\&#39;</span>, <span style="color:#e6db74">&#39;/&#39;</span>, $relative_class) <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;.php&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// if the file exists, require it
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">file_exists</span>($file)) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">require_once</span> $file;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><ul>
+<li>第4行 <code>$prefix = 'MyPlugin';</code>
+代表這個專案使用的前綴名稱是什麼</li>
+<li>第6行 <code>$base_dir = __DIR__ . '/app/';</code>
+代表要autoload讀取的資料夾</li>
+</ul>
+</li>
+<li>
+<p>回到my-plugin.php 加上require</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75715e">// autoload class object
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">require</span> <span style="color:#66d9ef">__DIR__</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;/autoload.php&#34;</span>;
+</span></span></code></pre></div></li>
+</ol>
+<h4 id="目前資料夾結構">目前資料夾結構</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>my-plugin
+</span></span><span style="display:flex;"><span>├── autoload.php
+</span></span><span style="display:flex;"><span>└── my-plugin.php
+</span></span></code></pre></div><h2 id="3-在app資料夾中新增插件類別">3. 在app資料夾中新增插件類別</h2>
+<p>由於上面autoload寫我們要讀取app資料夾中的物件</p>
+<p>所以我們需要在插件資料夾中新增app資料夾</p>
+<p>並在app資料夾中新增MyPlugin.php</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">MyPlugin</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyPlugin</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">plugin_init</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="目前資料夾結構-1">目前資料夾結構</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>my-plugin
+</span></span><span style="display:flex;"><span>├── app
+</span></span><span style="display:flex;"><span>│    └── MyPlugin.php
+</span></span><span style="display:flex;"><span>├── autoload.php
+</span></span><span style="display:flex;"><span>└── my-plugin.php
+</span></span></code></pre></div><h2 id="4-回到wordpress-plugin寫下初始化物件">4. 回到wordpress plugin寫下初始化物件</h2>
+<p>使用wordpress hook : plugins_loaded</p>
+<p>作為觸發初始化插件的進入點</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">MyPlugin\MyPlugin</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 讀取這個插件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">add_action</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;plugins_loaded&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>        $plugin <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">MyPlugin</span>();
+</span></span><span style="display:flex;"><span>        $plugin<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">plugin_init</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> $plugin;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><h2 id="5-建立後台選單">5. 建立後台選單</h2>
+<p>接下來我們使用mvc的設計來切分每個功能的物件</p>
+<ol>
+<li>新增一個Controllers資料夾並且在裡面加上AdminPageController
+負責管理後台頁面的事件
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">MyPlugin\Controllers</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AdminPageController</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">add_action</span>(<span style="color:#e6db74">&#39;admin_menu&#39;</span>, <span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 建立選單
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#a6e22e">add_menu_page</span>(
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;我的插件&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;我的插件&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;manage_options&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;my-plugin-options&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;dashicons-email-alt&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#ae81ff">99</span>
+</span></span><span style="display:flex;"><span>            );
+</span></span><span style="display:flex;"><span>        });
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>回到MyPlugin.php中將controller引入
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">MyPlugin\Controllers\AdminPageController</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyPlugin</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> $adminPageController;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">adminPageController</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">AdminPageController</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">plugin_init</span>()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ol>
+<p>登入wordpress後台將外掛啟用</p>
+<p>我的插件按鈕就出現了!!</p>
+<p><img src="https://i.imgur.com/LilUBLO.png" alt=""></p>
+<h3 id="介紹一下-wp-的-add_menu_page-函式的細節">介紹一下 wp 的 add_menu_page 函式的細節</h3>
+<p><a href="https://developer.wordpress.org/reference/functions/add_menu_page/">https://developer.wordpress.org/reference/functions/add_menu_page/</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">add_menu_page</span>( 
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">string</span> $page_title,        <span style="color:#75715e">// 點進該頁面所顯示的標題
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">string</span> $menu_title,        <span style="color:#75715e">// 在選單目錄所顯示的標題
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">string</span> $capability,        <span style="color:#75715e">// wp權限需求
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">string</span> $menu_slug,         <span style="color:#75715e">// wp目錄的客製化網址設定 http://{你的網站}/wp-admin/{menu_slug}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">callable</span> $callback <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>,   <span style="color:#75715e">// 點擊後觸發的callback
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">string</span> $icon_url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>,     <span style="color:#75715e">// 顯示在目錄上的icon
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">int</span><span style="color:#f92672">|</span><span style="color:#a6e22e">float</span> $position <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span> <span style="color:#75715e">// 目錄的座標位置參考上方連結詳細說明
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">add_menu_page</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;我的插件&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;我的插件&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;manage_options&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;my-plugin-options&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;dashicons-email-alt&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">99</span>
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><h4 id="目前資料夾結構-2">目前資料夾結構</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>my-plugin
+</span></span><span style="display:flex;"><span>├── app
+</span></span><span style="display:flex;"><span>│   ├── Controllers
+</span></span><span style="display:flex;"><span>│   │   └── AdminPageController.php
+</span></span><span style="display:flex;"><span>│   └── MyPlugin.php
+</span></span><span style="display:flex;"><span>├── autoload.php
+</span></span><span style="display:flex;"><span>└── my-plugin.php
+</span></span></code></pre></div><h2 id="6-定義方便使用的絕對路徑與網址">6. 定義方便使用的絕對路徑與網址</h2>
+<p>在my-plugin.php中加上define</p>
+<p>這邊定義了插件的絕對網址與插件的絕對路徑</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75715e">// define absolute url
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">defined</span>(<span style="color:#e6db74">&#39;MY_PLUGIN_ABS_PLUGIN_URL&#39;</span>) <span style="color:#f92672">||</span> <span style="color:#a6e22e">define</span>(<span style="color:#e6db74">&#39;MY_PLUGIN_ABS_PLUGIN_URL&#39;</span>, <span style="color:#a6e22e">plugin_dir_url</span>(<span style="color:#66d9ef">__FILE__</span>));
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">defined</span>(<span style="color:#e6db74">&#39;MY_PLUGIN_ABS_PLUGIN_PATH&#39;</span>) <span style="color:#f92672">||</span> <span style="color:#a6e22e">define</span>(<span style="color:#e6db74">&#39;MY_PLUGIN_ABS_PLUGIN_PATH&#39;</span>, <span style="color:#a6e22e">plugin_dir_path</span>(<span style="color:#66d9ef">__FILE__</span>));
+</span></span></code></pre></div><h2 id="7-後台插件畫面">7. 後台插件畫面</h2>
+<p>有了目錄按鈕後直接點下去會出現404查無此頁</p>
+<p>因此我們現在要在這個按鈕加上callback</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">add_action</span>(<span style="color:#e6db74">&#39;admin_menu&#39;</span>, <span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 建立主選單
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">add_menu_page</span>(
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;我的插件&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;我的插件&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;manage_options&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;my-plugin-options&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>            $myPluginPagePath <span style="color:#f92672">=</span> <span style="color:#a6e22e">MY_PLUGIN_ABS_PLUGIN_PATH</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;public/admin/my-plugin-admin-page.php&#34;</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">load_template</span>($myPluginPagePath);
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;dashicons-email-alt&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">99</span>
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>callback的function使用load_template的方式前後端分離</p>
+<p>可以使前端專心編寫指定路徑上的檔案即可</p>
+<p>不會讓controller中混雜 html js 等程式</p>
+<p>透過上方的code可以看到需要讀取<code>插件資料夾/public/admin</code> 中的 <code>my-plugin-admin-page.php</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h1</span>&gt;MY PLUGIN PAGE&lt;<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h1</span>&gt;hello world!!&lt;<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><p><img src="https://i.imgur.com/ihEdrDI.png" alt=""></p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
