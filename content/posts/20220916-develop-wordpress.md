@@ -2,7 +2,6 @@
 title: "Wordpress 開發環境"
 date: 2022-09-16T11:25:16+08:00
 tags: ['wordpress', 'docker']
-draft: true
 ---
 # Wordpress 
 
@@ -39,8 +38,6 @@ version: '3.3'
 services:
   db:
     image: mysql:5.7
-    volumes:
-      - ./db/data/mysql:/var/lib/mysql
     restart: always
     environment:
       - MYSQL_DATABASE=wordpress-example
@@ -50,6 +47,8 @@ services:
       - TZ=UTC
     ports:
       - 33060:3306
+    volumes:
+      - ./.db/data/mysql:/var/lib/mysql
 
   wordpress:
     depends_on:
@@ -64,7 +63,7 @@ services:
       WORDPRESS_DB_USER: wpExampleUser
       WORDPRESS_DB_PASSWORD: KhcwtBvD5ygAu
     volumes:
-      - ./wordpress:/var/www/html
+      - ./.wordpress:/var/www/html
 ```
 
 寫好docker-compose後下指令啟動 
@@ -87,11 +86,11 @@ docker-compose up
 
 所以可以將docker容器中的位置對照出來外面
 
-設定是放在目前位置下的 wordpress 資料夾中
+設定是放在目前位置下的 .wordpress 資料夾中
 
 ```yaml
     volumes:
-      - ./wordpress:/var/www/html
+      - ./.wordpress:/var/www/html
 ```
 
 目前的資料夾結構
@@ -143,3 +142,49 @@ wordpress 的插件會安裝在 wp-content -> plugins 中
 就可以看到wordpress的插件列表中出現我們自行開發的插件了
 
 ![image](https://imgur.com/DyS7djk.png)
+
+
+## WP-CLI
+WP-CLI是 WordPress 的官方命令行界面。
+它可以讓你從終端機的介面下指令來快速管理 WordPress網站 、網站主題、網站插件等等。
+這通常是當你 WordPress網站設計 玩到一定的程度之後會開始摸索研究的軟體，讓你晉升高級 WordPress網頁設計師，更便捷快速的管理你的 WordPress網站。
+
+REF: https://raise-up.com.tw/wordpress-tutorial/wp-cli-introduction.html/
+
+
+可是使用了 docker-compose 要如何自動執行wp-cli呢？
+
+因此要在 `docker-compose.yaml` 中加入 wordpress-cli 的服務去執行他
+
+```yaml
+  wordpress-cli:
+    depends_on:
+      - db
+      - wordpress
+    user: "33:33"
+    image: wordpress:cli
+    environment:
+      WORDPRESS_DB_NAME: wordpress-example
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wpExampleUser
+      WORDPRESS_DB_PASSWORD: KhcwtBvD5ygAu
+    command: >
+      /bin/sh -c '
+      sleep 10;
+      wp core install --path=/var/www/html \
+                      --url="http://localhost:8000" \
+                      --title="wordpress-example" \
+                      --admin_user=wpExampleUser \
+                      --admin_password=wpExampleUser \
+                      --admin_email=wp.example@example.com;
+      wp theme install colormag --activate --allow-root;
+      wp plugin install aryo-activity-log --activate --allow-root;
+      '
+    volumes:
+      - ./.wordpress:/var/www/html
+```
+
+這裡我簡單寫下兩個指令
+1. wp core install   : 安裝wordpress 並設定網址,標題和管理員等資料
+2. wp theme install  : 安裝wordpress主題
+3. wp plugin install : 安裝wordpress插件

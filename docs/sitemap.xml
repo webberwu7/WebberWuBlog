@@ -2,22 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/tags/docker/</loc>
+    <lastmod>2022-09-16T11:25:16+08:00</lastmod>
+  </url><url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/posts/</loc>
+    <lastmod>2022-09-16T11:25:16+08:00</lastmod>
+  </url><url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/tags/</loc>
+    <lastmod>2022-09-16T11:25:16+08:00</lastmod>
+  </url><url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/</loc>
+    <lastmod>2022-09-16T11:25:16+08:00</lastmod>
+  </url><url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/tags/wordpress/</loc>
+    <lastmod>2022-09-16T11:25:16+08:00</lastmod>
+  </url><url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/posts/20220916-develop-wordpress/</loc>
+    <lastmod>2022-09-16T11:25:16+08:00</lastmod>
+  </url><url>
     <loc>https://webberwu7.github.io/WebberWuBlog/tags/php/</loc>
     <lastmod>2022-09-15T23:38:14+08:00</lastmod>
   </url><url>
     <loc>https://webberwu7.github.io/WebberWuBlog/tags/plugin/</loc>
-    <lastmod>2022-09-15T23:38:14+08:00</lastmod>
-  </url><url>
-    <loc>https://webberwu7.github.io/WebberWuBlog/posts/</loc>
-    <lastmod>2022-09-15T23:38:14+08:00</lastmod>
-  </url><url>
-    <loc>https://webberwu7.github.io/WebberWuBlog/tags/</loc>
-    <lastmod>2022-09-15T23:38:14+08:00</lastmod>
-  </url><url>
-    <loc>https://webberwu7.github.io/WebberWuBlog/</loc>
-    <lastmod>2022-09-15T23:38:14+08:00</lastmod>
-  </url><url>
-    <loc>https://webberwu7.github.io/WebberWuBlog/tags/wordpress/</loc>
     <lastmod>2022-09-15T23:38:14+08:00</lastmod>
   </url><url>
     <loc>https://webberwu7.github.io/WebberWuBlog/posts/20220915-develop-wordpress-plugin/</loc>

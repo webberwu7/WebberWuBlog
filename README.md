@@ -21,3 +21,8 @@ hugo new posts/{title_name}.md
 ```shell
 hugo
 ```
+
+
+## TODO
+- [ ] theme change
+- [ ] icon bug

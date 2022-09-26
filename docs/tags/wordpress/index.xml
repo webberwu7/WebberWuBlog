@@ -6,7 +6,28 @@
     <description>Recent content in wordpress on webber 筆記本</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Thu, 15 Sep 2022 23:38:14 +0800</lastBuildDate><atom:link href="https://webberwu7.github.io/WebberWuBlog/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Sep 2022 11:25:16 +0800</lastBuildDate><atom:link href="https://webberwu7.github.io/WebberWuBlog/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wordpress 開發環境</title>
+      <link>https://webberwu7.github.io/WebberWuBlog/posts/20220916-develop-wordpress/</link>
+      <pubDate>Fri, 16 Sep 2022 11:25:16 +0800</pubDate>
+      
+      <guid>https://webberwu7.github.io/WebberWuBlog/posts/20220916-develop-wordpress/</guid>
+      <description>Wordpress WordPress是一個以PHP和MySQL為平台的自由開源的部落格軟體和內容管理系統
+WordPress具有外掛程式架構和模板系統
+方便使用者開發客製化功能外掛和精美的主題模板
+那麼如果要開發外掛或主題，就需要一個wordpress環境
+今天這篇會紀錄如何在 Mac 系統中使用 docker 建立一個地端的 wordpress
+使用 docker-compose 一次將需要的服務啟動 如上面所描述的 wordpress 是以 php 和 mysql 為平台建置而成的
+因此我們需要一個 mysql服務 和一個有php的網站建設
+mysql服務 使用官方提供的 mysql:5.7
+並且設定好連線的使用者帳號密碼與建立資料庫
+wordpress 服務 使用官方提供的 wordpress:6.0.0-php8.0-apache (REF: wordpress docker hub)
+未來如果 wordpress 要升級，可參考官方 tag 改成目標版本號
+php 版本目前使用 8.0 如果未來要升級，可參考官方 tag 改成目標版本號
+version: &amp;#39;3.3&amp;#39; services: db: image: mysql:5.7 restart: always environment: - MYSQL_DATABASE=wordpress-example - MYSQL_USER=wpExampleUser - MYSQL_PASSWORD=KhcwtBvD5ygAu - MYSQL_ROOT_PASSWORD=ybcM8Wrhr4MqX9ZpsWkQgdGH4NMghNcq - TZ=UTC ports: - 33060:3306 volumes: - .</description>
+    </item>
+    
     <item>
       <title>wordpress 插件開發筆記 (1) - 第一個插件</title>
       <link>https://webberwu7.github.io/WebberWuBlog/posts/20220915-develop-wordpress-plugin/</link>
