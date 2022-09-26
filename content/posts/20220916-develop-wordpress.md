@@ -15,6 +15,8 @@ WordPress具有外掛程式架構和模板系統
 
 今天這篇會紀錄如何在 Mac 系統中使用 docker 建立一個地端的 wordpress
 
+開發的範例程式碼會在我的 github repo 中 [webberwu7/wordpress-my-plugin-example](https://github.com/webberwu7/wordpress-my-plugin-example)
+
 ## 使用 docker-compose 一次將需要的服務啟動
 如上面所描述的 wordpress 是以 php 和 mysql 為平台建置而成的
 
