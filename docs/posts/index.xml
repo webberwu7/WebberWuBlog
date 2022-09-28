@@ -6,7 +6,37 @@
     <description>Recent content in Posts on webber 筆記本</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Fri, 16 Sep 2022 11:25:16 +0800</lastBuildDate><atom:link href="https://webberwu7.github.io/WebberWuBlog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Sep 2022 18:02:43 +0800</lastBuildDate><atom:link href="https://webberwu7.github.io/WebberWuBlog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CYBERSEC 2022 台灣資安大會</title>
+      <link>https://webberwu7.github.io/WebberWuBlog/posts/20220926-conference-cybersec2022/</link>
+      <pubDate>Mon, 26 Sep 2022 18:02:43 +0800</pubDate>
+      
+      <guid>https://webberwu7.github.io/WebberWuBlog/posts/20220926-conference-cybersec2022/</guid>
+      <description>議程 Day 1 Day 2 Day 3 我參加的講座筆記 這次參加的是 Day 3 的議程，主要想聽關於紅隊演練的議程
+701B &amp;ldquo;在家工作&amp;quot;到&amp;quot;隨時隨處工作&amp;rdquo; — 零信任方式下的後疫情時代數位化轉型, Zscaler, Aaron Tseng 零信任 在家工作
+員工從家裡存取公司服務都是安全的嗎？
+因次提出了要讓員工使用vpn連進公司內網的需求
+但是多了vpn就安全了嗎？
+只要有vpn進入後就可以在公司內網中四處搜尋
+因次要加上綁定身份的功能
+HR 連上vpn後只能使用 HR 相關的系統
+RD 連上vpn後只能使用 RD 相關的系統
+零攻擊面
+換證後只能看到自己有權限的服務
+檢查端點風險等級 會檢查目前電腦的安全機制，需要購安全才能連線
+ZPA 取代 VPN (ZPA 是這家公司的產品)
+你要先連上他的雲(broker)，由這個雲去轉發存取服務
+所以在這個平台上設定好權限和過濾等資料即可避免使用者想去亂撈其他服務的狀況
+701F 打密碼太過時?安全地登入雲端與 SaaS 服務 的最新趨勢, HENNGE, 中込 剛 常見的攻擊手法
+社交工程攻擊 只要你有憑證你被攻擊時就會被偷走
+信箱zip
+釣魚真人信件
+解法
+如何驗證有憑證的使用者？ 綁定裝置憑證 如果裝置被害怎麼辦？ 多裝置驗證 如果PC端想要登入，此時需要手機驗證
+搭配單一登入入口 基礎的密碼 + 裝置憑證 ＋ 推播通知驗證</description>
+    </item>
+    
     <item>
       <title>Wordpress 開發環境</title>
       <link>https://webberwu7.github.io/WebberWuBlog/posts/20220916-develop-wordpress/</link>
