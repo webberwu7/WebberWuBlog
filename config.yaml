@@ -107,7 +107,7 @@ params:
     author_title: 
     # author_description: Good Good Study, Day Day Up~
     location: Taipei, Taiwan
-    follow: /
+    follow: https://webberwu7.github.io/WebberWuBlog
     # Social Links
     social:
       links:
@@ -138,7 +138,7 @@ params:
   # Comment
   comment:
     type:  disqus # type disqus/gitalk/valine 启用哪种评论系统
-    disqus: WebberNoteBlog # enter disqus shortname here
+    disqus: WebberWuBlog # enter disqus shortname here
     # gitalk: # gitalk. https://gitalk.github.io/
     #   owner: #必须. GitHub repository 所有者，可以是个人或者组织。
     #   admin: #必须. GitHub repository 的所有者和合作者 (对这个 repository 有写权限的用户)。
@@ -201,6 +201,5 @@ params:
   widgets:
     - board
     - tag_cloud
-    - category
     - tag
     - recent_posts
