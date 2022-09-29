@@ -1,32 +1,104 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>docker on webber 筆記本</title>
     <link>https://webberwu7.github.io/WebberWuBlog/tags/docker/</link>
     <description>Recent content in docker on webber 筆記本</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Fri, 16 Sep 2022 11:25:16 +0800</lastBuildDate><atom:link href="https://webberwu7.github.io/WebberWuBlog/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>MIT</copyright>
+    <lastBuildDate>Fri, 16 Sep 2022 11:25:16 +0800</lastBuildDate>
+    
+        <atom:link href="https://webberwu7.github.io/WebberWuBlog/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CYBERSEC 2022 台灣資安大會</title>
+      <link>https://webberwu7.github.io/WebberWuBlog/2022/09/20220926-conference-cybersec2022/</link>
+      <pubDate>Mon, 26 Sep 2022 18:02:43 +0800</pubDate>
+      
+      <guid>https://webberwu7.github.io/WebberWuBlog/2022/09/20220926-conference-cybersec2022/</guid>
+      <description>議程 Day 1 Day 2 Day 3 我參加的講座筆記 這次參加的是 Day 3 的議程，主要想聽關於紅隊演練的議程 701B &amp;ldquo;在家工作&amp;quot;到&amp;quot;隨時隨處</description>
+    </item>
+    
     <item>
       <title>Wordpress 開發環境</title>
-      <link>https://webberwu7.github.io/WebberWuBlog/posts/20220916-develop-wordpress/</link>
+      <link>https://webberwu7.github.io/WebberWuBlog/2022/09/20220916-develop-wordpress/</link>
       <pubDate>Fri, 16 Sep 2022 11:25:16 +0800</pubDate>
       
-      <guid>https://webberwu7.github.io/WebberWuBlog/posts/20220916-develop-wordpress/</guid>
-      <description>Wordpress WordPress是一個以PHP和MySQL為平台的自由開源的部落格軟體和內容管理系統
-WordPress具有外掛程式架構和模板系統
-方便使用者開發客製化功能外掛和精美的主題模板
-那麼如果要開發外掛或主題，就需要一個wordpress環境
-今天這篇會紀錄如何在 Mac 系統中使用 docker 建立一個地端的 wordpress
-開發的範例程式碼會在我的 github repo 中 webberwu7/wordpress-my-plugin-example
-使用 docker-compose 一次將需要的服務啟動 如上面所描述的 wordpress 是以 php 和 mysql 為平台建置而成的
-因此我們需要一個 mysql服務 和一個有php的網站建設
-mysql服務 使用官方提供的 mysql:5.7
-並且設定好連線的使用者帳號密碼與建立資料庫
-wordpress 服務 使用官方提供的 wordpress:6.0.0-php8.0-apache (REF: wordpress docker hub)
-未來如果 wordpress 要升級，可參考官方 tag 改成目標版本號
-php 版本目前使用 8.0 如果未來要升級，可參考官方 tag 改成目標版本號
-version: &amp;#39;3.3&amp;#39; services: db: image: mysql:5.7 restart: always environment: - MYSQL_DATABASE=wordpress-example - MYSQL_USER=wpExampleUser - MYSQL_PASSWORD=KhcwtBvD5ygAu - MYSQL_ROOT_PASSWORD=ybcM8Wrhr4MqX9ZpsWkQgdGH4NMghNcq - TZ=UTC ports: - 33060:3306 volumes: - .</description>
+      <guid>https://webberwu7.github.io/WebberWuBlog/2022/09/20220916-develop-wordpress/</guid>
+      <description>Wordpress WordPress是一個以PHP和MySQL為平台的自由開源的部落格軟體和內容管理系統 WordPress具有外掛程式架構和模板系統 方便使用</description>
+    </item>
+    
+    <item>
+      <title>wordpress 插件開發筆記 (1) - 第一個插件</title>
+      <link>https://webberwu7.github.io/WebberWuBlog/2022/09/20220915-develop-wordpress-plugin/</link>
+      <pubDate>Thu, 15 Sep 2022 23:38:14 +0800</pubDate>
+      
+      <guid>https://webberwu7.github.io/WebberWuBlog/2022/09/20220915-develop-wordpress-plugin/</guid>
+      <description>1. 基本結構 建立一個資料夾 並在裡面新增一個與資料夾同名的.php檔 做為插件的進入點 my-plugin └── my-plugin.php 在my-plugin.php加上插件的註解後 wor</description>
+    </item>
+    
+    <item>
+      <title>Python - Bigquery 筆記</title>
+      <link>https://webberwu7.github.io/WebberWuBlog/2022/08/20220818-python-bigquery/</link>
+      <pubDate>Thu, 18 Aug 2022 00:05:39 +0800</pubDate>
+      
+      <guid>https://webberwu7.github.io/WebberWuBlog/2022/08/20220818-python-bigquery/</guid>
+      <description>需要套件 google-cloud-bigquery =&amp;gt; 串接bigquery的套件 pnadas =&amp;gt; 抓取後製作成dataframe的套件 db-dtype =&amp;gt; 轉換成dataframe的套件 pip3 install pip3 install google-cloud-bigquery pip3 install pandas pip3 install db-dtypes requirements.txt pip install</description>
+    </item>
+    
+    <item>
+      <title>菜雞部落客的hugo踩雷之路 ( 4 ) - 終於有頭像了</title>
+      <link>https://webberwu7.github.io/WebberWuBlog/2022/08/20220816-make-a-hugo-blog-3/</link>
+      <pubDate>Tue, 16 Aug 2022 12:19:14 +0800</pubDate>
+      
+      <guid>https://webberwu7.github.io/WebberWuBlog/2022/08/20220816-make-a-hugo-blog-3/</guid>
+      <description>部落格作者頭像 在目前使用的 m10c 主題中有提到設定 Configuration In your config.toml file, define the following variables in params: author: 作者的名字 description: 關於作者的簡單的敘述 avatar: 放置作者大頭照的路徑 menu_item_separator: 在目錄類型之間的</description>
+    </item>
+    
+    <item>
+      <title>Laravel 升級之路 - 踩雷筆記</title>
+      <link>https://webberwu7.github.io/WebberWuBlog/2022/08/20220813-laravel-upgrade-note/</link>
+      <pubDate>Sat, 13 Aug 2022 16:15:34 +0800</pubDate>
+      
+      <guid>https://webberwu7.github.io/WebberWuBlog/2022/08/20220813-laravel-upgrade-note/</guid>
+      <description>Laravel 升級之路 隨著laravel版本推陳出新 php 8 也已經於2020年末推出了 之前專案使用的 laravel lts版本是 laravel 6 將在2022.09邁入不再維護的日期 此</description>
+    </item>
+    
+    <item>
+      <title>菜雞部落客的hugo踩雷之路 ( 3 ) - Content 與 layout 的愛恨情仇</title>
+      <link>https://webberwu7.github.io/WebberWuBlog/2022/08/20220808-make-a-hugo-blog-2/</link>
+      <pubDate>Mon, 08 Aug 2022 23:37:05 +0800</pubDate>
+      
+      <guid>https://webberwu7.github.io/WebberWuBlog/2022/08/20220808-make-a-hugo-blog-2/</guid>
+      <description>文章參數配置 相信大家在創建文章時都會看的這樣的文字在最前方 --- title: &amp;quot;菜雞部落客的hugo踩雷之路 ( 3 ) - 優化網站&amp;quot; date: 2022-08-06T23:37:05+08:00 draft: true ---</description>
+    </item>
+    
+    <item>
+      <title>菜雞部落客的hugo踩雷之路 ( 2 ) - 部署到github上的靜態網站</title>
+      <link>https://webberwu7.github.io/WebberWuBlog/2022/08/20220806-make-a-hugo-blog-1/</link>
+      <pubDate>Sat, 06 Aug 2022 13:50:36 +0800</pubDate>
+      
+      <guid>https://webberwu7.github.io/WebberWuBlog/2022/08/20220806-make-a-hugo-blog-1/</guid>
+      <description>靜態網站 所謂靜態網頁，便是指超文件標示語言HyperText Markup Language，簡稱：HTML。是一種常與CSS及Javascript配合製</description>
+    </item>
+    
+    <item>
+      <title>菜雞部落客的hugo踩雷之路 ( 1 ) - 建立hugo專案與新增文章</title>
+      <link>https://webberwu7.github.io/WebberWuBlog/2022/08/20220806-make-a-hugo-blog/</link>
+      <pubDate>Sat, 06 Aug 2022 11:56:21 +0800</pubDate>
+      
+      <guid>https://webberwu7.github.io/WebberWuBlog/2022/08/20220806-make-a-hugo-blog/</guid>
+      <description>什麼是 Hugo Hugo 是一個用 Go 編寫的靜態網站生成器，2013由 Steve Francia 原創，自 v0.14 (2015年) 由 Bjørn Erik Pedersen 主力開發[2]，並由全球各地的開發者和使用者</description>
+    </item>
+    
+    <item>
+      <title>關於我</title>
+      <link>https://webberwu7.github.io/WebberWuBlog/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://webberwu7.github.io/WebberWuBlog/about/</guid>
+      <description>技能樹 PHP 後端工程師 主要使用 laravel lumen 建立 RESTful API 開發 Wordpress Plugin Python 網路爬蟲應用 pandas 製作報表分析 AWS 使用Serverless建立服務 (SAM) s3, rds, apigateway, lambda, sqs, stepfunction 工作經驗 聯合報系,</description>
     </item>
     
   </channel>

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <title>
+        Wordpress 開發環境 - webber 筆記本
+      </title>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    
+    <meta name="theme-color" content="#000000" />
+    
+    <meta http-equiv="window-target" content="_top" />
+    
+    
+    <meta name="description" content="Wordpress WordPress是一個以PHP和MySQL為平台的自由開源的部落格軟體和內容管理系統 WordPress具有外掛程式架構和模板系統 方便使用" />
+    <meta name="generator" content="Hugo 0.101.0 with theme pure" />
+    <title>Wordpress 開發環境 - webber 筆記本</title>
+    
+    
+    <link rel="stylesheet" href="https://webberwu7.github.io/WebberWuBlog/css/style.min.e64d754037c0ee0ec4e20ab1d6f07740ace61729bc03850559b8caa21ae4a597.css">
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
+    <meta property="og:title" content="Wordpress 開發環境" />
+<meta property="og:description" content="Wordpress WordPress是一個以PHP和MySQL為平台的自由開源的部落格軟體和內容管理系統 WordPress具有外掛程式架構和模板系統 方便使用" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://webberwu7.github.io/WebberWuBlog/2022/09/20220916-develop-wordpress/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-16T11:25:16+08:00" />
+<meta property="article:modified_time" content="2022-09-16T11:25:16+08:00" />
+
+<meta itemprop="name" content="Wordpress 開發環境">
+<meta itemprop="description" content="Wordpress WordPress是一個以PHP和MySQL為平台的自由開源的部落格軟體和內容管理系統 WordPress具有外掛程式架構和模板系統 方便使用"><meta itemprop="datePublished" content="2022-09-16T11:25:16+08:00" />
+<meta itemprop="dateModified" content="2022-09-16T11:25:16+08:00" />
+<meta itemprop="wordCount" content="1096">
+<meta itemprop="keywords" content="wordpress,docker," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Wordpress 開發環境"/>
+<meta name="twitter:description" content="Wordpress WordPress是一個以PHP和MySQL為平台的自由開源的部落格軟體和內容管理系統 WordPress具有外掛程式架構和模板系統 方便使用"/>
+
+    <!--[if lte IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+      <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+
+  </head>
+
+  
+  
+
+  <body class="main-center theme-purple" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="/" target="">
+            <img class="img-circle img-rotate" src="https://webberwu7.github.io/WebberWuBlog/images/avatar.jpg" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">Webber Wu</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md"></h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>Taipei, Taiwan</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder=""
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/WebberWuBlog/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">Home</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-archives">
+                <a href="/WebberWuBlog/posts/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">Archives</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="/WebberWuBlog/tags/">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">Tags</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/WebberWuBlog/about/">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">About</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title"></h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content"><p>筆記自己做過的功能與經驗</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+      <div class="widget">
+    <h3 class="widget-title"> </h3>
+    <div id="tag-cloud-list" class="widget-body">
+            
+            
+            <a href="https://webberwu7.github.io/WebberWuBlog/tags/bigquery/" class="tag-list-link" rel="1">bigquery<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://webberwu7.github.io/WebberWuBlog/tags/conference/" class="tag-list-link" rel="1">conference<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://webberwu7.github.io/WebberWuBlog/tags/docker/" class="tag-list-link" rel="1">docker<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://webberwu7.github.io/WebberWuBlog/tags/hugo/" class="tag-list-link" rel="4">hugo<span
+               class="tag-list-count">4</span></a>
+            
+            
+            <a href="https://webberwu7.github.io/WebberWuBlog/tags/laravel/" class="tag-list-link" rel="1">laravel<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://webberwu7.github.io/WebberWuBlog/tags/php/" class="tag-list-link" rel="2">php<span
+               class="tag-list-count">2</span></a>
+            
+            
+            <a href="https://webberwu7.github.io/WebberWuBlog/tags/plugin/" class="tag-list-link" rel="1">plugin<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://webberwu7.github.io/WebberWuBlog/tags/python/" class="tag-list-link" rel="1">python<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://webberwu7.github.io/WebberWuBlog/tags/wordpress/" class="tag-list-link" rel="2">wordpress<span
+               class="tag-list-count">2</span></a>
+            
+    </div>
+<script>
+document.onreadystatechange = () => {
+  if (document.readyState === 'complete') {
+    tagCloud('#tag-cloud-list a',  8 ,  20 );
+  }
+};
+
+function tagCloud(where, min, max) {
+  let iMax = 0;
+  let iMin = 0;
+  $(where).each(function() {
+    let weight = Number($(this).attr("rel"));
+    if(iMax < weight) iMax = weight;
+    if(iMin > weight || iMin == 0) iMin = weight;
+  });
+  let step = (max - min)/(iMax - iMin);
+  $(where).each(function() {
+    let weight = $(this).attr("rel") - iMin;
+    $(this).css({"font-size": min + (weight * step) + 'px'});
+  });
+};
+</script>
+</div>
+
+      <div class="widget">
+    <h3 class="widget-title"> </h3>
+    <div class="widget-body">
+        <ul class="category-list">
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> </h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/bigquery/" class="tag-list-link">bigquery</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/conference/" class="tag-list-link">conference</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/docker/" class="tag-list-link">docker</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/hugo/" class="tag-list-link">hugo</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/laravel/" class="tag-list-link">laravel</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/php/" class="tag-list-link">php</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/plugin/" class="tag-list-link">plugin</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/python/" class="tag-list-link">python</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/wordpress/" class="tag-list-link">wordpress</a><span
+                    class="tag-list-count">2</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+      
+<div class="widget">
+    <h3 class="widget-title"></h3>
+    <div class="widget-body">
+        <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220926-conference-cybersec2022/" class="title">CYBERSEC 2022 台灣資安大會</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-09-26 18:02:43 &#43;0800 CST" itemprop="datePublished">2022-09-26</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220916-develop-wordpress/" class="title">Wordpress 開發環境</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-09-16 11:25:16 &#43;0800 CST" itemprop="datePublished">2022-09-16</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220915-develop-wordpress-plugin/" class="title">wordpress 插件開發筆記 (1) - 第一個插件</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-09-15 23:38:14 &#43;0800 CST" itemprop="datePublished">2022-09-15</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://webberwu7.github.io/WebberWuBlog/2022/08/20220818-python-bigquery/" class="title">Python - Bigquery 筆記</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-08-18 00:05:39 &#43;0800 CST" itemprop="datePublished">2022-08-18</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://webberwu7.github.io/WebberWuBlog/2022/08/20220816-make-a-hugo-blog-3/" class="title">菜雞部落客的hugo踩雷之路 ( 4 ) - 終於有頭像了</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-08-16 12:19:14 &#43;0800 CST" itemprop="datePublished">2022-08-16</time>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title"></h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/WebberWuBlog/2022/09/20220916-develop-wordpress/"
+    >Wordpress 開發環境</a
+  >
+</h1>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220916-develop-wordpress/" class="article-date">
+  <time datetime="2022-09-16 11:25:16 &#43;0800 CST" itemprop="datePublished">2022-09-16</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/WebberWuBlog/tags/wordpress/"> wordpress </a>
+    <a class="article-tag-link" href="/WebberWuBlog/tags/docker/"> docker </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/WebberWuBlog/2022/09/20220916-develop-wordpress/#comments"
+            class="article-comment-link"></a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">1096</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">3 </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h1 id="wordpress">Wordpress</h1>
+<p>WordPress是一個以PHP和MySQL為平台的自由開源的部落格軟體和內容管理系統</p>
+<p>WordPress具有外掛程式架構和模板系統</p>
+<p>方便使用者開發客製化功能外掛和精美的主題模板</p>
+<p>那麼如果要開發外掛或主題，就需要一個wordpress環境</p>
+<p>今天這篇會紀錄如何在 Mac 系統中使用 docker 建立一個地端的 wordpress</p>
+<p>開發的範例程式碼會在我的 github repo 中 <a href="https://github.com/webberwu7/wordpress-my-plugin-example">webberwu7/wordpress-my-plugin-example</a></p>
+<h2 id="使用-docker-compose-一次將需要的服務啟動">使用 docker-compose 一次將需要的服務啟動</h2>
+<p>如上面所描述的 wordpress 是以 php 和 mysql 為平台建置而成的</p>
+<p>因此我們需要一個 mysql服務 和一個有php的網站建設</p>
+<ul>
+<li>
+<p>mysql服務
+使用官方提供的 mysql:5.7</p>
+<p>並且設定好連線的使用者帳號密碼與建立資料庫</p>
+</li>
+<li>
+<p>wordpress 服務
+使用官方提供的 wordpress:6.0.0-php8.0-apache    (<a href="https://hub.docker.com/_/wordpress">REF: wordpress docker hub</a>)</p>
+<p>未來如果 wordpress 要升級，可參考官方 tag 改成目標版本號</p>
+<p>php 版本目前使用 8.0 如果未來要升級，可參考官方 tag 改成目標版本號</p>
+</li>
+</ul>
+<pre><code class="language-yml">version: '3.3'
+
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      - MYSQL_DATABASE=wordpress-example
+      - MYSQL_USER=wpExampleUser
+      - MYSQL_PASSWORD=KhcwtBvD5ygAu
+      - MYSQL_ROOT_PASSWORD=ybcM8Wrhr4MqX9ZpsWkQgdGH4NMghNcq
+      - TZ=UTC
+    ports:
+      - 33060:3306
+    volumes:
+      - ./.db/data/mysql:/var/lib/mysql
+
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:6.0.0-php8.0-apache
+    ports:
+      - &quot;8000:80&quot;
+    restart: always
+    environment:
+      WORDPRESS_DB_NAME: wordpress-example
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wpExampleUser
+      WORDPRESS_DB_PASSWORD: KhcwtBvD5ygAu
+    volumes:
+      - ./.wordpress:/var/www/html
+</code></pre>
+<p>寫好docker-compose後下指令啟動</p>
+<pre><code>docker-compose up
+</code></pre>
+<p>如果順利啟動的話就會看到 wordpress 的引導安裝介面了</p>
+<p><img src="https://imgur.com/O2193uv.png" alt="image"></p>
+<p><img src="https://imgur.com/lTYDKjX.png" alt="image"></p>
+<p>安裝完成登入後，就能看到wordpress的後台介面囉</p>
+<p><img src="https://imgur.com/LCTH28q.png" alt="image"></p>
+<h2 id="將開發的插件放入目前運行中的-wordpress">將開發的插件放入目前運行中的 wordpress</h2>
+<p>在docker-compose中有使用 volume 功能</p>
+<p>所以可以將docker容器中的位置對照出來外面</p>
+<p>設定是放在目前位置下的 .wordpress 資料夾中</p>
+<pre><code class="language-yaml">    volumes:
+      - ./.wordpress:/var/www/html
+</code></pre>
+<p>目前的資料夾結構</p>
+<pre><code class="language-txt">.
+├── db
+│   └── data
+├── wordpress
+│   ├── wp-admin
+│   ├── wp-content
+│   ├── wp-includes
+│   ├── index.php
+│   ├── license.txt
+│   ├── readme.html
+│   ├── wp-activate.php
+│   ├── wp-blog-header.php
+│   ├── wp-comments-post.php
+│   ├── wp-config-docker.php
+│   ├── wp-config-sample.php
+│   ├── wp-config.php
+│   ├── wp-cron.php
+│   ├── wp-links-opml.php
+│   ├── wp-load.php
+│   ├── wp-login.php
+│   ├── wp-mail.php
+│   ├── wp-settings.php
+│   ├── wp-signup.php
+│   ├── wp-trackback.php
+│   └── xmlrpc.php
+├── LICENSE
+├── README.md
+└── docker-compose.yml
+</code></pre>
+<p>wordpress 的插件會安裝在 wp-content -&gt; plugins 中</p>
+<p>所以將開發的插件複製到這個位置他就會同步至 wordpress 然後自動讀取</p>
+<p>例如： 我們可以將 <a href="/WebberWuBlog/posts/202220915-develop-wordpress-plugin">wordpress 插件開發筆記 (1) - 第一個插件</a> 開發的插件加入其中</p>
+<pre><code class="language-txt">├── wordpress
+    ├── wp-admin
+    └── wp-content
+        └── plugins 
+            └── my-plugin 
+</code></pre>
+<p>就可以看到wordpress的插件列表中出現我們自行開發的插件了</p>
+<p><img src="https://imgur.com/DyS7djk.png" alt="image"></p>
+<h2 id="wp-cli">WP-CLI</h2>
+<p>WP-CLI是 WordPress 的官方命令行界面。
+它可以讓你從終端機的介面下指令來快速管理 WordPress網站 、網站主題、網站插件等等。
+這通常是當你 WordPress網站設計 玩到一定的程度之後會開始摸索研究的軟體，讓你晉升高級 WordPress網頁設計師，更便捷快速的管理你的 WordPress網站。</p>
+<p>REF: <a href="https://raise-up.com.tw/wordpress-tutorial/wp-cli-introduction.html/">https://raise-up.com.tw/wordpress-tutorial/wp-cli-introduction.html/</a></p>
+<p>可是使用了 docker-compose 要如何自動執行wp-cli呢？</p>
+<p>因此要在 <code>docker-compose.yaml</code> 中加入 wordpress-cli 的服務去執行他</p>
+<pre><code class="language-yaml">  wordpress-cli:
+    depends_on:
+      - db
+      - wordpress
+    user: &quot;33:33&quot;
+    image: wordpress:cli
+    environment:
+      WORDPRESS_DB_NAME: wordpress-example
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wpExampleUser
+      WORDPRESS_DB_PASSWORD: KhcwtBvD5ygAu
+    command: &gt;
+      /bin/sh -c '
+      sleep 10;
+      wp core install --path=/var/www/html \
+                      --url=&quot;http://localhost:8000&quot; \
+                      --title=&quot;wordpress-example&quot; \
+                      --admin_user=wpExampleUser \
+                      --admin_password=wpExampleUser \
+                      --admin_email=wp.example@example.com;
+      wp theme install colormag --activate --allow-root;
+      wp plugin install aryo-activity-log --activate --allow-root;
+      '
+    volumes:
+      - ./.wordpress:/var/www/html
+</code></pre>
+<p>這裡我簡單寫下兩個指令</p>
+<ol>
+<li>wp core install   : 安裝wordpress 並設定網址,標題和管理員等資料</li>
+<li>wp theme install  : 安裝wordpress主題</li>
+<li>wp plugin install : 安裝wordpress插件</li>
+</ol>
+
+    </div>
+    <div class="article-footer">
+
+    </div>
+  </article>
+<section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220915-develop-wordpress-plugin/" title="wordpress 插件開發筆記 (1) - 第一個插件"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;</span></a>
+            </li>
+            <li class="next">
+                <a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220926-conference-cybersec2022/"
+                    title="CYBERSEC 2022 台灣資安大會"><span>&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="" role="button">
+                    <span>[&nbsp;</span><span></span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="facebook,twitter"
+                data-mobile-sites=""></div>
+        </div>
+    </div>
+</nav>
+
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://github.com/webberwu7" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://webberwu7.github.io/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-rss"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2022  -
+    2022
+    <div class="publishby">
+         <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a><a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+    
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/php.min.js" defer></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="https://webberwu7.github.io/WebberWuBlog/js/application.min.c181e6b0c036798c7731cfb85b41b44c80689fd48fee546b73d449386ce6ccfb.js"></script>
+<script src="https://webberwu7.github.io/WebberWuBlog/js/plugin.min.46930345227de54c034f39c80841463c3b879632feb482e9f2734d4b616ae3be.js"></script>
+
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '',
+                PAGES: '',
+                CATEGORIES: '',
+                TAGS: '',
+                UNTITLED: '',
+            },
+            ROOT_URL: 'https:\/\/webberwu7.github.io\/WebberWuBlog',
+            CONTENT_URL: 'https:\/\/webberwu7.github.io\/WebberWuBlog\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://webberwu7.github.io/WebberWuBlog/js/insight.min.07c7d73e2ec5e960e55f8b98577ada0bd78b36e7ef9d6dd65b85d4b1d443e7c1a1ca7cd1d98e7105db5fd72583cbc6fbb5e386062d3bf3c2568588fbb38c0c06.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https:\/\/webberwu7.github.io\/WebberWuBlog\/2022\/09\/20220916-develop-wordpress\/';
+        this.page.identifier = 'WebberNoteBlog';
+    };
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = '//' + 'WebberNoteBlog' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+  </body>
+</html>

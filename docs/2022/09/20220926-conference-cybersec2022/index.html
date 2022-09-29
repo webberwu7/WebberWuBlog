@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <title>
+        CYBERSEC 2022 台灣資安大會 - webber 筆記本
+      </title>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    
+    <meta name="theme-color" content="#000000" />
+    
+    <meta http-equiv="window-target" content="_top" />
+    
+    
+    <meta name="description" content="議程 Day 1 Day 2 Day 3 我參加的講座筆記 這次參加的是 Day 3 的議程，主要想聽關於紅隊演練的議程 701B &amp;ldquo;在家工作&amp;quot;到&amp;quot;隨時隨處" />
+    <meta name="generator" content="Hugo 0.101.0 with theme pure" />
+    <title>CYBERSEC 2022 台灣資安大會 - webber 筆記本</title>
+    
+    
+    <link rel="stylesheet" href="https://webberwu7.github.io/WebberWuBlog/css/style.min.e64d754037c0ee0ec4e20ab1d6f07740ace61729bc03850559b8caa21ae4a597.css">
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
+    <meta property="og:title" content="CYBERSEC 2022 台灣資安大會" />
+<meta property="og:description" content="議程 Day 1 Day 2 Day 3 我參加的講座筆記 這次參加的是 Day 3 的議程，主要想聽關於紅隊演練的議程 701B &ldquo;在家工作&quot;到&quot;隨時隨處" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://webberwu7.github.io/WebberWuBlog/2022/09/20220926-conference-cybersec2022/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-26T18:02:43+08:00" />
+<meta property="article:modified_time" content="2022-09-26T18:02:43+08:00" />
+
+<meta itemprop="name" content="CYBERSEC 2022 台灣資安大會">
+<meta itemprop="description" content="議程 Day 1 Day 2 Day 3 我參加的講座筆記 這次參加的是 Day 3 的議程，主要想聽關於紅隊演練的議程 701B &ldquo;在家工作&quot;到&quot;隨時隨處"><meta itemprop="datePublished" content="2022-09-26T18:02:43+08:00" />
+<meta itemprop="dateModified" content="2022-09-26T18:02:43+08:00" />
+<meta itemprop="wordCount" content="1798">
+<meta itemprop="keywords" content="conference," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CYBERSEC 2022 台灣資安大會"/>
+<meta name="twitter:description" content="議程 Day 1 Day 2 Day 3 我參加的講座筆記 這次參加的是 Day 3 的議程，主要想聽關於紅隊演練的議程 701B &ldquo;在家工作&quot;到&quot;隨時隨處"/>
+
+    <!--[if lte IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+      <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+
+  </head>
+
+  
+  
+
+  <body class="main-center theme-purple" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="/" target="">
+            <img class="img-circle img-rotate" src="https://webberwu7.github.io/WebberWuBlog/images/avatar.jpg" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">Webber Wu</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md"></h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>Taipei, Taiwan</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder=""
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/WebberWuBlog/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">Home</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-archives">
+                <a href="/WebberWuBlog/posts/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">Archives</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="/WebberWuBlog/tags/">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">Tags</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/WebberWuBlog/about/">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">About</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title"></h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content"><p>筆記自己做過的功能與經驗</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+      <div class="widget">
+    <h3 class="widget-title"> </h3>
+    <div id="tag-cloud-list" class="widget-body">
+            
+            
+            <a href="https://webberwu7.github.io/WebberWuBlog/tags/bigquery/" class="tag-list-link" rel="1">bigquery<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://webberwu7.github.io/WebberWuBlog/tags/conference/" class="tag-list-link" rel="1">conference<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://webberwu7.github.io/WebberWuBlog/tags/docker/" class="tag-list-link" rel="1">docker<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://webberwu7.github.io/WebberWuBlog/tags/hugo/" class="tag-list-link" rel="4">hugo<span
+               class="tag-list-count">4</span></a>
+            
+            
+            <a href="https://webberwu7.github.io/WebberWuBlog/tags/laravel/" class="tag-list-link" rel="1">laravel<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://webberwu7.github.io/WebberWuBlog/tags/php/" class="tag-list-link" rel="2">php<span
+               class="tag-list-count">2</span></a>
+            
+            
+            <a href="https://webberwu7.github.io/WebberWuBlog/tags/plugin/" class="tag-list-link" rel="1">plugin<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://webberwu7.github.io/WebberWuBlog/tags/python/" class="tag-list-link" rel="1">python<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://webberwu7.github.io/WebberWuBlog/tags/wordpress/" class="tag-list-link" rel="2">wordpress<span
+               class="tag-list-count">2</span></a>
+            
+    </div>
+<script>
+document.onreadystatechange = () => {
+  if (document.readyState === 'complete') {
+    tagCloud('#tag-cloud-list a',  8 ,  20 );
+  }
+};
+
+function tagCloud(where, min, max) {
+  let iMax = 0;
+  let iMin = 0;
+  $(where).each(function() {
+    let weight = Number($(this).attr("rel"));
+    if(iMax < weight) iMax = weight;
+    if(iMin > weight || iMin == 0) iMin = weight;
+  });
+  let step = (max - min)/(iMax - iMin);
+  $(where).each(function() {
+    let weight = $(this).attr("rel") - iMin;
+    $(this).css({"font-size": min + (weight * step) + 'px'});
+  });
+};
+</script>
+</div>
+
+      <div class="widget">
+    <h3 class="widget-title"> </h3>
+    <div class="widget-body">
+        <ul class="category-list">
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> </h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/bigquery/" class="tag-list-link">bigquery</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/conference/" class="tag-list-link">conference</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/docker/" class="tag-list-link">docker</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/hugo/" class="tag-list-link">hugo</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/laravel/" class="tag-list-link">laravel</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/php/" class="tag-list-link">php</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/plugin/" class="tag-list-link">plugin</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/python/" class="tag-list-link">python</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/wordpress/" class="tag-list-link">wordpress</a><span
+                    class="tag-list-count">2</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+      
+<div class="widget">
+    <h3 class="widget-title"></h3>
+    <div class="widget-body">
+        <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220926-conference-cybersec2022/" class="title">CYBERSEC 2022 台灣資安大會</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-09-26 18:02:43 &#43;0800 CST" itemprop="datePublished">2022-09-26</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220916-develop-wordpress/" class="title">Wordpress 開發環境</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-09-16 11:25:16 &#43;0800 CST" itemprop="datePublished">2022-09-16</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220915-develop-wordpress-plugin/" class="title">wordpress 插件開發筆記 (1) - 第一個插件</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-09-15 23:38:14 &#43;0800 CST" itemprop="datePublished">2022-09-15</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://webberwu7.github.io/WebberWuBlog/2022/08/20220818-python-bigquery/" class="title">Python - Bigquery 筆記</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-08-18 00:05:39 &#43;0800 CST" itemprop="datePublished">2022-08-18</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://webberwu7.github.io/WebberWuBlog/2022/08/20220816-make-a-hugo-blog-3/" class="title">菜雞部落客的hugo踩雷之路 ( 4 ) - 終於有頭像了</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-08-16 12:19:14 &#43;0800 CST" itemprop="datePublished">2022-08-16</time>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title"></h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/WebberWuBlog/2022/09/20220926-conference-cybersec2022/"
+    >CYBERSEC 2022 台灣資安大會</a
+  >
+</h1>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220926-conference-cybersec2022/" class="article-date">
+  <time datetime="2022-09-26 18:02:43 &#43;0800 CST" itemprop="datePublished">2022-09-26</time>
+</a>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/WebberWuBlog/tags/conference/"> conference </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/WebberWuBlog/2022/09/20220926-conference-cybersec2022/#comments"
+            class="article-comment-link"></a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">1798</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">4 </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h2 id="議程">議程</h2>
+<ul>
+<li>Day 1
+<img src="https://imgur.com/GL8z3jN.jpeg" alt="image"></li>
+<li>Day 2
+<img src="https://imgur.com/nUAsiDj.jpeg" alt="image"></li>
+<li>Day 3
+<img src="https://imgur.com/feWLZWe.jpeg" alt="image"></li>
+</ul>
+<h2 id="我參加的講座筆記">我參加的講座筆記</h2>
+<p>這次參加的是 Day 3 的議程，主要想聽關於紅隊演練的議程</p>
+<h3 id="701b-在家工作到隨時隨處工作--零信任方式下的後疫情時代數位化轉型-zscaler-aaron-tseng">701B &ldquo;在家工作&quot;到&quot;隨時隨處工作&rdquo; — 零信任方式下的後疫情時代數位化轉型, Zscaler, Aaron Tseng</h3>
+<ul>
+<li>
+<p>零信任
+在家工作</p>
+<p>員工從家裡存取公司服務都是安全的嗎？</p>
+<p>因次提出了要讓員工使用vpn連進公司內網的需求</p>
+<p>但是多了vpn就安全了嗎？</p>
+<p>只要有vpn進入後就可以在公司內網中四處搜尋</p>
+<p>因次要加上綁定身份的功能</p>
+<p>HR 連上vpn後只能使用 HR 相關的系統</p>
+<p>RD 連上vpn後只能使用 RD 相關的系統</p>
+</li>
+<li>
+<p>零攻擊面</p>
+<ol>
+<li>
+<p>換證後只能看到自己有權限的服務</p>
+</li>
+<li>
+<p>檢查端點風險等級
+會檢查目前電腦的安全機制，需要購安全才能連線</p>
+</li>
+<li>
+<p>ZPA 取代 VPN
+(ZPA 是這家公司的產品)</p>
+<p><img src="https://s4.itho.me/sites/default/files/images/ZPA%20Architecture%20Simple.png" alt="image"></p>
+<p>你要先連上他的雲(broker)，由這個雲去轉發存取服務</p>
+<p>所以在這個平台上設定好權限和過濾等資料即可避免使用者想去亂撈其他服務的狀況</p>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="701f-打密碼太過時安全地登入雲端與-saas-服務-的最新趨勢-hennge-中込-剛">701F 打密碼太過時?安全地登入雲端與 SaaS 服務 的最新趨勢, HENNGE, 中込 剛</h3>
+<ul>
+<li>
+<p>常見的攻擊手法</p>
+<ul>
+<li>
+<p>社交工程攻擊
+只要你有憑證你被攻擊時就會被偷走</p>
+</li>
+<li>
+<p>信箱zip</p>
+</li>
+<li>
+<p>釣魚真人信件</p>
+</li>
+</ul>
+</li>
+<li>
+<p>解法</p>
+<ol>
+<li>如何驗證有憑證的使用者？
+綁定裝置憑證</li>
+<li>如果裝置被害怎麼辦？
+多裝置驗證</li>
+</ol>
+<p>如果PC端想要登入，此時需要手機驗證</p>
+</li>
+<li>
+<p>搭配單一登入入口
+基礎的密碼 + 裝置憑證 ＋ 推播通知驗證</p>
+</li>
+</ul>
+<h4 id="結語">結語</h4>
+<ul>
+<li>
+<p>2022 的安全威脅趨勢是 『人』而不是系統</p>
+<p>案例: <a href="https://zh.wikipedia.org/zh-tw/Lapsus$">Lapsas$</a>, <a href="https://www.ithome.com.tw/news/149414">Emotet</a>, 網路釣魚</p>
+</li>
+<li>
+<p>透過 裝置驗證 可以有效解決人為錯誤問題</p>
+</li>
+</ul>
+<h3 id="701f-如何正確使用紅隊演練-戴夫寇爾-翁浩正">701F 如何正確使用紅隊演練, 戴夫寇爾, 翁浩正</h3>
+<ul>
+<li>
+<p>RED TEAM 市場在哪？
+高科技業 政府網站</p>
+<p>每個企業都需要屬於自己的資安</p>
+<p>不一定是直接抄別人就好</p>
+<p>每個公司都想做紅隊</p>
+<p>但是品質問題</p>
+<p>如果爛的紅隊就只是滲透測試報告而已</p>
+</li>
+<li>
+<p>什麼是紅隊？
+紅隊是全方位打擊而非指定主機攻擊</p>
+<p>弱掃 + 滲透 + 紅隊</p>
+<p>信任紅隊並接受結果</p>
+<p>不要什麼都不給打</p>
+<p>開案結案績效如何計算</p>
+</li>
+<li>
+<p>如何進行紅隊演練</p>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>階段一: 初次合作</th>
+<th>階段二: 資安成熟度成長中</th>
+<th>階段三: 資安成熟度高</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>時間</td>
+<td>揭露演練日期和時間</td>
+<td>揭露演練時間並拉長日期</td>
+<td>不限演練日期和時間</td>
+</tr>
+<tr>
+<td>網路</td>
+<td>固定IP位置</td>
+<td>可用動態IP位置</td>
+<td>全程使用動態IP位置以及使用網路服務作為跳板</td>
+</tr>
+<tr>
+<td>範圍</td>
+<td>以企業最常使用的網域，IP位置，雲端服務為主</td>
+<td>除常見範圍，也納入設備，供應鏈，子公司，跨國辦公室</td>
+<td>所有數位資產皆納入範圍</td>
+</tr>
+<tr>
+<td>溝通</td>
+<td>諾藍隊有任何疑問，可由紅隊提出說明</td>
+<td>諾藍隊提出疑問，紅隊視情況說明</td>
+<td>紅隊僅需告知重大漏洞，其餘資訊不提供</td>
+</tr>
+<tr>
+<td>情境</td>
+<td>以外網入侵為主</td>
+<td>先以外網為主，後變換其他情境</td>
+<td>視情況可從內網開始演練，並納入實體入侵，社交工程等方式</td>
+</tr>
+<tr>
+<td>籃隊</td>
+<td>監控但不阻擋</td>
+<td>發現攻擊行為可以阻擋，多次阻擋成功後，再採取監控不阻擋的放行機制</td>
+<td>發現攻擊立即阻擋，不必放行</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>紅隊演練開演前準備</p>
+<ol>
+<li>確認演練範圍
+<ul>
+<li>公司授權演練範圍，如網域,主機,子公司等</li>
+<li>盤點高敏感資料主機</li>
+<li>需避開的範圍,時段或手法</li>
+</ul>
+</li>
+<li>確認演練情境
+<ul>
+<li>從外部網路出發(外部系統)</li>
+<li>從內部網路出發(內部資安事件)</li>
+<li>演練之前遇到資安事件的情境類型</li>
+<li>特定攻擊手法，如WIFI入侵, 實體入侵等</li>
+</ul>
+</li>
+<li>確認演練目標
+<ul>
+<li>盤點公司最在意的主機或資料是什麼</li>
+<li>與核心目標有相依性的主機有哪些</li>
+<li>曾經發生過事件的高危險主機</li>
+<li>盤點重要基礎設施,核心系統,機密資料,特權帳號權限</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>專案怎麼合作
+<img src="https://imgur.com/dzL2ALj.jpg" alt="image">
+<img src="https://imgur.com/1iJC9PX.jpg" alt="image"></p>
+</li>
+<li>
+<p>如何結案驗收</p>
+<ul>
+<li>資安廠商
+<ul>
+<li>攻擊的 <code>方法論</code>, 策略,  攻擊觀點的安全建議</li>
+<li>詳細的 <code>攻擊路徑</code>, 漏洞說明</li>
+<li><code>簡報交流</code> 雙方攻防的想法</li>
+</ul>
+</li>
+<li>企業內部
+<ul>
+<li><code>回顧</code>演練流程</li>
+<li>重新調整資安<code>策略</code></li>
+<li>擬訂長期演練<code>計畫</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="結語-1">結語</h4>
+<ul>
+<li>從需求出發，思考為什麼我需要這個服務，我想要解決什麼問題</li>
+<li>紅隊就是盟友，藉由演練盤點人員, 設備, 流程的問題</li>
+<li>做好開案, 成案, 結案的準備，將資源發揮最大效益</li>
+</ul>
+<h3 id="701f-我真的適合執行紅隊演練嗎-金融業的經驗分享-金融業資安單位-張哲銘">701F 我真的適合執行紅隊演練嗎? 金融業的經驗分享, 金融業資安單位, 張哲銘</h3>
+<p>資通安全責任等級分級辦法 - <a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030304">參考法條</a></p>
+<p>反正就是說分五等級 ABCDE 公司，每年要看自己哪一等做多少跟資安相關的檢查</p>
+<ul>
+<li>
+<p>紅隊演練的專案規劃階段概要
+<img src="https://lh3.googleusercontent.com/pw/AL9nZEVWBYZDdgbF-yI5RxKfFL7JrHUf3n1JEiZQA3zwgYLXzUg9nouXCsysD3IQpIqVm55XzAguaZ9TNqHkDU1VipQcccNnU5FXYSgOu7-60knDVTTXeGMRDNUQdwY9L40mWvOflIzYJZUKjXx2FFCSSyU=w2160-h1216-no?authuser=0" alt="image"></p>
+</li>
+<li>
+<p>廠商的遴選與合約要素
+<img src="https://lh3.googleusercontent.com/pw/AL9nZEXnRYwjSeWVViXOSJ8uZwocjlfeL9XRRAFGmS5DrrzZFVOl5qGyMjkNnzFMMnSQL9xz3Ms_DZhXhHMUm_EmyeCuHoA9kX6JyETGZeQtmgPJQdGvLJEtv8ApuGdUmz8c_ErwY-qPGtJONSwtmm-l410=w1679-h944-no?authuser=0" alt="image"></p>
+<p>多組廠商遴選
+<img src="https://lh3.googleusercontent.com/pw/AL9nZEX-dI5QujIRSYptIkNrlgtMO9TvOVRKcfapXpb_0B9SQ55k-os0-6offLdbCSQqYcWH-gW57xvkh9sSDiTHQIslJYcP2WOatuoLiU9HNF0UC1FAnjqXV8A7GD6rkpHLlLUffr5GZdzXsmHbCU8LGrc=w1679-h944-no?authuser=0" alt="image"></p>
+</li>
+<li>
+<p>演練原則
+<img src="https://lh3.googleusercontent.com/pw/AL9nZEV6-lCj2xLFO7LtSk1Az1bvVs7zGelyAShqXAAw7mwmtQ-ndew5hSg9RywuTZGKTa4VseXQU8m4MgKPd4HLa95bYRY26PWobeMzHR23trYVj_M8KP6D5NmkSyaV1lrGPCTZlTxsmpEFMYHhbGHz9jg=w1679-h944-no?authuser=0" alt="image"></p>
+</li>
+<li>
+<p>演練目標
+<img src="https://lh3.googleusercontent.com/pw/AL9nZEWViOoXPMMElt4M-l-CNvolimrdhMWrVtfgKZvaPz0DO0jNKgTgfdKl-wydxrAY2hnAitrpfRWsTtvU2wZ4dTOEszoLiVmARbEiYn_ZLX_eIRi23fy4XyGuYdB4yu6KAkxciIZa1K9xB7v0mq5NooA=w1679-h944-no?authuser=0" alt="image"></p>
+</li>
+<li>
+<p>紅隊演練人員組成
+<img src="https://lh3.googleusercontent.com/pw/AL9nZEWYs-pQLDBkbkfpJMzzf9N0YHhwbmqUVl9123LScsjpS3LFmpvy7DMeT3sk2jMKVSVTaSPffiLHy9nv6FSVDKzJIql8XimCUb8pkKOiiN-dCeP9yDfhgm725KXPUQfmC3-y3xbX8XxNWQ9i90ec5D0=w1679-h944-no?authuser=0" alt="image"></p>
+</li>
+<li>
+<p>演練後
+<img src="https://lh3.googleusercontent.com/pw/AL9nZEWYs-pQLDBkbkfpJMzzf9N0YHhwbmqUVl9123LScsjpS3LFmpvy7DMeT3sk2jMKVSVTaSPffiLHy9nv6FSVDKzJIql8XimCUb8pkKOiiN-dCeP9yDfhgm725KXPUQfmC3-y3xbX8XxNWQ9i90ec5D0=w1679-h944-no?authuser=0" alt="image"></p>
+<p>記錄演練時發生的時間序列圖 非常重要 (下圖為模擬圖並非真實發生)
+<img src="https://lh3.googleusercontent.com/pw/AL9nZEVgb-0zGNmqS4LdDFFNBVixs2B-vnUaOAHhfvCJaaDKMSFjhppsWqI6LRObDMop4saLbJRKe5Z8EkEgSA---YHBWT-cBiV7Y_KDHeOKsxnufVOwzxZiNcNXVjwlZpYKEM4KEM1P2ANTKjEH-AGqZ5I=w1679-h944-no?authuser=0" alt="image"></p>
+</li>
+</ul>
+<h4 id="結語-2">結語</h4>
+<p><img src="https://lh3.googleusercontent.com/pw/AL9nZEVxvCFnSyqNAD6T_nqSK807Uaa1tAQCXn-Nm8jHwNrtpUNEPxfgeT2fYtCCCd77cjgj1tFLvxSCNokOMTIJZ172vya0mBORP07WZE7ZCvBAK9u-l2_PD3DiVRtXcTlbRnkqmQaQr4Ntx4EuFleNHCQ=w1679-h944-no?authuser=0" alt="image"></p>
+<h3 id="701a-真實風險與attck的鴻溝-戴夫寇爾-翁浩正">701A 真實風險與ATT&amp;CK的鴻溝, 戴夫寇爾, 翁浩正</h3>
+<ul>
+<li>
+<p>ATT&amp;CK</p>
+<p>ATT&amp;CK® 是一個紀錄資安攻擊與情資分享的資料庫，也是紅隊與藍隊之間溝通的橋樑，市面上許多端點防禦軟體都使用 ATT&amp;CK® 作為防護的標準。</p>
+<p><a href="https://attack.mitre.org/">https://attack.mitre.org/</a></p>
+<p>REF: <a href="https://feifei.tw/attck-intro/">[ATT&amp;CK®] 1 ATT&amp;CK® 基本介紹</a></p>
+</li>
+<li>
+<p>金融業常見的 ATT&amp;CK 手法</p>
+<p><img src="https://lh3.googleusercontent.com/pw/AL9nZEUvA0RSw_Q9ZoQiNNB6HBBO9MYmYLUAMxz3tHpbyptnFE1NSzfmc8HIskv5148oOjI1XGxcnm3DUqRwth5KgbbglW0eUiOlsLg5fqJi3w8MTKqxRaSVLwaZdcxYLFYBwA6zoaXk1aRYjHw3kiHhnj4=w1679-h944-no?authuser=0" alt="image"></p>
+<p>知名的 APT10 組織攻擊手法</p>
+<p><img src="https://imgur.com/t1UYRcH.jpg" alt="image"></p>
+</li>
+<li>
+<p>DEVCORE 最常見的五種攻擊型態
+<img src="https://lh3.googleusercontent.com/pw/AL9nZEUA-fyit3FfLLkP2Zm5_fnQ9sKfD4FuE5gjdF6D7oiDNfft3bG2_LDGzZDwT_NDt4fN8Af-RAT8NvsB7gxDpkOIUVGFPf2kwJ2aUHX92wVfaImQQ4vqiIFL-4NAdc5qwP4qSD7MRS0I49SkEWdwdA8=w1679-h944-no?authuser=0" alt="image"></p>
+</li>
+</ul>
+<h4 id="結語-3">結語</h4>
+<p>ATTACK MATRIC 只是一種考古題</p>
+<p>讓我們可以理解別人研究過的攻擊手法</p>
+<p>而防禦手法也並非去做到完全的防禦</p>
+<p>而是能夠將其在中發現後阻斷</p>
+<h2 id="戰果-">戰果 (?)</h2>
+<p>樓下參展廠商贈品超級多</p>
+<p><img src="https://lh3.googleusercontent.com/pw/AL9nZEWRLcAQZ3opum_OKA-XPAMjdsh88Eg0UsrKsYhM8mDyCva2bLBBmaCDx71xCfY2nmQs-lCEjoLCVdoSGs6RDpCZflF-UHG4FhoJAjDCEKVZEXnvGZuFijKcOBcfqFQ2LMIzuLT5G44Ov2wen1ywo9U=w1679-h944-no?authuser=0" alt="image"></p>
+<h2 id="相片網址">相片網址</h2>
+<p><a href="https://photos.google.com/share/AF1QipNQ142Bqb0-pleI7c81fnnyebHDDjyp3m92H_NxrNVkVSrz4Vw6gpwbX2MlA7LyGA?key=NFB6THQtbzhnX05BcF83WHlVbjhaUlFQbk5scXVn">CYBERSEC 2022 相簿網址</a></p>
+
+    </div>
+    <div class="article-footer">
+
+    </div>
+  </article>
+<section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220916-develop-wordpress/" title="Wordpress 開發環境"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;</span></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="" role="button">
+                    <span>[&nbsp;</span><span></span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="facebook,twitter"
+                data-mobile-sites=""></div>
+        </div>
+    </div>
+</nav>
+
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://github.com/webberwu7" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://webberwu7.github.io/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-rss"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2022  -
+    2022
+    <div class="publishby">
+         <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a><a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+    
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/php.min.js" defer></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="https://webberwu7.github.io/WebberWuBlog/js/application.min.c181e6b0c036798c7731cfb85b41b44c80689fd48fee546b73d449386ce6ccfb.js"></script>
+<script src="https://webberwu7.github.io/WebberWuBlog/js/plugin.min.46930345227de54c034f39c80841463c3b879632feb482e9f2734d4b616ae3be.js"></script>
+
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '',
+                PAGES: '',
+                CATEGORIES: '',
+                TAGS: '',
+                UNTITLED: '',
+            },
+            ROOT_URL: 'https:\/\/webberwu7.github.io\/WebberWuBlog',
+            CONTENT_URL: 'https:\/\/webberwu7.github.io\/WebberWuBlog\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://webberwu7.github.io/WebberWuBlog/js/insight.min.07c7d73e2ec5e960e55f8b98577ada0bd78b36e7ef9d6dd65b85d4b1d443e7c1a1ca7cd1d98e7105db5fd72583cbc6fbb5e386062d3bf3c2568588fbb38c0c06.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https:\/\/webberwu7.github.io\/WebberWuBlog\/2022\/09\/20220926-conference-cybersec2022\/';
+        this.page.identifier = 'WebberNoteBlog';
+    };
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = '//' + 'WebberNoteBlog' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+  </body>
+</html>
