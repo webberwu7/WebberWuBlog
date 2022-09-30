@@ -123,9 +123,9 @@ params:
       enabled: true
       width: 40
       height: 40
-      url: favicon.ico
+      url: icon/favicon.ico
     title: Hugo # 页面title
-    favicon: favicon.ico
+    favicon: icon/favicon.ico
     board: <p>筆記自己做過的功能與經驗</p> # 公告牌
 
   # Share
