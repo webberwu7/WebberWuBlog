@@ -38,13 +38,13 @@ menu:
   main:
     - identifier: home
       name: Home
-      title: Home
+      title: 首頁
       url: /
       weight: 1
 
     - identifier: archives
       name: Archives
-      title: Archives
+      title: 文章
       url: /posts/
       weight: 2
 
@@ -56,13 +56,13 @@ menu:
 
     - identifier: tags
       name: Tags
-      title: Tags
+      title: 標籤
       url: /tags/
       weight: 4
 
     - identifier: about
       name: About
-      title: About
+      title: 關於
       url: /about/
       weight: 5
 
@@ -126,7 +126,7 @@ params:
       url: icon/favicon.ico
     title: Hugo # 页面title
     favicon: icon/favicon.ico
-    board: <p>筆記自己做過的功能與經驗</p> # 公告牌
+    board: <p>這裡是 webber 的筆記網站</p><p>紀錄我做過的功能與各種經驗</p> # 公告牌
 
   # Share
   # weibo,qq,qzone,wechat,tencent,douban,diandian,facebook,twitter,google,linkedin

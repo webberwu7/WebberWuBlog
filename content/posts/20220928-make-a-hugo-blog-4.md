@@ -2,7 +2,6 @@
 title: "菜雞部落客的hugo踩雷之路 ( 5 ) - 改變主題與 Disqus 留言"
 date: 2022-09-28T17:42:47+08:00
 tags: ['hugo']
-draft: true
 ---
 在原本使用的 m10c 主題色系較為灰暗
 

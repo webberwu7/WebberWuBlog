@@ -6,10 +6,19 @@
     <description>Recent content in hugo on webber 筆記本</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>MIT</copyright>
-    <lastBuildDate>Tue, 16 Aug 2022 12:19:14 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 28 Sep 2022 17:42:47 +0800</lastBuildDate>
     
         <atom:link href="https://webberwu7.github.io/WebberWuBlog/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>菜雞部落客的hugo踩雷之路 ( 5 ) - 改變主題與 Disqus 留言</title>
+      <link>https://webberwu7.github.io/WebberWuBlog/2022/09/20220928-make-a-hugo-blog-4/</link>
+      <pubDate>Wed, 28 Sep 2022 17:42:47 +0800</pubDate>
+      
+      <guid>https://webberwu7.github.io/WebberWuBlog/2022/09/20220928-make-a-hugo-blog-4/</guid>
+      <description>在原本使用的 m10c 主題色系較為灰暗 然後我又想加上搜尋功能於是就換成了今天的主題 hugo-theme-pure 下載新的目標主題 git submodule add git@github.com:webberwu7/hugo-theme-pure.git themes/pure 移除舊的主題 git rm themes/m10c 變更 config.toml 設定 參考這份主</description>
+    </item>
     
     <item>
       <title>CYBERSEC 2022 台灣資安大會</title>
@@ -93,12 +102,12 @@
     </item>
     
     <item>
-      <title>關於我</title>
+      <title>關於 Webber Wu</title>
       <link>https://webberwu7.github.io/WebberWuBlog/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://webberwu7.github.io/WebberWuBlog/about/</guid>
-      <description>技能樹 PHP 後端工程師 主要使用 laravel lumen 建立 RESTful API 開發 Wordpress Plugin Python 網路爬蟲應用 pandas 製作報表分析 AWS 使用Serverless建立服務 (SAM) s3, rds, apigateway, lambda, sqs, stepfunction 工作經驗 聯合報系,</description>
+      <description>我是 webber 目前是一名開發網站後端的工程師 喜歡接觸各種有趣的工具、功能和新世界！？ 技能樹 PHP 後端工程師 主要使用 laravel lumen 建立 RESTful API 開發 Wordpress Plugin Python 網路爬蟲應用 pandas 分</description>
     </item>
     
   </channel>

@@ -2,7 +2,7 @@
 <html lang="zh-tw">
   <head>
     <title>
-        菜雞部落客的hugo踩雷之路 ( 2 ) - 部署到github上的靜態網站 - webber 筆記本
+        菜雞部落客的hugo踩雷之路 ( 5 ) - 改變主題與 Disqus 留言 - webber 筆記本
       </title>
         <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -20,29 +20,29 @@
     <meta http-equiv="window-target" content="_top" />
     
     
-    <meta name="description" content="靜態網站 所謂靜態網頁，便是指超文件標示語言HyperText Markup Language，簡稱：HTML。是一種常與CSS及Javascript配合製" />
+    <meta name="description" content="在原本使用的 m10c 主題色系較為灰暗 然後我又想加上搜尋功能於是就換成了今天的主題 hugo-theme-pure 下載新的目標主題 git submodule add git@github.com:webberwu7/hugo-theme-pure.git themes/pure 移除舊的主題 git rm themes/m10c 變更 config.toml 設定 參考這份主" />
     <meta name="generator" content="Hugo 0.101.0 with theme pure" />
-    <title>菜雞部落客的hugo踩雷之路 ( 2 ) - 部署到github上的靜態網站 - webber 筆記本</title>
+    <title>菜雞部落客的hugo踩雷之路 ( 5 ) - 改變主題與 Disqus 留言 - webber 筆記本</title>
     
     
     <link rel="stylesheet" href="https://webberwu7.github.io/WebberWuBlog/css/style.min.e64d754037c0ee0ec4e20ab1d6f07740ace61729bc03850559b8caa21ae4a597.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-    <meta property="og:title" content="菜雞部落客的hugo踩雷之路 ( 2 ) - 部署到github上的靜態網站" />
-<meta property="og:description" content="靜態網站 所謂靜態網頁，便是指超文件標示語言HyperText Markup Language，簡稱：HTML。是一種常與CSS及Javascript配合製" />
+    <meta property="og:title" content="菜雞部落客的hugo踩雷之路 ( 5 ) - 改變主題與 Disqus 留言" />
+<meta property="og:description" content="在原本使用的 m10c 主題色系較為灰暗 然後我又想加上搜尋功能於是就換成了今天的主題 hugo-theme-pure 下載新的目標主題 git submodule add git@github.com:webberwu7/hugo-theme-pure.git themes/pure 移除舊的主題 git rm themes/m10c 變更 config.toml 設定 參考這份主" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://webberwu7.github.io/WebberWuBlog/2022/08/20220806-make-a-hugo-blog-1/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-08-06T13:50:36+08:00" />
-<meta property="article:modified_time" content="2022-08-06T13:50:36+08:00" />
+<meta property="og:url" content="https://webberwu7.github.io/WebberWuBlog/2022/09/20220928-make-a-hugo-blog-4/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-28T17:42:47+08:00" />
+<meta property="article:modified_time" content="2022-09-28T17:42:47+08:00" />
 
-<meta itemprop="name" content="菜雞部落客的hugo踩雷之路 ( 2 ) - 部署到github上的靜態網站">
-<meta itemprop="description" content="靜態網站 所謂靜態網頁，便是指超文件標示語言HyperText Markup Language，簡稱：HTML。是一種常與CSS及Javascript配合製"><meta itemprop="datePublished" content="2022-08-06T13:50:36+08:00" />
-<meta itemprop="dateModified" content="2022-08-06T13:50:36+08:00" />
-<meta itemprop="wordCount" content="908">
+<meta itemprop="name" content="菜雞部落客的hugo踩雷之路 ( 5 ) - 改變主題與 Disqus 留言">
+<meta itemprop="description" content="在原本使用的 m10c 主題色系較為灰暗 然後我又想加上搜尋功能於是就換成了今天的主題 hugo-theme-pure 下載新的目標主題 git submodule add git@github.com:webberwu7/hugo-theme-pure.git themes/pure 移除舊的主題 git rm themes/m10c 變更 config.toml 設定 參考這份主"><meta itemprop="datePublished" content="2022-09-28T17:42:47+08:00" />
+<meta itemprop="dateModified" content="2022-09-28T17:42:47+08:00" />
+<meta itemprop="wordCount" content="292">
 <meta itemprop="keywords" content="hugo," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="菜雞部落客的hugo踩雷之路 ( 2 ) - 部署到github上的靜態網站"/>
-<meta name="twitter:description" content="靜態網站 所謂靜態網頁，便是指超文件標示語言HyperText Markup Language，簡稱：HTML。是一種常與CSS及Javascript配合製"/>
+<meta name="twitter:title" content="菜雞部落客的hugo踩雷之路 ( 5 ) - 改變主題與 Disqus 留言"/>
+<meta name="twitter:description" content="在原本使用的 m10c 主題色系較為灰暗 然後我又想加上搜尋功能於是就換成了今天的主題 hugo-theme-pure 下載新的目標主題 git submodule add git@github.com:webberwu7/hugo-theme-pure.git themes/pure 移除舊的主題 git rm themes/m10c 變更 config.toml 設定 參考這份主"/>
 
     <!--[if lte IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -287,8 +287,8 @@ function tagCloud(where, min, max) {
       <h1 itemprop="name">
   <a
     class="article-title"
-    href="/WebberWuBlog/2022/08/20220806-make-a-hugo-blog-1/"
-    >菜雞部落客的hugo踩雷之路 ( 2 ) - 部署到github上的靜態網站</a
+    href="/WebberWuBlog/2022/09/20220928-make-a-hugo-blog-4/"
+    >菜雞部落客的hugo踩雷之路 ( 5 ) - 改變主題與 Disqus 留言</a
   >
 </h1>
 
@@ -296,8 +296,8 @@ function tagCloud(where, min, max) {
         
 <span class="article-date">
   <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://webberwu7.github.io/WebberWuBlog/2022/08/20220806-make-a-hugo-blog-1/" class="article-date">
-  <time datetime="2022-08-06 13:50:36 &#43;0800 CST" itemprop="datePublished">2022-08-06</time>
+<a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220928-make-a-hugo-blog-4/" class="article-date">
+  <time datetime="2022-09-28 17:42:47 &#43;0800 CST" itemprop="datePublished">2022-09-28</time>
 </a>
 </span>
   
@@ -306,72 +306,62 @@ function tagCloud(where, min, max) {
     <a class="article-tag-link" href="/WebberWuBlog/tags/hugo/"> hugo </a>
   </span>
 
-        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/WebberWuBlog/2022/08/20220806-make-a-hugo-blog-1/#comments"
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/WebberWuBlog/2022/09/20220928-make-a-hugo-blog-4/#comments"
             class="article-comment-link">評論</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字數統計: 908字</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">閱讀時間: 2分 </span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字數統計: 292字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">閱讀時間: 1分 </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      <h1 id="靜態網站">靜態網站</h1>
-<p>所謂靜態網頁，便是指超文件標示語言HyperText Markup Language，簡稱：HTML。是一種常與CSS及Javascript配合製作的網站建置基礎技術，網頁以純文字或圖片形式為主，內容固定、互動性差，且無後台資料庫。一般來說只要是網頁副檔名為html或htm，皆可辦定為靜態網頁。因爲靜態網頁的穩定性和無需連接資料庫，因此能快速開啟頁面，也更容易被搜索引擎檢索，所以許多人在編寫網頁時會將動態網頁、影像、動畫等轉變成靜態方式，就是所謂的“偽靜態網頁”，來提高搜尋引擎的友善度進而達到排名優化。</p>
-<p>[REF: <a href="https://www.bigboycancode.com/website-planning/static-vs-dynamic-website/">上網查到的說明</a>]</p>
-<h1 id="github-pages">GitHub Pages</h1>
-<p><a href="https://pages.github.com/">https://pages.github.com/</a></p>
-<p>GitHub Pages是GitHub提供的一個網頁代管服務，於2008年推出[1][2]。可以用於存放靜態網頁，包括部落格、項目文檔[3][1]甚至整本書。[4]Jekyll軟體可以用於將文檔轉換成靜態網頁，該軟體提供了將網頁上傳到GitHub Pages的功能。[5]一般GitHub Pages的網站使用github.io的子域名，但是用戶也可以使用第三方域名。[6]</p>
-<p>[REF: <a href="https://zh.wikipedia.org/zh-tw/GitHub_Pages">Wiki</a>]</p>
-<h2 id="1-先來-github-創建一個-repository">1. 先來 github 創建一個 repository</h2>
-<p><img src="https://i.imgur.com/5jZWfsB.png" alt="image"></p>
-<p>創建後先不要急著把專案上push上來</p>
-<p>停在這個頁面一下，我們需要先把hugo的config設定好再來上傳</p>
-<p><img src="https://i.imgur.com/IILSoH7.png" alt="image"></p>
-<h2 id="2-設定hugo-config-baseurl-至-github-page">2. 設定hugo config baseUrl 至 github page</h2>
-<p>Github Page的域名規則是這樣</p>
-<p><code>https://{github帳號}.github.io/{剛剛創建的repository}</code></p>
-<p>所以我們到config.toml檔設定</p>
-<pre><code>baseURL = 'https://webberwu7.github.io/WebberWuBlog'
-</code></pre>
-<p>設定改好後 hugo 更新一下!</p>
-<pre><code class="language-zsh">hugo
-</code></pre>
-<h2 id="3-推專案上-github-囉">3. 推專案上 github 囉</h2>
+      <p>在原本使用的 m10c 主題色系較為灰暗</p>
+<p>然後我又想加上搜尋功能於是就換成了今天的主題 hugo-theme-pure</p>
+<h2 id="下載新的目標主題">下載新的目標主題</h2>
+<p><code>git submodule add git@github.com:webberwu7/hugo-theme-pure.git themes/pure</code></p>
+<h2 id="移除舊的主題">移除舊的主題</h2>
+<p><code>git rm themes/m10c</code></p>
+<h2 id="變更-configtoml-設定">變更 config.toml 設定</h2>
+<p>參考這份主題的NOTE</p>
+<p>將config.yml複製下來</p>
+<p>Please copy the config.yml under the exampleSite folder to the root folder of your Hugo Site.</p>
+<p>Feel free to change it.</p>
+<p>If you don&rsquo;t like .yml file, you can also convert it to you want.</p>
+<h2 id="disqus">Disqus</h2>
+<h3 id="安裝-disqus">安裝 Disqus</h3>
 <ol>
 <li>
-<p>先在hugo專案資料夾 git init 和設定對照的 github remote</p>
-<pre><code class="language-zsh">git init
-git remote add origin git@github.com:webberwu7/WebberWuBlog.git
-</code></pre>
+<p>先到 <a href="https://disqus.com/">Disqus</a> 的官網註冊一個帳號。
+<img src="https://imgur.com/yw7xEoj.jpg" alt="image"></p>
 </li>
 <li>
-<p>commit &amp; push</p>
-<pre><code class="language-zsh">git add --all
-git commit -m &quot;init hugo blog&quot;
-git push origin master
-</code></pre>
+<p>按下 i want to install disqus on my site
+<img src="https://imgur.com/tV1qcgf.jpg" alt="image"></p>
+</li>
+<li>
+<p>填寫 Website Name, 可以想像這個是唯一的key值
+<img src="https://imgur.com/QDA6YQ8.jpg" alt="image"></p>
+</li>
+<li>
+<p>後續因為 disqus 想要你付錢有一些方案可以選擇 這邊都直接下一步大法過去就好</p>
+</li>
+<li>
+<p>回到hugo config 中加上設定</p>
 </li>
 </ol>
-<h2 id="4-到github-repository-中設定github-page">4. 到github repository 中設定Github Page</h2>
-<p>Setting -&gt; Pages -&gt; Source</p>
-<p>設定 <code>deploy from a branch</code></p>
-<p>branch 選擇 <code>master</code> <code>/docs</code></p>
-<p><img src="https://i.imgur.com/TfiVss4.png" alt="image"></p>
-<hr>
-<h2 id="踩到雷了-趕緊補救一下">[踩到雷了！！ 趕緊補救一下]</h2>
-<p>config.toml 加入 exportDir 設定</p>
-<p>因為hugo exportDir 預設是 public 資料夾</p>
-<p>但是github page 在上方第四步時只支援 /docs 資料夾中的資料</p>
-<p>因此我們需要在config.toml 檔加入</p>
-<pre><code class="language-toml">publishDir = 'docs'
+<pre><code class="language-yaml">  # Comment
+  comment:
+    type:  disqus # type disqus/gitalk/valine 启用哪种评论系统
+    disqus: WebberWuBlog # enter disqus shortname here
 </code></pre>
-<p>然後重新hugo製作一次</p>
-<p>之後把舊的public資料夾刪除掉</p>
-<hr>
-<h2 id="5-workflows">5. Workflows</h2>
-<p>如果一切順利的話可以在 action 中看到跑完的綠色通過</p>
-<p><img src="https://i.imgur.com/JbdYaSM.png" alt="image">
-(前面的紅色就是踩到的一些雷)</p>
-<h2 id="出發-前往部署成功的網站看看囉">出發 前往部署成功的網站看看囉</h2>
-<p><code>https://{github帳號}.github.io/{剛剛創建的repository}</code></p>
+<ol start="6">
+<li>就可以在文章底下看到留言系統囉
+<img src="https://imgur.com/J1WNCR7.jpg" alt="image"></li>
+</ol>
+<h2 id="補充">補充</h2>
+<p>由於作者已經將 hugo-theme-pure github 封存</p>
+<p><a href="https://github.com/xiaoheiAh/hugo-theme-pure">https://github.com/xiaoheiAh/hugo-theme-pure</a></p>
+<p>所以我在 github 上 Fork 了一份回來</p>
+<p><img src="https://imgur.com/MCDzTAl.jpg" alt="image"></p>
+<p>後續也加上了 i18n 多國語系 zh-TW.yaml</p>
 
     </div>
     <div class="article-footer">
@@ -388,14 +378,9 @@ git push origin master
     <div class="bar-inner">
         <ul class="pager pull-left">
             <li class="prev">
-                <a href="https://webberwu7.github.io/WebberWuBlog/2022/08/20220806-make-a-hugo-blog/" title="菜雞部落客的hugo踩雷之路 ( 1 ) - 建立hugo專案與新增文章"><i
+                <a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220926-conference-cybersec2022/" title="CYBERSEC 2022 台灣資安大會"><i
                         class="icon icon-angle-left"
                         aria-hidden="true"></i><span>&nbsp;&nbsp;下一篇</span></a>
-            </li>
-            <li class="next">
-                <a href="https://webberwu7.github.io/WebberWuBlog/2022/08/20220808-make-a-hugo-blog-2/"
-                    title="菜雞部落客的hugo踩雷之路 ( 3 ) - Content 與 layout 的愛恨情仇"><span>上一篇&nbsp;&nbsp;</span><i
-                        class="icon icon-angle-right" aria-hidden="true"></i></a>
             </li>
             
             <li class="toggle-toc">
@@ -494,7 +479,7 @@ git push origin master
 
 <script>
     var disqus_config = function () {
-        this.page.url = 'https:\/\/webberwu7.github.io\/WebberWuBlog\/2022\/08\/20220806-make-a-hugo-blog-1\/';
+        this.page.url = 'https:\/\/webberwu7.github.io\/WebberWuBlog\/2022\/09\/20220928-make-a-hugo-blog-4\/';
         this.page.identifier = 'WebberWuBlog';
     };
     (function () {

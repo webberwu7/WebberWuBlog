@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/tags/hugo/</loc>
+    <lastmod>2022-09-28T17:42:47+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/posts/</loc>
+    <lastmod>2022-09-28T17:42:47+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/tags/</loc>
+    <lastmod>2022-09-28T17:42:47+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/</loc>
+    <lastmod>2022-09-28T17:42:47+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/2022/09/20220928-make-a-hugo-blog-4/</loc>
+    <lastmod>2022-09-28T17:42:47+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://webberwu7.github.io/WebberWuBlog/tags/conference/</loc>
     <lastmod>2022-09-26T18:02:43+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -11,27 +46,6 @@
   
   <url>
     <loc>https://webberwu7.github.io/WebberWuBlog/2022/09/20220926-conference-cybersec2022/</loc>
-    <lastmod>2022-09-26T18:02:43+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://webberwu7.github.io/WebberWuBlog/posts/</loc>
-    <lastmod>2022-09-26T18:02:43+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://webberwu7.github.io/WebberWuBlog/tags/</loc>
-    <lastmod>2022-09-26T18:02:43+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://webberwu7.github.io/WebberWuBlog/</loc>
     <lastmod>2022-09-26T18:02:43+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -96,13 +110,6 @@
   <url>
     <loc>https://webberwu7.github.io/WebberWuBlog/2022/08/20220818-python-bigquery/</loc>
     <lastmod>2022-08-18T00:05:39+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://webberwu7.github.io/WebberWuBlog/tags/hugo/</loc>
-    <lastmod>2022-08-16T12:19:14+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
