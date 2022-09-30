@@ -1,5 +1,5 @@
 ---
-title: "wordpress 插件開發筆記 (1) - 第一個插件"
+title: "Wordpress 插件開發筆記 (1) - 第一個插件"
 date: 2022-09-15T23:38:14+08:00
 tags: ['php', 'wordpress', 'plugin']
 ---

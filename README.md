@@ -22,6 +22,10 @@ hugo new posts/{title_name}.md
 hugo
 ```
 
+### Update submodule
+```shell
+git submodule update --remote
+```
 
 ## TODO
 - [ ] theme change

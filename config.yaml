@@ -201,5 +201,4 @@ params:
   widgets:
     - board
     - tag_cloud
-    - tag
     - recent_posts

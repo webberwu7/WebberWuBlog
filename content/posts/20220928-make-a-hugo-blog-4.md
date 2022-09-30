@@ -52,5 +52,13 @@ If you don't like .yml file, you can also convert it to you want.
 6. 就可以在文章底下看到留言系統囉
     ![image](https://imgur.com/J1WNCR7.jpg)
 
-## TO-DO
-網站icon
+## 補充
+由於作者已經將 hugo-theme-pure github 封存
+
+https://github.com/xiaoheiAh/hugo-theme-pure
+
+所以我在 github 上 Fork 了一份回來
+
+![image](https://imgur.com/MCDzTAl.jpg)
+
+後續也加上了 i18n 多國語系 zh-TW.yaml

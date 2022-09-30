@@ -52,7 +52,6 @@
         <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
       <![endif]-->
-
   </head>
 
   
@@ -71,7 +70,7 @@
         </div><div class="search" id="search-form-wrap">
     <form class="search-form sidebar-form">
         <div class="input-group">
-            <input type="text" class="search-form-input form-control" placeholder="" />
+            <input type="text" class="search-form-input form-control" placeholder="搜尋" />
             <span class="input-group-btn">
                 <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
                         class="icon icon-search"></i></button>
@@ -81,7 +80,7 @@
             <div class="ins-search-mask"></div>
             <div class="ins-search-container">
                 <div class="ins-input-wrapper">
-                    <input type="text" class="ins-search-input" placeholder=""
+                    <input type="text" class="ins-search-input" placeholder="想要搜尋什麼..."
                         x-webkit-speech />
                     <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
                         aria-label="Close"><span aria-hidden="true">×</span></button>
@@ -135,7 +134,7 @@
   <div class="slimContent">
     
       <div class="widget">
-    <h3 class="widget-title"></h3>
+    <h3 class="widget-title">公告</h3>
     <div class="widget-body">
         <div id="board">
             <div class="content"><p>筆記自己做過的功能與經驗</p>
@@ -145,7 +144,7 @@
 </div>
 
       <div class="widget">
-    <h3 class="widget-title"> </h3>
+    <h3 class="widget-title"> 標籤</h3>
     <div id="tag-cloud-list" class="widget-body">
             
             
@@ -209,54 +208,9 @@ function tagCloud(where, min, max) {
 </script>
 </div>
 
-      <div class="widget">
-    <h3 class="widget-title"> </h3>
-    <div class="widget-body">
-        <ul class="tag-list">
-            
-            
-            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/bigquery/" class="tag-list-link">bigquery</a><span
-                    class="tag-list-count">1</span></li>
-            
-            
-            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/conference/" class="tag-list-link">conference</a><span
-                    class="tag-list-count">1</span></li>
-            
-            
-            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/docker/" class="tag-list-link">docker</a><span
-                    class="tag-list-count">1</span></li>
-            
-            
-            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/hugo/" class="tag-list-link">hugo</a><span
-                    class="tag-list-count">4</span></li>
-            
-            
-            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/laravel/" class="tag-list-link">laravel</a><span
-                    class="tag-list-count">1</span></li>
-            
-            
-            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/php/" class="tag-list-link">php</a><span
-                    class="tag-list-count">2</span></li>
-            
-            
-            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/plugin/" class="tag-list-link">plugin</a><span
-                    class="tag-list-count">1</span></li>
-            
-            
-            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/python/" class="tag-list-link">python</a><span
-                    class="tag-list-count">1</span></li>
-            
-            
-            <li class="tag-list-item"><a href="https://webberwu7.github.io/WebberWuBlog/tags/wordpress/" class="tag-list-link">wordpress</a><span
-                    class="tag-list-count">2</span></li>
-            
-        </ul>
-
-    </div>
-</div>
       
 <div class="widget">
-    <h3 class="widget-title"></h3>
+    <h3 class="widget-title">最新文章</h3>
     <div class="widget-body">
         <ul class="recent-post-list list-unstyled no-thumbnail">
             <li>
@@ -282,7 +236,7 @@ function tagCloud(where, min, max) {
             <li>
                 <div class="item-inner">
                     <p class="item-title">
-                        <a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220915-develop-wordpress-plugin/" class="title">wordpress 插件開發筆記 (1) - 第一個插件</a>
+                        <a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220915-develop-wordpress-plugin/" class="title">Wordpress 插件開發筆記 (1) - 第一個插件</a>
                     </p>
                     <p class="item-date">
                         <time datetime="2022-09-15 23:38:14 &#43;0800 CST" itemprop="datePublished">2022-09-15</time>
@@ -319,7 +273,7 @@ function tagCloud(where, min, max) {
     
 <aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
   <div class="slimContent">
-    <h4 class="toc-title"></h4>
+    <h4 class="toc-title">文章目錄</h4>
     <nav id="toc" class="js-toc toc">
 
     </nav>
@@ -354,9 +308,9 @@ function tagCloud(where, min, max) {
   </span>
 
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/WebberWuBlog/2022/08/20220818-python-bigquery/#comments"
-            class="article-comment-link"></a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">128</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">1 </span>
+            class="article-comment-link">評論</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字數統計: 128字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">閱讀時間: 1分 </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
@@ -415,18 +369,18 @@ print(response)
             <li class="prev">
                 <a href="https://webberwu7.github.io/WebberWuBlog/2022/08/20220816-make-a-hugo-blog-3/" title="菜雞部落客的hugo踩雷之路 ( 4 ) - 終於有頭像了"><i
                         class="icon icon-angle-left"
-                        aria-hidden="true"></i><span>&nbsp;&nbsp;</span></a>
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;下一篇</span></a>
             </li>
             <li class="next">
                 <a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220915-develop-wordpress-plugin/"
-                    title="wordpress 插件開發筆記 (1) - 第一個插件"><span>&nbsp;&nbsp;</span><i
+                    title="Wordpress 插件開發筆記 (1) - 第一個插件"><span>上一篇&nbsp;&nbsp;</span><i
                         class="icon icon-angle-right" aria-hidden="true"></i></a>
             </li>
             
             <li class="toggle-toc">
                 <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
-                    title="" role="button">
-                    <span>[&nbsp;</span><span></span>
+                    title="文章目錄" role="button">
+                    <span>[&nbsp;</span><span>文章目錄</span>
                     <i class="text-collapsed icon icon-anchor"></i>
                     <i class="text-in icon icon-close"></i>
                     <span>]</span>
@@ -452,7 +406,7 @@ print(response)
     &copy;2022  -
     2022
     <div class="publishby">
-         <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a><a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
     </div>
     
   </div>
@@ -490,11 +444,11 @@ print(response)
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: '',
-                PAGES: '',
-                CATEGORIES: '',
-                TAGS: '',
-                UNTITLED: '',
+                POSTS: '文章',
+                PAGES: '頁面',
+                CATEGORIES: '類別',
+                TAGS: '標籤',
+                UNTITLED: '(未命名)',
             },
             ROOT_URL: 'https:\/\/webberwu7.github.io\/WebberWuBlog',
             CONTENT_URL: 'https:\/\/webberwu7.github.io\/WebberWuBlog\/searchindex.json ',
