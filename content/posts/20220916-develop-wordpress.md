@@ -190,3 +190,32 @@ REF: https://raise-up.com.tw/wordpress-tutorial/wp-cli-introduction.html/
 1. wp core install   : 安裝wordpress 並設定網址,標題和管理員等資料
 2. wp theme install  : 安裝wordpress主題
 3. wp plugin install : 安裝wordpress插件
+
+
+## VS Code 開發 wrodrpress 推薦插件
+### fsdeploy
+這個插件可以將檔案自動複製同步到指定位置
+
+很適合將我們開發的插件程式複製到 docker 產生的 volumes 的位置
+
+他的觸發條件是當該資料夾中有檔案在vscode存擋時自動將檔案貼過去
+
+如果你是直接複製過來或是git reset之類的動作，他並不會觸發自動同步
+
+![image](https://imgur.com/WqrjBGt.jpg)
+
+REF: [https://marketplace.visualstudio.com/items?itemName=mightycoco.fsdeploy](https://marketplace.visualstudio.com/items?itemName=mightycoco.fsdeploy)
+
+參考設定 json
+```json
+  "fsdeploy.nodes": [
+    {
+        "source":"{{ THIS REPOSITORY DIR }}/plugins",
+        "target":"{{ THIS REPOSITORY DIR }}/.wordpress/wp-content/plugins",
+        "include":"**/*.*",
+        "exclude":"**/min/*.*",
+        "deleteTargetOnDeploy": true,
+        "scp": {}
+    }
+  ]
+```

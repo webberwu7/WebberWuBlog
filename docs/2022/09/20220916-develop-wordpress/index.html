@@ -39,7 +39,7 @@
 <meta itemprop="name" content="Wordpress 開發環境">
 <meta itemprop="description" content="Wordpress WordPress是一個以PHP和MySQL為平台的自由開源的部落格軟體和內容管理系統 WordPress具有外掛程式架構和模板系統 方便使用"><meta itemprop="datePublished" content="2022-09-16T11:25:16+08:00" />
 <meta itemprop="dateModified" content="2022-09-16T11:25:16+08:00" />
-<meta itemprop="wordCount" content="1096">
+<meta itemprop="wordCount" content="1248">
 <meta itemprop="keywords" content="wordpress,docker," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Wordpress 開發環境"/>
 <meta name="twitter:description" content="Wordpress WordPress是一個以PHP和MySQL為平台的自由開源的部落格軟體和內容管理系統 WordPress具有外掛程式架構和模板系統 方便使用"/>
@@ -309,7 +309,7 @@ function tagCloud(where, min, max) {
 
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/WebberWuBlog/2022/09/20220916-develop-wordpress/#comments"
             class="article-comment-link">評論</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字數統計: 1096字</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字數統計: 1248字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">閱讀時間: 3分 </span>
       </div>
     </div>
@@ -464,6 +464,26 @@ services:
 <li>wp theme install  : 安裝wordpress主題</li>
 <li>wp plugin install : 安裝wordpress插件</li>
 </ol>
+<h2 id="vs-code-開發-wrodrpress-推薦插件">VS Code 開發 wrodrpress 推薦插件</h2>
+<h3 id="fsdeploy">fsdeploy</h3>
+<p>這個插件可以將檔案自動複製同步到指定位置</p>
+<p>很適合將我們開發的插件程式複製到 docker 產生的 volumes 的位置</p>
+<p>他的觸發條件是當該資料夾中有檔案在vscode存擋時自動將檔案貼過去</p>
+<p>如果你是直接複製過來或是git reset之類的動作，他並不會觸發自動同步</p>
+<p><img src="https://imgur.com/WqrjBGt.jpg" alt="image"></p>
+<p>REF: <a href="https://marketplace.visualstudio.com/items?itemName=mightycoco.fsdeploy">https://marketplace.visualstudio.com/items?itemName=mightycoco.fsdeploy</a></p>
+<p>參考設定 json</p>
+<pre><code class="language-json">  &quot;fsdeploy.nodes&quot;: [
+    {
+        &quot;source&quot;:&quot;{{ THIS REPOSITORY DIR }}/plugins&quot;,
+        &quot;target&quot;:&quot;{{ THIS REPOSITORY DIR }}/.wordpress/wp-content/plugins&quot;,
+        &quot;include&quot;:&quot;**/*.*&quot;,
+        &quot;exclude&quot;:&quot;**/min/*.*&quot;,
+        &quot;deleteTargetOnDeploy&quot;: true,
+        &quot;scp&quot;: {}
+    }
+  ]
+</code></pre>
 
     </div>
     <div class="article-footer">
