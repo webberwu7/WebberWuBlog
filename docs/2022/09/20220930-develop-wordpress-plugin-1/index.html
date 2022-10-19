@@ -2,7 +2,7 @@
 <html lang="zh-tw">
   <head>
     <title>
-        菜雞部落客的hugo踩雷之路 ( 2 ) - 部署到github上的靜態網站 - webber 筆記本
+        Wordpress 插件開發筆記 (2) - wp option 與 MVC 框架 - webber 筆記本
       </title>
         <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -20,29 +20,29 @@
     <meta http-equiv="window-target" content="_top" />
     
     
-    <meta name="description" content="靜態網站 所謂靜態網頁，便是指超文件標示語言HyperText Markup Language，簡稱：HTML。是一種常與CSS及Javascript配合製" />
+    <meta name="description" content="上一篇 我們在wordpress中建立起一個helloworld的插件 並且加入一個後台設定頁面 這篇要描寫如何將可設定的參數加到wordpres" />
     <meta name="generator" content="Hugo 0.101.0 with theme pure" />
-    <title>菜雞部落客的hugo踩雷之路 ( 2 ) - 部署到github上的靜態網站 - webber 筆記本</title>
+    <title>Wordpress 插件開發筆記 (2) - wp option 與 MVC 框架 - webber 筆記本</title>
     
     
     <link rel="stylesheet" href="https://webberwu7.github.io/WebberWuBlog/css/style.min.d9249ab082ab72df82ec9f71027ea50b38f33d15fe12384a6ccb528d9b552e93.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-    <meta property="og:title" content="菜雞部落客的hugo踩雷之路 ( 2 ) - 部署到github上的靜態網站" />
-<meta property="og:description" content="靜態網站 所謂靜態網頁，便是指超文件標示語言HyperText Markup Language，簡稱：HTML。是一種常與CSS及Javascript配合製" />
+    <meta property="og:title" content="Wordpress 插件開發筆記 (2) - wp option 與 MVC 框架" />
+<meta property="og:description" content="上一篇 我們在wordpress中建立起一個helloworld的插件 並且加入一個後台設定頁面 這篇要描寫如何將可設定的參數加到wordpres" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://webberwu7.github.io/WebberWuBlog/2022/08/20220806-make-a-hugo-blog-1/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-08-06T13:50:36+08:00" />
-<meta property="article:modified_time" content="2022-08-06T13:50:36+08:00" />
+<meta property="og:url" content="https://webberwu7.github.io/WebberWuBlog/2022/09/20220930-develop-wordpress-plugin-1/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-30T17:23:12+08:00" />
+<meta property="article:modified_time" content="2022-09-30T17:23:12+08:00" />
 
-<meta itemprop="name" content="菜雞部落客的hugo踩雷之路 ( 2 ) - 部署到github上的靜態網站">
-<meta itemprop="description" content="靜態網站 所謂靜態網頁，便是指超文件標示語言HyperText Markup Language，簡稱：HTML。是一種常與CSS及Javascript配合製"><meta itemprop="datePublished" content="2022-08-06T13:50:36+08:00" />
-<meta itemprop="dateModified" content="2022-08-06T13:50:36+08:00" />
-<meta itemprop="wordCount" content="908">
-<meta itemprop="keywords" content="hugo," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="菜雞部落客的hugo踩雷之路 ( 2 ) - 部署到github上的靜態網站"/>
-<meta name="twitter:description" content="靜態網站 所謂靜態網頁，便是指超文件標示語言HyperText Markup Language，簡稱：HTML。是一種常與CSS及Javascript配合製"/>
+<meta itemprop="name" content="Wordpress 插件開發筆記 (2) - wp option 與 MVC 框架">
+<meta itemprop="description" content="上一篇 我們在wordpress中建立起一個helloworld的插件 並且加入一個後台設定頁面 這篇要描寫如何將可設定的參數加到wordpres"><meta itemprop="datePublished" content="2022-09-30T17:23:12+08:00" />
+<meta itemprop="dateModified" content="2022-09-30T17:23:12+08:00" />
+<meta itemprop="wordCount" content="615">
+<meta itemprop="keywords" content="php,wordpress,plugin," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Wordpress 插件開發筆記 (2) - wp option 與 MVC 框架"/>
+<meta name="twitter:description" content="上一篇 我們在wordpress中建立起一個helloworld的插件 並且加入一個後台設定頁面 這篇要描寫如何將可設定的參數加到wordpres"/>
 
     <!--[if lte IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -287,8 +287,8 @@ function tagCloud(where, min, max) {
       <h1 itemprop="name">
   <a
     class="article-title"
-    href="/WebberWuBlog/2022/08/20220806-make-a-hugo-blog-1/"
-    >菜雞部落客的hugo踩雷之路 ( 2 ) - 部署到github上的靜態網站</a
+    href="/WebberWuBlog/2022/09/20220930-develop-wordpress-plugin-1/"
+    >Wordpress 插件開發筆記 (2) - wp option 與 MVC 框架</a
   >
 </h1>
 
@@ -296,82 +296,245 @@ function tagCloud(where, min, max) {
         
 <span class="article-date">
   <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://webberwu7.github.io/WebberWuBlog/2022/08/20220806-make-a-hugo-blog-1/" class="article-date">
-  <time datetime="2022-08-06 13:50:36 &#43;0800 CST" itemprop="datePublished">2022-08-06</time>
+<a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220930-develop-wordpress-plugin-1/" class="article-date">
+  <time datetime="2022-09-30 17:23:12 &#43;0800 CST" itemprop="datePublished">2022-09-30</time>
 </a>
 </span>
   
   <span class="article-tag">
     <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/WebberWuBlog/tags/hugo/"> hugo </a>
+    <a class="article-tag-link" href="/WebberWuBlog/tags/php/"> php </a>
+    <a class="article-tag-link" href="/WebberWuBlog/tags/wordpress/"> wordpress </a>
+    <a class="article-tag-link" href="/WebberWuBlog/tags/plugin/"> plugin </a>
   </span>
 
-        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/WebberWuBlog/2022/08/20220806-make-a-hugo-blog-1/#comments"
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/WebberWuBlog/2022/09/20220930-develop-wordpress-plugin-1/#comments"
             class="article-comment-link">評論</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字數統計: 908字</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字數統計: 615字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">閱讀時間: 2分 </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      <h1 id="靜態網站">靜態網站</h1>
-<p>所謂靜態網頁，便是指超文件標示語言HyperText Markup Language，簡稱：HTML。是一種常與CSS及Javascript配合製作的網站建置基礎技術，網頁以純文字或圖片形式為主，內容固定、互動性差，且無後台資料庫。一般來說只要是網頁副檔名為html或htm，皆可辦定為靜態網頁。因爲靜態網頁的穩定性和無需連接資料庫，因此能快速開啟頁面，也更容易被搜索引擎檢索，所以許多人在編寫網頁時會將動態網頁、影像、動畫等轉變成靜態方式，就是所謂的“偽靜態網頁”，來提高搜尋引擎的友善度進而達到排名優化。</p>
-<p>[REF: <a href="https://www.bigboycancode.com/website-planning/static-vs-dynamic-website/">上網查到的說明</a>]</p>
-<h1 id="github-pages">GitHub Pages</h1>
-<p><a href="https://pages.github.com/">https://pages.github.com/</a></p>
-<p>GitHub Pages是GitHub提供的一個網頁代管服務，於2008年推出[1][2]。可以用於存放靜態網頁，包括部落格、項目文檔[3][1]甚至整本書。[4]Jekyll軟體可以用於將文檔轉換成靜態網頁，該軟體提供了將網頁上傳到GitHub Pages的功能。[5]一般GitHub Pages的網站使用github.io的子域名，但是用戶也可以使用第三方域名。[6]</p>
-<p>[REF: <a href="https://zh.wikipedia.org/zh-tw/GitHub_Pages">Wiki</a>]</p>
-<h2 id="1-先來-github-創建一個-repository">1. 先來 github 創建一個 repository</h2>
-<p><img src="https://i.imgur.com/5jZWfsB.png" alt="image"></p>
-<p>創建後先不要急著把專案上push上來</p>
-<p>停在這個頁面一下，我們需要先把hugo的config設定好再來上傳</p>
-<p><img src="https://i.imgur.com/IILSoH7.png" alt="image"></p>
-<h2 id="2-設定hugo-config-baseurl-至-github-page">2. 設定hugo config baseUrl 至 github page</h2>
-<p>Github Page的域名規則是這樣</p>
-<p><code>https://{github帳號}.github.io/{剛剛創建的repository}</code></p>
-<p>所以我們到config.toml檔設定</p>
-<pre><code>baseURL = 'https://webberwu7.github.io/WebberWuBlog'
+      <p>上一篇 我們在wordpress中建立起一個helloworld的插件</p>
+<p>並且加入一個後台設定頁面</p>
+<p>這篇要描寫如何將可設定的參數加到wordpress中</p>
+<p>並且使用 MVC 架構設計API給前端使用</p>
+<h2 id="wordpress-settings">Wordpress Settings</h2>
+<p>WordPress 提供了兩個核心 API，使管理界面易於構建、安全並與 WordPress 管理的設計保持一致。</p>
+<p>The Settings API focuses on providing a way for developers to create forms and manage form data.</p>
+<p>The Options API focuses on managing data using a simple key/value system.</p>
+<p>REF: <a href="https://developer.wordpress.org/plugins/settings/">https://developer.wordpress.org/plugins/settings/</a></p>
+<h2 id="options-api">options api</h2>
+<p>REF: <a href="https://developer.wordpress.org/plugins/settings/options-api/">https://developer.wordpress.org/plugins/settings/options-api/</a></p>
+<ul>
+<li>
+<p>add_option($optionName);</p>
+<p>在 wp option 建立一組 key 對照</p>
+</li>
+<li>
+<p>get_option($optionName);</p>
+<p>在 wp option 取 key 對照值</p>
+</li>
+<li>
+<p>update_option($optionName, $value);</p>
+<p>在 wp option 更新 key 對照值</p>
+</li>
+<li>
+<p>delete_option($optionName)</p>
+<p>在 wp option 移除 key 對照</p>
+</li>
+</ul>
+<h2 id="restful-api">RESTful API</h2>
+<p>在wordpress中加入客製化 RESTful API
+<a href="https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/">https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/</a></p>
+<ul>
+<li>register_rest_route</li>
+</ul>
+<p>register_rest_route( string $namespace, string $route, array $args = array(), bool $override = false ): bool</p>
+<p>下面範例加上一個health-check的API</p>
+<pre><code class="language-php">class HealthCheckController
+{
+    public function __construct()
+    {
+        $this-&gt;registerApiRoutes();
+    }
+
+    public function registerApiRoutes()
+    {
+        add_action('rest_api_init', function () {
+            register_rest_route('my-plugin/v1', 'health-check', [
+                'methods' =&gt; 'GET',
+                'callback' =&gt; [$this, 'healthCheck'],
+            ]);
+        });
+    }
+
+    public function healthCheck()
+    {
+        return &quot;success&quot;;
+    }
+}
 </code></pre>
-<p>設定改好後 hugo 更新一下!</p>
-<pre><code class="language-zsh">hugo
+<h2 id="實用情境設計">實用情境設計</h2>
+<p>我需要讓使用者設定<code>認證token</code>與<code>專案id</code></p>
+<h3 id="model">Model</h3>
+<p>我需要一個Model來管理與建立這些需要的設定欄位</p>
+<ul>
+<li>WpOption.php</li>
+</ul>
+<pre><code class="language-php">&lt;?php
+
+namespace MyPlugin\Models;
+
+class WpOption
+{
+    // Options in this group 
+    public $optionNames = [
+        &quot;token&quot;, &quot;project&quot;
+    ];
+
+    public function __construct()
+    {
+        $this-&gt;register_options();
+    }
+
+    private function register_options()
+    {
+        foreach ($this-&gt;optionNames as $optionName) {
+            add_option($optionName);
+        }
+    }
+
+    public function getOptions(): array
+    {
+        $response = [];
+        foreach ($this-&gt;optionNames as $optionName) {
+            $response[$optionName] = $this-&gt;get($optionName);
+        }
+
+        return $response;
+    }
+
+    public function setOptions($options): bool|array
+    {
+        foreach ($options as $key =&gt; $value) {
+            $this-&gt;set($key, $value);
+        }
+
+        return $this-&gt;getOptions();
+    }
+
+    public function get($optionName): false|string
+    {
+        if (in_array($optionName, $this-&gt;optionNames)) {
+            return get_option($optionName);
+        }
+
+        return false;
+    }
+
+    public function set($optionName, $value): bool
+    {
+        if (!in_array($optionName, $this-&gt;optionNames)) {
+            return false;
+        }
+
+        return update_option($optionName, $value);
+    }
+}
 </code></pre>
-<h2 id="3-推專案上-github-囉">3. 推專案上 github 囉</h2>
+<h3 id="controller">Controller</h3>
 <ol>
 <li>
-<p>先在hugo專案資料夾 git init 和設定對照的 github remote</p>
-<pre><code class="language-zsh">git init
-git remote add origin git@github.com:webberwu7/WebberWuBlog.git
+<p>使用 setting controller 負責將 models 初始化</p>
+<ul>
+<li>SettingController.php
+<pre><code class="language-php">&lt;?php
+
+namespace MyPlugin\Controllers;
+
+use MyPlugin\Models\WpOption;
+
+class SettingController
+{
+    public $wpOption;
+
+    public function __construct()
+    {
+        $this-&gt;wpOption = new WpOption();
+    }
+}
 </code></pre>
+</li>
+</ul>
 </li>
 <li>
-<p>commit &amp; push</p>
-<pre><code class="language-zsh">git add --all
-git commit -m &quot;init hugo blog&quot;
-git push origin master
+<p>編寫提供前端呼叫的API controller</p>
+<ul>
+<li>WpOptionController
+<pre><code class="language-php">&lt;?php
+
+namespace MyPlugin\Controllers\API;
+
+use MyPlugin\Models\WpOption;
+use WP_REST_Request;
+
+class WpOptionController
+{
+    protected $wpOption;
+
+    public function __construct()
+    {
+        $this-&gt;wpOption = new WpOption();
+
+        $this-&gt;registerApiRoutes();
+    }
+
+    public function registerApiRoutes()
+    {
+        add_action('rest_api_init', function () {
+            register_rest_route('my-plugin/v1/api/backstage', '/setting/options', [
+                'methods' =&gt; 'GET',
+                'callback' =&gt; [$this, 'getOptions'],
+            ]);
+            register_rest_route('my-plugin/v1/api/backstage', '/setting/options', [
+                'methods' =&gt; 'POST',
+                'callback' =&gt; [$this, 'updateOptions'],
+                'args' =&gt; [
+                    'token' =&gt; [
+                        'required' =&gt; false
+                    ],
+                    'project' =&gt; [
+                        'required' =&gt; false
+                    ],
+                ]
+            ]);
+        });
+    }
+
+    public function getOptions(WP_REST_Request $request)
+    {
+        $options = $this-&gt;wpOption-&gt;getOptions();
+
+        return $options;
+    }
+
+    public function updateOptions(WP_REST_Request $request)
+    {
+        // get input params
+        $data = $request-&gt;get_params();
+
+        // update data
+        $options = $this-&gt;wpOption-&gt;setOptions($data);
+
+        return $options;
+    }
+}
 </code></pre>
 </li>
+</ul>
+</li>
 </ol>
-<h2 id="4-到github-repository-中設定github-page">4. 到github repository 中設定Github Page</h2>
-<p>Setting -&gt; Pages -&gt; Source</p>
-<p>設定 <code>deploy from a branch</code></p>
-<p>branch 選擇 <code>master</code> <code>/docs</code></p>
-<p><img src="https://i.imgur.com/TfiVss4.png" alt="image"></p>
-<hr>
-<h2 id="踩到雷了-趕緊補救一下">[踩到雷了！！ 趕緊補救一下]</h2>
-<p>config.toml 加入 exportDir 設定</p>
-<p>因為hugo exportDir 預設是 public 資料夾</p>
-<p>但是github page 在上方第四步時只支援 /docs 資料夾中的資料</p>
-<p>因此我們需要在config.toml 檔加入</p>
-<pre><code class="language-toml">publishDir = 'docs'
-</code></pre>
-<p>然後重新hugo製作一次</p>
-<p>之後把舊的public資料夾刪除掉</p>
-<hr>
-<h2 id="5-workflows">5. Workflows</h2>
-<p>如果一切順利的話可以在 action 中看到跑完的綠色通過</p>
-<p><img src="https://i.imgur.com/JbdYaSM.png" alt="image">
-(前面的紅色就是踩到的一些雷)</p>
-<h2 id="出發-前往部署成功的網站看看囉">出發 前往部署成功的網站看看囉</h2>
-<p><code>https://{github帳號}.github.io/{剛剛創建的repository}</code></p>
 
     </div>
     <div class="article-footer">
@@ -388,13 +551,13 @@ git push origin master
     <div class="bar-inner">
         <ul class="pager pull-left">
             <li class="prev">
-                <a href="https://webberwu7.github.io/WebberWuBlog/2022/08/20220806-make-a-hugo-blog/" title="菜雞部落客的hugo踩雷之路 ( 1 ) - 建立hugo專案與新增文章"><i
+                <a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220928-make-a-hugo-blog-4/" title="菜雞部落客的hugo踩雷之路 ( 5 ) - 改變主題與 Disqus 留言"><i
                         class="icon icon-angle-left"
                         aria-hidden="true"></i><span>&nbsp;&nbsp;下一篇</span></a>
             </li>
             <li class="next">
-                <a href="https://webberwu7.github.io/WebberWuBlog/2022/08/20220808-make-a-hugo-blog-2/"
-                    title="菜雞部落客的hugo踩雷之路 ( 3 ) - Content 與 layout 的愛恨情仇"><span>上一篇&nbsp;&nbsp;</span><i
+                <a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220930-develop-wordpress-plugin-2/"
+                    title="Wordpress 插件開發筆記 (3) - PHP Composer 套件管理 / Swagger"><span>上一篇&nbsp;&nbsp;</span><i
                         class="icon icon-angle-right" aria-hidden="true"></i></a>
             </li>
             
@@ -494,7 +657,7 @@ git push origin master
 
 <script>
     var disqus_config = function () {
-        this.page.url = 'https:\/\/webberwu7.github.io\/WebberWuBlog\/2022\/08\/20220806-make-a-hugo-blog-1\/';
+        this.page.url = 'https:\/\/webberwu7.github.io\/WebberWuBlog\/2022\/09\/20220930-develop-wordpress-plugin-1\/';
         this.page.identifier = 'WebberWuBlog';
     };
     (function () {

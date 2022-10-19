@@ -6,10 +6,28 @@
     <description>Recent content on webber 筆記本</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>MIT</copyright>
-    <lastBuildDate>Wed, 28 Sep 2022 17:42:47 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 30 Sep 2022 18:00:00 +0800</lastBuildDate>
     
         <atom:link href="https://webberwu7.github.io/WebberWuBlog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Wordpress 插件開發筆記 (3) - PHP Composer 套件管理 / Swagger</title>
+      <link>https://webberwu7.github.io/WebberWuBlog/2022/09/20220930-develop-wordpress-plugin-2/</link>
+      <pubDate>Fri, 30 Sep 2022 18:00:00 +0800</pubDate>
+      
+      <guid>https://webberwu7.github.io/WebberWuBlog/2022/09/20220930-develop-wordpress-plugin-2/</guid>
+      <description>在wordpress中導入MVC架構後，會以api的方式讓前後端溝通 為了方便前後端溝通順利，需要有一套好的文件系統 常見的api文件就是swa</description>
+    </item>
+    
+    <item>
+      <title>Wordpress 插件開發筆記 (2) - wp option 與 MVC 框架</title>
+      <link>https://webberwu7.github.io/WebberWuBlog/2022/09/20220930-develop-wordpress-plugin-1/</link>
+      <pubDate>Fri, 30 Sep 2022 17:23:12 +0800</pubDate>
+      
+      <guid>https://webberwu7.github.io/WebberWuBlog/2022/09/20220930-develop-wordpress-plugin-1/</guid>
+      <description>上一篇 我們在wordpress中建立起一個helloworld的插件 並且加入一個後台設定頁面 這篇要描寫如何將可設定的參數加到wordpres</description>
+    </item>
     
     <item>
       <title>菜雞部落客的hugo踩雷之路 ( 5 ) - 改變主題與 Disqus 留言</title>

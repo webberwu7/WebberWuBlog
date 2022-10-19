@@ -3,28 +3,63 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://webberwu7.github.io/WebberWuBlog/tags/hugo/</loc>
-    <lastmod>2022-09-28T17:42:47+08:00</lastmod>
+    <loc>https://webberwu7.github.io/WebberWuBlog/tags/php/</loc>
+    <lastmod>2022-09-30T18:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/tags/plugin/</loc>
+    <lastmod>2022-09-30T18:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://webberwu7.github.io/WebberWuBlog/posts/</loc>
-    <lastmod>2022-09-28T17:42:47+08:00</lastmod>
+    <lastmod>2022-09-30T18:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://webberwu7.github.io/WebberWuBlog/tags/</loc>
-    <lastmod>2022-09-28T17:42:47+08:00</lastmod>
+    <lastmod>2022-09-30T18:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://webberwu7.github.io/WebberWuBlog/</loc>
+    <lastmod>2022-09-30T18:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/tags/wordpress/</loc>
+    <lastmod>2022-09-30T18:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/2022/09/20220930-develop-wordpress-plugin-2/</loc>
+    <lastmod>2022-09-30T18:00:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/2022/09/20220930-develop-wordpress-plugin-1/</loc>
+    <lastmod>2022-09-30T17:23:12+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/tags/hugo/</loc>
     <lastmod>2022-09-28T17:42:47+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -59,29 +94,8 @@
   </url>
   
   <url>
-    <loc>https://webberwu7.github.io/WebberWuBlog/tags/wordpress/</loc>
-    <lastmod>2022-09-16T11:25:16+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://webberwu7.github.io/WebberWuBlog/2022/09/20220916-develop-wordpress/</loc>
     <lastmod>2022-09-16T11:25:16+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://webberwu7.github.io/WebberWuBlog/tags/php/</loc>
-    <lastmod>2022-09-15T23:38:14+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://webberwu7.github.io/WebberWuBlog/tags/plugin/</loc>
-    <lastmod>2022-09-15T23:38:14+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
