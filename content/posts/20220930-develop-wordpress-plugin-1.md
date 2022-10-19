@@ -45,8 +45,16 @@ https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-en
 
 
 * register_rest_route
-
-register_rest_route( string $namespace, string $route, array $args = array(), bool $override = false ): bool
+    註冊一個客製化的rest route
+    通常會將這個功能註冊在 `rest_api_init` 事件中
+    ```php
+    register_rest_route( 
+        string $namespace, 
+        string $route, 
+        array $args = array(), 
+        bool $override = false 
+    ): bool
+    ```
 
 下面範例加上一個health-check的API
 
