@@ -2,7 +2,8 @@
 <html lang="zh-tw">
   <head>
     <title>
-        webber 筆記本</title>
+        Laravel on MacOS - webber 筆記本
+      </title>
         <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -19,25 +20,29 @@
     <meta http-equiv="window-target" content="_top" />
     
     
-    
+    <meta name="description" content="前置準備 HomeBrew HomeBrew 是 Mac 上好用的套件管理工具 我們可以透過 homebrew 來安裝 laravel 所需要的php版本環境 REF: https://brew.sh/index_zh-tw 在 macOS 的終端機，或 Linux 的 shell 提示貼上這串直接安裝 /bin/bash -c &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&amp;quot; PHP laravel" />
     <meta name="generator" content="Hugo 0.101.0 with theme pure" />
-    <title>webber 筆記本</title>
+    <title>Laravel on MacOS - webber 筆記本</title>
     
-    <link rel="alternate" type="application/rss+xml" href="https://webberwu7.github.io/WebberWuBlog/series/index.xml" title="webber 筆記本" />
     
     <link rel="stylesheet" href="https://webberwu7.github.io/WebberWuBlog/css/style.min.d9249ab082ab72df82ec9f71027ea50b38f33d15fe12384a6ccb528d9b552e93.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-    <meta property="og:title" content="Series" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://webberwu7.github.io/WebberWuBlog/series/" />
+    <meta property="og:title" content="Laravel on MacOS" />
+<meta property="og:description" content="前置準備 HomeBrew HomeBrew 是 Mac 上好用的套件管理工具 我們可以透過 homebrew 來安裝 laravel 所需要的php版本環境 REF: https://brew.sh/index_zh-tw 在 macOS 的終端機，或 Linux 的 shell 提示貼上這串直接安裝 /bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot; PHP laravel" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://webberwu7.github.io/WebberWuBlog/2022/11/20221101-laravel-on-macos/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-11-01T12:00:38+08:00" />
+<meta property="article:modified_time" content="2022-11-01T12:00:38+08:00" />
 
-<meta itemprop="name" content="Series">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Series"/>
-<meta name="twitter:description" content=""/>
+<meta itemprop="name" content="Laravel on MacOS">
+<meta itemprop="description" content="前置準備 HomeBrew HomeBrew 是 Mac 上好用的套件管理工具 我們可以透過 homebrew 來安裝 laravel 所需要的php版本環境 REF: https://brew.sh/index_zh-tw 在 macOS 的終端機，或 Linux 的 shell 提示貼上這串直接安裝 /bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot; PHP laravel"><meta itemprop="datePublished" content="2022-11-01T12:00:38+08:00" />
+<meta itemprop="dateModified" content="2022-11-01T12:00:38+08:00" />
+<meta itemprop="wordCount" content="906">
+<meta itemprop="keywords" content="php,laravel," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Laravel on MacOS"/>
+<meta name="twitter:description" content="前置準備 HomeBrew HomeBrew 是 Mac 上好用的套件管理工具 我們可以透過 homebrew 來安裝 laravel 所需要的php版本環境 REF: https://brew.sh/index_zh-tw 在 macOS 的終端機，或 Linux 的 shell 提示貼上這串直接安裝 /bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot; PHP laravel"/>
 
     <!--[if lte IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -266,69 +271,277 @@ function tagCloud(where, min, max) {
 
     
     
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">文章目錄</h4>
+    <nav id="toc" class="js-toc toc">
 
-<main class="main" role="main">
-    <article class="content article article-archives article-type-list" itemscope="">
-        <header class="article-header">
-            <h1 itemprop="title">Series</h1>
-            <p class="text-muted">共 13 篇文章</p>
-        </header>
-        <div class="article-body">
-                        <section class="panel panel-default b-no">
-                            <div class="panel-heading" role="tab">
-                                <h3 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse2022" aria-expanded="true">
-                                        <i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>
-                                        &nbsp;2022
-                                    </a>
-                                </h3>
-                            </div>
-                            <div id="collapse2022" class="panel-collapse collapse in" role="tabpanel"
-                                aria-labelledby="heading2022">
-                                <div class="panel-body">
-                                    <div class="collection"><a href="https://webberwu7.github.io/WebberWuBlog/2022/11/20221101-laravel-on-macos/" class="collection-item" itemprop="url" target="_blank">
-    <time datetime="2022-11-01 12:00:38 &#43;0800 CST" itemprop="datePublished" style="margin-right: 5px;">2022-11-01
-    </time>Laravel on MacOS
-</a><a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220930-develop-wordpress-plugin-2/" class="collection-item" itemprop="url" target="_blank">
-    <time datetime="2022-09-30 18:00:00 &#43;0800 CST" itemprop="datePublished" style="margin-right: 5px;">2022-09-30
-    </time>Wordpress 插件開發筆記 (3) - PHP Composer 套件管理 / Swagger
-</a><a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220930-develop-wordpress-plugin-1/" class="collection-item" itemprop="url" target="_blank">
-    <time datetime="2022-09-30 17:23:12 &#43;0800 CST" itemprop="datePublished" style="margin-right: 5px;">2022-09-30
-    </time>Wordpress 插件開發筆記 (2) - wp option 與 MVC 框架
-</a><a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220928-make-a-hugo-blog-4/" class="collection-item" itemprop="url" target="_blank">
-    <time datetime="2022-09-28 17:42:47 &#43;0800 CST" itemprop="datePublished" style="margin-right: 5px;">2022-09-28
-    </time>菜雞部落客的hugo踩雷之路 ( 5 ) - 改變主題與 Disqus 留言
-</a><a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220926-conference-cybersec2022/" class="collection-item" itemprop="url" target="_blank">
-    <time datetime="2022-09-26 18:02:43 &#43;0800 CST" itemprop="datePublished" style="margin-right: 5px;">2022-09-26
-    </time>CYBERSEC 2022 台灣資安大會
-</a><a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220916-develop-wordpress/" class="collection-item" itemprop="url" target="_blank">
-    <time datetime="2022-09-16 11:25:16 &#43;0800 CST" itemprop="datePublished" style="margin-right: 5px;">2022-09-16
-    </time>Wordpress 開發環境
-</a><a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220915-develop-wordpress-plugin/" class="collection-item" itemprop="url" target="_blank">
-    <time datetime="2022-09-15 23:38:14 &#43;0800 CST" itemprop="datePublished" style="margin-right: 5px;">2022-09-15
-    </time>Wordpress 插件開發筆記 (1) - 第一個插件
-</a><a href="https://webberwu7.github.io/WebberWuBlog/2022/08/20220818-python-bigquery/" class="collection-item" itemprop="url" target="_blank">
-    <time datetime="2022-08-18 00:05:39 &#43;0800 CST" itemprop="datePublished" style="margin-right: 5px;">2022-08-18
-    </time>Python - Bigquery 筆記
-</a><a href="https://webberwu7.github.io/WebberWuBlog/2022/08/20220816-make-a-hugo-blog-3/" class="collection-item" itemprop="url" target="_blank">
-    <time datetime="2022-08-16 12:19:14 &#43;0800 CST" itemprop="datePublished" style="margin-right: 5px;">2022-08-16
-    </time>菜雞部落客的hugo踩雷之路 ( 4 ) - 終於有頭像了
-</a><a href="https://webberwu7.github.io/WebberWuBlog/2022/08/20220813-laravel-upgrade-note/" class="collection-item" itemprop="url" target="_blank">
-    <time datetime="2022-08-13 16:15:34 &#43;0800 CST" itemprop="datePublished" style="margin-right: 5px;">2022-08-13
-    </time>Laravel 升級之路 - 踩雷筆記
-</a><a href="https://webberwu7.github.io/WebberWuBlog/2022/08/20220808-make-a-hugo-blog-2/" class="collection-item" itemprop="url" target="_blank">
-    <time datetime="2022-08-08 23:37:05 &#43;0800 CST" itemprop="datePublished" style="margin-right: 5px;">2022-08-08
-    </time>菜雞部落客的hugo踩雷之路 ( 3 ) - Content 與 layout 的愛恨情仇
-</a><a href="https://webberwu7.github.io/WebberWuBlog/2022/08/20220806-make-a-hugo-blog-1/" class="collection-item" itemprop="url" target="_blank">
-    <time datetime="2022-08-06 13:50:36 &#43;0800 CST" itemprop="datePublished" style="margin-right: 5px;">2022-08-06
-    </time>菜雞部落客的hugo踩雷之路 ( 2 ) - 部署到github上的靜態網站
-</a><a href="https://webberwu7.github.io/WebberWuBlog/2022/08/20220806-make-a-hugo-blog/" class="collection-item" itemprop="url" target="_blank">
-    <time datetime="2022-08-06 11:56:21 &#43;0800 CST" itemprop="datePublished" style="margin-right: 5px;">2022-08-06
-    </time>菜雞部落客的hugo踩雷之路 ( 1 ) - 建立hugo專案與新增文章
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/WebberWuBlog/2022/11/20221101-laravel-on-macos/"
+    >Laravel on MacOS</a
+  >
+</h1>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://webberwu7.github.io/WebberWuBlog/2022/11/20221101-laravel-on-macos/" class="article-date">
+  <time datetime="2022-11-01 12:00:38 &#43;0800 CST" itemprop="datePublished">2022-11-01</time>
 </a>
-        </div></div></div></section>
+</span>
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/WebberWuBlog/tags/php/"> php </a>
+    <a class="article-tag-link" href="/WebberWuBlog/tags/laravel/"> laravel </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/WebberWuBlog/2022/11/20221101-laravel-on-macos/#comments"
+            class="article-comment-link">評論</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字數統計: 906字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">閱讀時間: 2分 </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h1 id="前置準備">前置準備</h1>
+<h2 id="homebrew">HomeBrew</h2>
+<p>HomeBrew 是 Mac 上好用的套件管理工具</p>
+<p>我們可以透過 homebrew 來安裝 laravel 所需要的php版本環境</p>
+<p>REF: <a href="https://brew.sh/index_zh-tw">https://brew.sh/index_zh-tw</a></p>
+<p>在 macOS 的終端機，或 Linux 的 shell 提示貼上這串直接安裝</p>
+<pre><code class="language-bash">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+</code></pre>
+<h2 id="php">PHP</h2>
+<ul>
+<li>
+<p>laravel 8.x需要 php 7.3</p>
+<p><code>brew install php@7.3</code></p>
+</li>
+<li>
+<p>laravel 9.x 需要php 8以上</p>
+<p><code>brew install php@8.1</code></p>
+</li>
+</ul>
+<h2 id="php-composer">PHP Composer</h2>
+<p>composer 是 php 的套件管理工具，想像他跟 pip, npm 是一樣的類型工具</p>
+<p>REF: <a href="https://getcomposer.org/">https://getcomposer.org/</a></p>
+<pre><code>php -r &quot;copy('https://getcomposer.org/installer', 'composer-setup.php');&quot;
+php -r &quot;if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;&quot;
+php composer-setup.php
+php -r &quot;unlink('composer-setup.php');&quot;
+</code></pre>
+<p>裝完後會多出一個 <code>composer.phar</code>，我們把它放到可使用指令區</p>
+<pre><code class="language-bash">sudo mkdir /usr/local/bin -p
+sudo mv composer.phar /usr/local/bin/composer
+</code></pre>
+<p>使用指令 <code>composer --version</code> 確認是否有安裝成功</p>
+<pre><code class="language-shell">➜  ~ composer --version
+Composer version 2.3.5 2022-04-13 16:43:00
+</code></pre>
+<h1 id="建立-laravel">建立 Laravel</h1>
+<p>參考 laravel 官方文件建立第一個 laravel 專案</p>
+<p>REF: <a href="https://laravel.com/docs/9.x/installation#your-first-laravel-project">Laravel安裝</a></p>
+<ol>
+<li>
+<p>使用composer 安裝 laravel</p>
+<pre><code class="language-bash"># composer create-project laravel/laravel {換成你的專案資料夾名稱}
+composer create-project laravel/laravel example-app
+</code></pre>
+</li>
+<li>
+<p>進到專案資料夾</p>
+<pre><code class="language-bash"># cd {專案資料夾名稱}
+cd example-app
+</code></pre>
+</li>
+<li>
+<p>啟動服務</p>
+<pre><code class="language-bash">php artisan serve
+</code></pre>
+</li>
+<li>
+<p>打開瀏覽器確認是否順利啟動
+預設網站會在<code>http://localhost:8000</code>中找到</p>
+</li>
+</ol>
+<p><img src="https://i.imgur.com/SCQTuKV.png" alt="">
+(這張圖是laravel 8 的初始畫面)</p>
+<h1 id="建立-laravel-網站所需要的相關服務">建立 laravel 網站所需要的相關服務</h1>
+<p>這裡會使用docker的服務 docker-compose 快速啟動相關服務</p>
+<ol>
+<li>
+<p>新增一個檔案 <code>docker-compose.yml</code></p>
+<p>加入設定內容</p>
+<pre><code class="language-yaml=">version: '3'
+services:
+redis:
+    image: redis
+    ports:
+    - 6379:6379
+
+mysql:
+    image: mysql:5.7
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+    - MYSQL_DATABASE=我是資料庫名稱
+    - MYSQL_USER=我是使用者名稱
+    - MYSQL_PASSWORD=我是使用者密碼
+    - MYSQL_ROOT_PASSWORD=我是root密碼
+    - TZ=UTC
+    volumes:
+    - ~/.laravel.pratice/data/mysql:/var/lib/mysql
+    ports:
+    - 3306:3306
+
+phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+    - PMA_ARBITRARY=1
+    - EXTERNAL_IP=0.0.0.0
+    ports:
+    - 8080:80
+    depends_on:
+        - &quot;mysql&quot;
+
+</code></pre>
+</li>
+<li>
+<p>啟動服務</p>
+<pre><code class="language-shell">docker-compose up
+</code></pre>
+</li>
+<li>
+<p>設定 laravel 環境變數檔案 <code>.env</code></p>
+<p>在專案資料夾中執行複製範例檔</p>
+<pre><code class="language-bash">cp .env.example .env
+</code></pre>
+<p>接下來在.env中 將資料庫相關的參數設定好</p>
+<pre><code>DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=資料庫名稱
+DB_USERNAME=帳號
+DB_PASSWORD=密碼
+</code></pre>
+</li>
+</ol>
+<ul>
+<li>
+<p>踩雷</p>
+<p>DB_HOST=127.0.0.1</p>
+<p>APP_URL=127.0.0.1</p>
+<p>如果在地端請從localhost改成127.0.0.1</p>
+</li>
+<li>
+<p>關閉服務時 結束docker compose</p>
+<p><code>docker-compose down</code></p>
+</li>
+</ul>
+<h1 id="製做-laravel-docker-image">製做 laravel docker image</h1>
+<ol>
+<li>
+<p>寫好 dockerfile</p>
+<p>基底 image 可以使用 dwchiang 製作的 nginx-php-fpm (<a href="https://hub.docker.com/r/dwchiang/nginx-php-fpm">https://hub.docker.com/r/dwchiang/nginx-php-fpm</a>)</p>
+<pre><code class="language-dockerfile">FROM dwchiang/nginx-php-fpm:8.0.12-fpm-buster-nginx-1.21.1
+
+# 更新 apt-get 套件包與安裝常見工具
+RUN apt-get update -y &amp;&amp; apt-get install -y libmcrypt-dev openssl zip unzip 
+
+# 安裝php相關擴充套件
+RUN docker-php-ext-install -j$(nproc) \
+        bcmath \
+        mysqli \
+        pdo \
+        pdo_mysql \
+        exif \
+        opcache
+
+# 下載 composer
+RUN apt-get -y install curl
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+# 將程式碼複製到 /var/www/html 底下
+ADD /{程式碼laravel資料夾} /var/www/html
+# 切換指令執行位置 /var/www/html
+WORKDIR /var/www/html
+
+# composer 安裝所需php套件
+RUN composer install --prefer-dist
+RUN composer dump-autoload
+
+# 設定資料夾使用者權限
+RUN chown -R www-data:www-data /var/www/html
+RUN chmod 770 /var/www/html/storage
+
+# 設定對外 port
+EXPOSE 80
+CMD [&quot;/docker-entrypoint.sh&quot;]
+</code></pre>
+</li>
+<li>
+<p>Build image</p>
+<p><code>docker build -t [image_name] . --no-cache</code></p>
+</li>
+<li>
+<p>Run container</p>
+<p><code>docker run -d --name [container_name] -p 8000:80 [image_name]:latest</code></p>
+</li>
+<li>
+<p>API Test</p>
+<p>get root page</p>
+<p><code>curl 127.0.0.1:8000</code></p>
+</li>
+</ol>
+
+    </div>
+    <div class="article-footer">
+
+    </div>
+  </article>
+<section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://webberwu7.github.io/WebberWuBlog/2022/09/20220930-develop-wordpress-plugin-2/" title="Wordpress 插件開發筆記 (3) - PHP Composer 套件管理 / Swagger"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;下一篇</span></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="文章目錄" role="button">
+                    <span>[&nbsp;</span><span>文章目錄</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="facebook,twitter"
+                data-mobile-sites=""></div>
         </div>
-    </article>
+    </div>
+</nav>
+
+
 </main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
 <ul class="social-links">
     <li><a href="https://github.com/webberwu7" target="_blank" title="github" data-toggle=tooltip data-placement=top >
@@ -403,6 +616,19 @@ function tagCloud(where, min, max) {
         
         hasInnerContainers: true,
     });
+</script>
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https:\/\/webberwu7.github.io\/WebberWuBlog\/2022\/11\/20221101-laravel-on-macos\/';
+        this.page.identifier = 'WebberWuBlog';
+    };
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = '//' + 'WebberWuBlog' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
 
   </body>

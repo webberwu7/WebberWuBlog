@@ -6,10 +6,19 @@
     <description>Recent content in laravel on webber 筆記本</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>MIT</copyright>
-    <lastBuildDate>Sat, 13 Aug 2022 16:15:34 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 01 Nov 2022 12:00:38 +0800</lastBuildDate>
     
         <atom:link href="https://webberwu7.github.io/WebberWuBlog/tags/laravel/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Laravel on MacOS</title>
+      <link>https://webberwu7.github.io/WebberWuBlog/2022/11/20221101-laravel-on-macos/</link>
+      <pubDate>Tue, 01 Nov 2022 12:00:38 +0800</pubDate>
+      
+      <guid>https://webberwu7.github.io/WebberWuBlog/2022/11/20221101-laravel-on-macos/</guid>
+      <description>前置準備 HomeBrew HomeBrew 是 Mac 上好用的套件管理工具 我們可以透過 homebrew 來安裝 laravel 所需要的php版本環境 REF: https://brew.sh/index_zh-tw 在 macOS 的終端機，或 Linux 的 shell 提示貼上這串直接安裝 /bin/bash -c &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&amp;quot; PHP laravel</description>
+    </item>
     
     <item>
       <title>Wordpress 插件開發筆記 (3) - PHP Composer 套件管理 / Swagger</title>

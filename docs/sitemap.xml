@@ -3,35 +3,49 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://webberwu7.github.io/WebberWuBlog/tags/php/</loc>
-    <lastmod>2022-09-30T18:00:00+08:00</lastmod>
+    <loc>https://webberwu7.github.io/WebberWuBlog/tags/laravel/</loc>
+    <lastmod>2022-11-01T12:00:38+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://webberwu7.github.io/WebberWuBlog/tags/plugin/</loc>
-    <lastmod>2022-09-30T18:00:00+08:00</lastmod>
+    <loc>https://webberwu7.github.io/WebberWuBlog/2022/11/20221101-laravel-on-macos/</loc>
+    <lastmod>2022-11-01T12:00:38+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/tags/php/</loc>
+    <lastmod>2022-11-01T12:00:38+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://webberwu7.github.io/WebberWuBlog/posts/</loc>
-    <lastmod>2022-09-30T18:00:00+08:00</lastmod>
+    <lastmod>2022-11-01T12:00:38+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://webberwu7.github.io/WebberWuBlog/tags/</loc>
-    <lastmod>2022-09-30T18:00:00+08:00</lastmod>
+    <lastmod>2022-11-01T12:00:38+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://webberwu7.github.io/WebberWuBlog/</loc>
+    <lastmod>2022-11-01T12:00:38+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://webberwu7.github.io/WebberWuBlog/tags/plugin/</loc>
     <lastmod>2022-09-30T18:00:00+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -131,13 +145,6 @@
   <url>
     <loc>https://webberwu7.github.io/WebberWuBlog/2022/08/20220816-make-a-hugo-blog-3/</loc>
     <lastmod>2022-08-16T12:19:14+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://webberwu7.github.io/WebberWuBlog/tags/laravel/</loc>
-    <lastmod>2022-08-13T16:15:34+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
